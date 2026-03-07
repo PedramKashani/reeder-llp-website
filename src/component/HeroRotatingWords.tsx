@@ -1,0 +1,69 @@
+"use client";
+
+import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
+
+type HeroRotatingWordsProps = {
+  backgroundImageUrl: string;
+  kicker: string; // "We were born to be"
+  words: string[]; // ["Family Lawyers", "Negotiators", "Problem Solvers"]
+  scrollToId?: string; // "welcome"
+};
+
+export function HeroRotatingWords({
+  backgroundImageUrl,
+  kicker,
+  words,
+  scrollToId = "welcome",
+}: HeroRotatingWordsProps) {
+  const safeWords = useMemo(
+    () => (words.length ? words : ["Attorneys"]),
+    [words],
+  );
+  const [idx, setIdx] = useState(0);
+
+  useEffect(() => {
+    const t = window.setInterval(() => {
+      setIdx((i) => (i + 1) % safeWords.length);
+    }, 1800);
+    return () => window.clearInterval(t);
+  }, [safeWords.length]);
+
+  return (
+    <section className="snap-section relative min-h-[100vh] overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0 flex items-center justify-center bg-neutral-900">
+        <img
+          src={backgroundImageUrl}
+          alt=""
+          className="h-full w-full object-contain"
+        />
+        {/* Overlay for readability */}
+        <div className="absolute inset-0 bg-neutral-950/40" />
+      </div>
+
+      <div className="relative mx-auto flex max-w-6xl px-6">
+        <div className="flex min-h-[100vh] w-full items-end py-20 md:py-24">
+          <div className="max-w-2xl">
+            <div className="text-xs font-semibold uppercase tracking-[0.22em] text-white/80">
+              {kicker}
+            </div>
+
+            <h1 className="mt-3 text-5xl font-semibold tracking-tight text-white md:text-7xl">
+              <span className="inline-block">{safeWords[idx]}</span>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      {/* Scroll to next section button */}
+      <Link
+        href={`#${scrollToId}`}
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 rounded-full border border-white/30 bg-white/10 p-3 text-white backdrop-blur hover:bg-white/15"
+        aria-label="Scroll to next section"
+      >
+        <span className="block text-xl leading-none">↓</span>
+      </Link>
+    </section>
+  );
+}

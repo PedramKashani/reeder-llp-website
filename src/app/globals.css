@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-cormorant), Georgia, serif;
+  --font-display: var(--font-syne), system-ui, sans-serif;
+  --font-mono: ui-monospace, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: #0a0a0a;
+  color: #ffffff;
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-syne), system-ui, sans-serif;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+p {
+  color: #ffffff;
+}
+
+/* Light-background pages: force dark text so content is visible */
+main.bg-white h1,
+main.bg-white h2,
+main.bg-white h3,
+main.bg-white h4,
+main.bg-white h5,
+main.bg-white h6 {
+  color: #171717;
+}
+main.bg-white p {
+  color: #404040;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Each section appears individually on scroll */
+@keyframes sectionFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(48px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-section-hidden {
+  opacity: 0;
+  transform: translateY(48px);
+}
+
+.animate-section-visible {
+  animation: sectionFadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  opacity: 0;
+}
+
+/* Content loads in when section is visible */
+@keyframes contentReveal {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-section-visible .section-content-in {
+  animation: contentReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+  opacity: 0;
+}
+
+/* Section picture: strong fade up + scale so it’s easy to see */
+@keyframes sectionPictureIn {
+  from {
+    opacity: 0;
+    transform: translateY(80px) scale(0.88);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Section text: strong fade up + scale (staggered after picture) */
+@keyframes sectionTextIn {
+  from {
+    opacity: 0;
+    transform: translateY(64px) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-section-visible .section-picture-in {
+  animation: sectionPictureIn 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+  opacity: 0;
+}
+
+.animate-section-visible .section-text-in {
+  animation: sectionTextIn 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
+  opacity: 0;
+}
+
+/* One section per viewport – scroll snap so you only see one at a time */
+html {
+  scroll-snap-type: y mandatory;
+}
+
+.snap-section {
+  min-height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}

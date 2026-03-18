@@ -36,7 +36,7 @@ export function ImageContentSection({
               <img
                 src={imageUrl}
                 alt=""
-                className="absolute inset-0 h-full w-full object-cover"
+                className="absolute inset-0 h-full w-full object-cover object-[center_28%]"
               />
             </div>
           </div>

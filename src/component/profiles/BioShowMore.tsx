@@ -16,12 +16,12 @@ export function BioShowMore({ profile }: { profile: Professional }) {
 
   return (
     <section className="border-b border-neutral-200">
-      <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
-        <div className="text-xs font-semibold uppercase tracking-[0.22em] text-neutral-500">
+      <div className="mx-auto w-full max-w-7xl px-8 py-20 md:px-12 md:py-24 lg:px-16">
+        <div className="text-sm font-semibold uppercase tracking-[0.22em] text-neutral-500">
           Bio
         </div>
 
-        <div className="mt-6 max-w-3xl space-y-5 text-base leading-relaxed text-neutral-800">
+        <div className="mt-8 w-full max-w-none space-y-6 text-lg leading-[1.75] text-neutral-800 md:text-xl md:leading-[1.7]">
           <p>{paragraphs[0]}</p>
           {expanded &&
             rest.map((p, idx) => (
@@ -32,11 +32,11 @@ export function BioShowMore({ profile }: { profile: Professional }) {
         </div>
 
         {rest.length > 0 ? (
-          <div className="mt-8">
+          <div className="mt-10">
             <button
               type="button"
               onClick={() => setExpanded((v) => !v)}
-              className="inline-flex items-center rounded-xl border border-neutral-200 bg-white px-4 py-2.5 text-sm font-medium text-neutral-900 hover:bg-neutral-50"
+              className="inline-flex items-center rounded-xl border border-neutral-200 bg-white px-5 py-3 text-base font-medium text-neutral-900 hover:bg-neutral-50"
             >
               {expanded ? "Show Less" : "Show More"}
             </button>

@@ -9,7 +9,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-cormorant), Georgia, serif;
-  --font-display: var(--font-syne), system-ui, sans-serif;
+  --font-display: var(--font-cormorant), Georgia, serif;
   --font-mono: ui-monospace, monospace;
 }
 
@@ -34,7 +34,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-syne), system-ui, sans-serif;
+  font-family: var(--font-cormorant), Georgia, serif;
   color: #ffffff;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -53,8 +53,68 @@ main.bg-white h5,
 main.bg-white h6 {
   color: #171717;
 }
+/* Profile hero: keep name, title, and text white over the image */
+main.bg-white .profile-hero h1,
+main.bg-white .profile-hero h2,
+main.bg-white .profile-hero h3,
+main.bg-white .profile-hero h4,
+main.bg-white .profile-hero h5,
+main.bg-white .profile-hero h6,
+main.bg-white .profile-hero p,
+main.bg-white .profile-hero span,
+main.bg-white .profile-hero a {
+  color: #ffffff;
+}
+/* Case results hero: same — keep text white over the image */
+main.bg-white .case-results-hero h1,
+main.bg-white .case-results-hero h2,
+main.bg-white .case-results-hero h3,
+main.bg-white .case-results-hero h4,
+main.bg-white .case-results-hero h5,
+main.bg-white .case-results-hero h6,
+main.bg-white .case-results-hero p,
+main.bg-white .case-results-hero span,
+main.bg-white .case-results-hero a {
+  color: #ffffff;
+}
+/* Contact page hero: keep "Contact Us" and text white over the image */
+main.bg-white .contact-hero h1,
+main.bg-white .contact-hero h2,
+main.bg-white .contact-hero h3,
+main.bg-white .contact-hero h4,
+main.bg-white .contact-hero h5,
+main.bg-white .contact-hero h6,
+main.bg-white .contact-hero p,
+main.bg-white .contact-hero span,
+main.bg-white .contact-hero a {
+  color: #ffffff;
+}
+/* Contact page "Need to speak with someone?" — heading white on dark background (button keeps its own contrast) */
+main.bg-white .contact-cta-dark h1,
+main.bg-white .contact-cta-dark h2,
+main.bg-white .contact-cta-dark h3,
+main.bg-white .contact-cta-dark h4,
+main.bg-white .contact-cta-dark h5,
+main.bg-white .contact-cta-dark h6,
+main.bg-white .contact-cta-dark p {
+  color: #ffffff;
+}
 main.bg-white p {
   color: #404040;
+}
+
+/* Professionals page: CTA box is white — force dark text so it’s visible */
+.team-cta-box h1,
+.team-cta-box h2,
+.team-cta-box h3,
+.team-cta-box h4,
+.team-cta-box h5,
+.team-cta-box h6,
+.team-cta-box p {
+  color: #171717;
+}
+.team-cta-box p {
+  color: #525252;
 }
 
 @keyframes fadeIn {

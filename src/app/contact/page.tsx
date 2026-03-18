@@ -23,7 +23,7 @@ function scrollToId(id: string) {
 export default function ContactPage() {
   return (
     <main className="bg-white text-neutral-950">
-      <section className="relative min-h-[85vh] w-full overflow-hidden">
+      <section className="contact-hero relative min-h-[85vh] w-full overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=2400&q=80"
           alt="Law office interior"
@@ -224,7 +224,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="border-t border-neutral-200 bg-neutral-950">
+      <section className="contact-cta-dark border-t border-white/10 bg-neutral-950">
         <div className="mx-auto max-w-6xl px-6 py-14">
           <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
             <h4 className="text-2xl font-semibold tracking-tight text-white">
@@ -232,7 +232,7 @@ export default function ContactPage() {
             </h4>
             <a
               href="tel:310-861-2470"
-              className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-neutral-950 hover:bg-neutral-100"
+              className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-lg font-medium text-neutral-950 hover:bg-neutral-100"
             >
               Call 310-861-2470
             </a>

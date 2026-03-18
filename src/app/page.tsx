@@ -28,7 +28,7 @@ export default function HomePage() {
         body="Successful litigation requires focus, strategy, direction, and knowledge. With a wealth of legal knowledge, tight team, and a unique litigation strategy, we charge hard, don’t pull punches, and are goal oriented. We don’t need to turn over every stone because we know what we are doing and what it takes to succeed. The results speak for themselves."
         imageUrl="https://cdn.lawlytics.com/law-media/uploads/830/230563/large/IMG_9203-1.jpg?1680286838"
         ctaLabel="Learn More"
-        ctaHref="/trials-and-commercial-litigation"
+        ctaHref="/practice-areas/trials-commercial-litigation"
         />
       </div>
 
@@ -49,7 +49,7 @@ export default function HomePage() {
         body="At trial, winning is everything and losing is not an option. Whether it is a bet-the-company or any other case, we try every case like it is our own. With our unique trial preparation method, creativity, and human touch, we deliver."
         imageUrl="https://cdn.lawlytics.com/law-media/uploads/830/230565/large/IMG_9313-1.jpg?1680286844"
         ctaLabel="Learn More"
-        ctaHref="/trials-and-commercial-litigation"
+        ctaHref="/practice-areas/trials-commercial-litigation"
         />
       </div>
 

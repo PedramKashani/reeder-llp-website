@@ -8,6 +8,7 @@ type NavGroup = { title: string; links: NavLink[]; twoCols?: boolean };
 type NavSection = {
   label: string;
   leftBlurb: string;
+  mainHref?: string; // optional: clicking the label goes here (e.g. "What We Do" → /practice-areas)
   rows: NavGroup[][];
 };
 
@@ -38,6 +39,7 @@ const NAV_SECTIONS: NavSection[] = [
   {
     label: "What We Do",
     leftBlurb: "Practice Areas",
+    mainHref: "/practice-areas",
     rows: [
       [
         {
@@ -143,7 +145,6 @@ export function Header() {
               >
                 Home
               </Link>
-
               {Object.keys(mobileExpanded).map((label) => {
                 const s = sectionByLabel[label];
                 const expanded = mobileExpanded[label];
@@ -248,15 +249,29 @@ function PrimaryCTA() {
 }
 
 function DesktopNavItem({ section }: { section: NavSection }) {
+  const labelContent = (
+    <>
+      {section.label}
+      <span className="text-neutral-400">▾</span>
+    </>
+  );
   return (
     <div className="relative group">
-      <button
-        type="button"
-        className="inline-flex items-center gap-2 text-sm font-medium text-neutral-800 hover:text-neutral-950"
-      >
-        {section.label}
-        <span className="text-neutral-400">▾</span>
-      </button>
+      {section.mainHref ? (
+        <Link
+          href={section.mainHref}
+          className="inline-flex items-center gap-2 text-sm font-medium text-neutral-800 hover:text-neutral-950"
+        >
+          {labelContent}
+        </Link>
+      ) : (
+        <button
+          type="button"
+          className="inline-flex items-center gap-2 text-sm font-medium text-neutral-800 hover:text-neutral-950"
+        >
+          {labelContent}
+        </button>
+      )}
 
       {/* Dropdown */}
       <div

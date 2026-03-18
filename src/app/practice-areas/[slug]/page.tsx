@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { practiceAreas } from "@/data/practiceAreas";
+import { PracticeHeroImage } from "@/component/practice/PracticeHeroImage";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -43,13 +44,7 @@ export default async function PracticeAreaPage({ params }: Props) {
     <div className="main min-h-screen bg-neutral-950 text-white">
       {/* Hero - full height */}
       <div className="hero relative min-h-[100svh] w-full overflow-hidden">
-        <img
-          src={area.heroImage}
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover object-center"
-          sizes="100vw"
-          fetchPriority="high"
-        />
+        <PracticeHeroImage src={area.heroImage} alt="" />
         <div className="absolute inset-0 bg-black/40" />
 
         <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl items-end px-6">
@@ -79,22 +74,22 @@ export default async function PracticeAreaPage({ params }: Props) {
       {/* Content section */}
       <section
         id="content"
-        className="section-base border-b border-white/10 bg-neutral-950 py-20 md:py-28"
+        className="section-base border-b border-white/10 bg-neutral-950 py-24 md:py-32"
       >
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="section__inner wysiwyg max-w-4xl space-y-10 text-lg leading-[1.75] text-white/90 md:text-xl md:leading-[1.8]">
+        <div className="mx-auto w-full px-8 md:px-16 lg:px-24">
+          <div className="section__inner wysiwyg w-full space-y-16 text-white">
             {contentBlocks.map((block, i) => (
               <div key={i}>
                 {block.heading && (
-                  <h6 className="mb-5 text-base font-semibold uppercase tracking-[0.18em] text-white md:text-lg">
+                  <h6 className="mb-6 text-lg font-semibold uppercase tracking-[0.18em] text-white md:text-xl">
                     {block.heading}
                   </h6>
                 )}
-                <div className="space-y-6">
+                <div className="space-y-8">
                   {block.paragraphs.map((p, j) => (
                     <p
                       key={j}
-                      className="text-[1.0625rem] leading-[1.8] md:text-[1.125rem] md:leading-[1.85]"
+                      className="text-xl leading-[1.85] text-white md:text-2xl md:leading-[1.8]"
                     >
                       {p}
                     </p>

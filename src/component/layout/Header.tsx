@@ -91,7 +91,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/80 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-1">
         <Logo />
 
         {/* Desktop navigation */}
@@ -108,7 +108,7 @@ export function Header() {
         {/* Mobile burger */}
         <button
           type="button"
-          className="lg:hidden inline-flex items-center justify-center rounded-xl border border-neutral-200 bg-white px-3 py-2 text-sm"
+          className="lg:hidden inline-flex h-10 items-center justify-center rounded-xl border border-neutral-200 bg-white px-3 text-sm"
           aria-label="Open menu"
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen((v) => !v)}
@@ -223,13 +223,21 @@ export function Header() {
 
 function Logo() {
   return (
-    <Link href="/" className="flex items-center">
-      <div className="grid h-20 w-48 place-items-center rounded-2xl border border-neutral-200 bg-white relative -top-4 logo-animate-in">
+    <Link href="/" className="flex items-center gap-3">
+      <div className="grid h-12 w-36 place-items-center rounded-xl border border-neutral-200 bg-white logo-animate-in">
         <img
-          src="/images/logos/RMC-Logo-White-Bkgd.webp"
+          src="/images/logos/rmc-gold-logo.webp"
           alt="Reeder McCreary"
-          className="h-full w-full object-contain"
+          className="h-10 w-32 object-contain"
         />
+      </div>
+      <div className="hidden sm:block leading-tight">
+        <div className="text-[15px] font-semibold text-neutral-900">
+          Reeder McCreary
+        </div>
+        <div className="text-[9px] uppercase tracking-[0.18em] text-neutral-600">
+          Attorneys at Law
+        </div>
       </div>
     </Link>
   );
@@ -239,7 +247,7 @@ function PrimaryCTA() {
   return (
     <Link
       href="/contact"
-      className="inline-flex items-center justify-center rounded-xl bg-neutral-900 px-4 py-2.5 text-sm font-medium text-white hover:bg-neutral-800"
+      className="inline-flex h-10 items-center justify-center rounded-xl bg-neutral-900 px-4 text-sm font-medium text-white hover:bg-neutral-800"
     >
       Contact
     </Link>
@@ -258,14 +266,14 @@ function DesktopNavItem({ section }: { section: NavSection }) {
       {section.mainHref ? (
         <Link
           href={section.mainHref}
-          className="inline-flex items-center gap-2 text-sm font-medium text-neutral-800 hover:text-neutral-950"
+          className="inline-flex h-10 items-center gap-2 text-sm font-medium text-neutral-800 hover:text-neutral-950"
         >
           {labelContent}
         </Link>
       ) : (
         <button
           type="button"
-          className="inline-flex items-center gap-2 text-sm font-medium text-neutral-800 hover:text-neutral-950"
+          className="inline-flex h-10 items-center gap-2 text-sm font-medium text-neutral-800 hover:text-neutral-950"
         >
           {labelContent}
         </button>

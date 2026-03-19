@@ -6,7 +6,7 @@ import Link from "next/link";
 type HeroRotatingWordsProps = {
   backgroundImageUrl: string;
   kicker: string; // "We were born to be"
-  words: string[]; // ["Family Lawyers", "Negotiators", "Problem Solvers"]
+  words: string[]; // ["Trial Lawyers", "Deal Makers", "Litigators"]
   scrollToId?: string; // "welcome"
 };
 

@@ -25,7 +25,7 @@ export function HeroRotatingWords({
   useEffect(() => {
     const t = window.setInterval(() => {
       setIdx((i) => (i + 1) % safeWords.length);
-    }, 1800);
+    }, 2400);
     return () => window.clearInterval(t);
   }, [safeWords.length]);
 

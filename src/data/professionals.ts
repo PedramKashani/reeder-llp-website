@@ -44,14 +44,12 @@ export const professionals: Professional[] = [
     officePhone: "(310) 861-2470",
     directDial: "(310) 861-2471",
     email: "chris@reedermccreary.com",
-    photoSmall:
-      "https://cdn.lawlytics.com/law-media/uploads/830/230579/small/IMG_9033-1.jpg?1680293674",
-    photoLarge:
-      "https://cdn.lawlytics.com/law-media/uploads/830/230560/large/IMG_9033-1.jpg?1680286829",
+    photoSmall: "/images/attorneys/chris-headshot.webp",
+    photoLarge: "/images/attorneys/chris-headshot.webp",
     links: [
       {
         label: "Super Lawyers® Profile",
-        href: "https://profiles.superlawyers.com/california/los-angeles/lawyer/zachary-ward/b11008e9-bbc3-486a-b1c3-2f0ce6a6f5c5.html",
+        href: "https://profiles.superlawyers.com/california/los-angeles/lawyer/christopher-s-reeder/2a07799a-06a5-47ee-8322-47126efd6229.html",
       },
       {
         label: "Best Lawyers Profile",
@@ -177,10 +175,8 @@ export const professionals: Professional[] = [
     title: "Partner",
     officePhone: "(310) 861-2470",
     email: "duncan@reedermccreary.com",
-    photoSmall:
-      "https://cdn.lawlytics.com/law-media/uploads/830/230581/small/IMG_9035-1.jpg?1680293781",
-    photoLarge:
-      "https://cdn.lawlytics.com/law-media/uploads/830/230561/large/IMG_9035-1.jpg?1680286832",
+    photoSmall: "/images/attorneys/duncan-headshot.webp",
+    photoLarge: "/images/attorneys/duncan-headshot.webp",
     links: [
       {
         label: "Super Lawyers® Profile",
@@ -239,10 +235,8 @@ export const professionals: Professional[] = [
     officePhone: "(310) 861-2470",
     directDial: "(310) 861-2474",
     email: "ben@reedermccreary.com",
-    photoSmall:
-      "https://cdn.lawlytics.com/law-media/uploads/830/220737/small/Headshot---Ben2.jpg?1674160378",
-    photoLarge:
-      "https://cdn.lawlytics.com/law-media/uploads/830/220736/original/Headshot---Ben.jpg?1674160371",
+    photoSmall: "/images/attorneys/ben-headshot.webp",
+    photoLarge: "/images/attorneys/ben-headshot.webp",
     links: [
       {
         label: "Super Lawyers® Profile",
@@ -295,10 +289,8 @@ export const professionals: Professional[] = [
     officePhone: "(310) 861-2470",
     directDial: "(310) 861-2475",
     email: "mark@reedermccreary.com",
-    photoSmall:
-      "https://cdn.lawlytics.com/law-media/uploads/830/220739/small/Headshot---Mark2.jpg?1674160499",
-    photoLarge:
-      "https://cdn.lawlytics.com/law-media/uploads/830/220738/original/Headshot---Mark.jpg?1674160486",
+    photoSmall: "/images/attorneys/mark-headshot.webp",
+    photoLarge: "/images/attorneys/mark-headshot.webp",
     links: [
       {
         label: "Super Lawyers® Profile",
@@ -307,16 +299,20 @@ export const professionals: Professional[] = [
       { label: "Website", href: "https://markpassin.com/" },
     ],
     badgeImages: [
-      "https://cdn.lawlytics.com/law-media/uploads/830/318156/large/-25_SL_15yr_MP.png?1737991988",
+      "/images/badges/super-lawyers-15yr-mark.webp",
       "/images/badges/super-lawyers-selected-mark-passin-2026.webp",
-      "https://cdn.lawlytics.com/law-media/uploads/830/321583/large/GW-awards-hollywood2010-2012.jpg?1740192064",
-      "https://cdn.lawlytics.com/law-media/uploads/830/321579/large/ranked-in-chambers-red.png?1740190413",
+      "/images/badges/the-hollywood-reporter-mark.webp",
+      "/images/badges/ranked-in-chambers-red-mark.webp",
     ],
     sections: {
       background: [
         "Mark focuses his practice on high-profile contract disputes between major recording artists and record companies, including royalty audit and copyright termination matters, disputes between songwriters and music publishing companies, motion picture and television cases, including profit participation and film delivery cases, copyright and trademark infringement cases, disputes between artists and managers under the Talent Agencies Act, advertising industry cases, as well as defamation, right of privacy and right of publicity cases.",
         'He has been named to The Hollywood Reporter\'s "Power Lawyer" list twice and is regularly named a "Southern California Super Lawyer" by Super Lawyers.',
         "He received his J.D. from USC Gould School of Law and his B.A. magna cum laude, from the University of California, Los Angeles.",
+      ],
+      awards: [
+        'Named a "Southern California Super Lawyer" by Super Lawyers.',
+        'Named to The Hollywood Reporter\'s "Power Lawyer" list.',
       ],
     },
   },
@@ -331,10 +327,8 @@ export const professionals: Professional[] = [
     officePhone: "(310) 861-2470",
     directDial: "(424) 322-0218",
     email: "marcus@reedermccreary.com",
-    photoSmall:
-      "https://cdn.lawlytics.com/law-media/uploads/830/278137/small/marcus-headshot.jpg?1710887346",
-    photoLarge:
-      "https://cdn.lawlytics.com/law-media/uploads/830/278137/large/marcus-headshot.jpg",
+    photoSmall: "/images/attorneys/marcus-headshot.webp",
+    photoLarge: "/images/attorneys/marcus-headshot.webp",
     links: [
       {
         label: "Super Lawyers® Profile",

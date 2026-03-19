@@ -1,11 +1,25 @@
+import type { CSSProperties } from "react";
 import { HeroRotatingWords } from "@/component/HeroRotatingWords";
 import { SectionHeading } from "@/component/SectionHeading";
 import { ImageContentSection } from "@/component/ImageContentSection";
 import { CTASection } from "@/component/CTASection";
 
 export default function HomePage() {
+  const homeAnimStyle = {
+    ["--sectionFadeUpDuration" as unknown as keyof CSSProperties]:
+      "1.1s",
+    ["--sectionContentRevealDuration" as unknown as keyof CSSProperties]:
+      "1.3s",
+    ["--sectionPictureInDuration" as unknown as keyof CSSProperties]:
+      "2s",
+    ["--sectionTextInDuration" as unknown as keyof CSSProperties]:
+      "2s",
+  } as unknown as CSSProperties;
+
   return (
-    <main>
+    <main
+      style={homeAnimStyle}
+    >
       <HeroRotatingWords
         // Use a Reeder image if you want; keeping placeholder for now
         backgroundImageUrl="images/chris-duncan/chris-duncan-2.webp"
@@ -19,6 +33,7 @@ export default function HomePage() {
           id="welcome"
           kicker="Welcome to"
           title="Reeder McCreary, LLP"
+          center
         />
       </div>
 

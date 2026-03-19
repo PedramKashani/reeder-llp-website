@@ -53,7 +53,7 @@ export default function CaseResultsPage() {
         <img
           src="/images/chris-duncan/chris-duncan-1.webp"
           alt=""
-          className="absolute inset-0 h-full w-full object-cover object-center"
+          className="absolute inset-0 h-full w-full object-contain object-center"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-black/35" aria-hidden />

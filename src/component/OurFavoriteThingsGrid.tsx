@@ -19,12 +19,6 @@ const CATEGORY_ORDER = [
 
 const favorites: Favorite[] = [
   {
-    href: "https://www.theabbeyweho.com/",
-    img: "https://cdn.lawlytics.com/law-media/uploads/830/104392/large/Favorite3.png?1593308368",
-    alt: "The Abbey WeHo",
-    category: "Dining & Nightlife",
-  },
-  {
     href: "https://briowt.com/",
     img: "/images/favorites/favorite-brio.webp",
     alt: "Brio",

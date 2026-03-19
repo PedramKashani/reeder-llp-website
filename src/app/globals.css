@@ -130,6 +130,23 @@ main.bg-white p {
   animation: fadeIn 0.5s ease-out forwards;
 }
 
+@keyframes logoIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.88);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.logo-animate-in {
+  animation: logoIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
 .scrollbar-hide {
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -156,7 +173,8 @@ main.bg-white p {
 }
 
 .animate-section-visible {
-  animation: sectionFadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: sectionFadeUp var(--sectionFadeUpDuration, 0.7s)
+    cubic-bezier(0.22, 1, 0.36, 1) forwards;
   opacity: 0;
 }
 
@@ -173,7 +191,8 @@ main.bg-white p {
 }
 
 .animate-section-visible .section-content-in {
-  animation: contentReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+  animation: contentReveal var(--sectionContentRevealDuration, 0.8s)
+    cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
   opacity: 0;
 }
 
@@ -202,12 +221,14 @@ main.bg-white p {
 }
 
 .animate-section-visible .section-picture-in {
-  animation: sectionPictureIn 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+  animation: sectionPictureIn var(--sectionPictureInDuration, 1.4s)
+    cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
   opacity: 0;
 }
 
 .animate-section-visible .section-text-in {
-  animation: sectionTextIn 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
+  animation: sectionTextIn var(--sectionTextInDuration, 1.4s)
+    cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
   opacity: 0;
 }
 

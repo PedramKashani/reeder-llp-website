@@ -223,15 +223,13 @@ export function Header() {
 
 function Logo() {
   return (
-    <Link href="/" className="flex items-center gap-3">
-      <div className="grid h-10 w-10 place-items-center rounded-2xl border border-neutral-200 bg-white">
-        <span className="text-sm font-semibold">RM</span>
-      </div>
-      <div className="leading-tight">
-        <div className="text-sm font-semibold tracking-tight">
-          Reeder McCreary
-        </div>
-        <div className="text-xs text-neutral-600">Attorneys at Law</div>
+    <Link href="/" className="flex items-center">
+      <div className="grid h-20 w-48 place-items-center rounded-2xl border border-neutral-200 bg-white relative -top-4 logo-animate-in">
+        <img
+          src="/images/logos/RMC-Logo-White-Bkgd.webp"
+          alt="Reeder McCreary"
+          className="h-full w-full object-contain"
+        />
       </div>
     </Link>
   );
@@ -336,7 +334,7 @@ function DesktopNavItem({ section }: { section: NavSection }) {
               href="/contact#section-form"
               className="text-xs text-neutral-600 hover:text-neutral-900"
             >
-              Want to talk? Let's start with a quick message.
+              Want to talk? Let&apos;s start with a quick message.
             </Link>
             <Link
               href="/contact#section-form"

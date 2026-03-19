@@ -10,7 +10,7 @@ export default function PracticeSpacesFooter() {
               <img
                 alt=""
                 className="max-w-[260px] opacity-90"
-                src="https://cdn.lawlytics.com/law-media/uploads/830/230604/original/RMC-Logo-White-Bkgd.png?1680298763"
+                src="/images/logos/RMC-Logo-White-Bkgd.webp"
               />
             </div>
           </div>
@@ -32,15 +32,6 @@ export default function PracticeSpacesFooter() {
               310-861-2470
             </a>
           </div>
-        </div>
-
-        <div className="mt-10 flex items-center justify-center gap-2 text-[11px] text-white/40">
-          <span>Produced By Tony Ynot</span>
-          <img
-            alt=""
-            className="h-4 w-4 opacity-80"
-            src="https://cdn.lawlytics.com/law-media/uploads/830/230618/original/favicon-32x32.png?1680304865"
-          />
         </div>
       </div>
     </section>

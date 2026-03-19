@@ -51,7 +51,7 @@ export default function CaseResultsPage() {
       {/* Cinematic hero — same style as professionals pages */}
       <div className="case-results-hero relative min-h-[85vh] w-full overflow-hidden sm:min-h-[90vh]">
         <img
-          src="https://cdn.lawlytics.com/law-media/uploads/830/230563/large/IMG_9203-1.jpg?1680286838"
+          src="/images/chris-duncan/chris-duncan-1.webp"
           alt=""
           className="absolute inset-0 h-full w-full object-cover object-center"
           sizes="100vw"

@@ -4,7 +4,10 @@ export function ProfileHero({ profile }: { profile: Professional }) {
   const photoUrl = profile.photoLarge || profile.photoSmall || "";
 
   return (
-    <section className="profile-hero relative w-full" aria-label={`Profile: ${profile.name}`}>
+    <section
+      className="profile-hero relative w-full"
+      aria-label={`Profile: ${profile.name}`}
+    >
       {/* Cinematic luxury-law-firm hero: min 85vh / full screen, portrait fills section */}
       <div className="relative min-h-[85vh] w-full overflow-hidden sm:min-h-[90vh]">
         {/* Portrait: absolute, object-cover, face centered (center top) */}

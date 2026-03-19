@@ -156,7 +156,7 @@ export default function ContactPage() {
             <div className="md:col-span-4">
               <div className="relative aspect-[2/3] w-full overflow-hidden rounded-2xl bg-neutral-100">
                 <Image
-                  src="https://cdn.lawlytics.com/law-media/uploads/830/230599/large/Chris-082-Edit-Edit.jpg?1680295646"
+                  src="/images/chris/chris-reeder-3.webp"
                   alt=""
                   fill
                   className="object-cover"

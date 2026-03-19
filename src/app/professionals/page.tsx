@@ -7,7 +7,7 @@ export default function ProfessionalsPage() {
   return (
     <main>
       <TeamHero
-        backgroundImageUrl="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=2400&q=80"
+        backgroundImageUrl="/images/team/team-in-office-2.webp"
         subtitle="Los Angeles"
         title="Professionals"
         scrollToId="team"

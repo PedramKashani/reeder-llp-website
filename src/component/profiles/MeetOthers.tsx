@@ -36,7 +36,9 @@ export function MeetOthers({
               <div className="p-6">
                 <h5 className="text-xl font-semibold md:text-2xl">{p.name}</h5>
                 {p.title ? (
-                  <p className="mt-2 text-base text-black/70 md:text-lg">{p.title}</p>
+                  <p className="mt-2 text-base text-black/70 md:text-lg">
+                    {p.title}
+                  </p>
                 ) : null}
 
                 <div className="mt-5">

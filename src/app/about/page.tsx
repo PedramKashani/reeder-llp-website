@@ -6,7 +6,7 @@ export default function AboutPage() {
       {/* Cinematic hero – match case results/professionals style */}
       <div className="relative min-h-[85vh] w-full overflow-hidden sm:min-h-[90vh]">
         <img
-          src="https://cdn.lawlytics.com/law-media/uploads/830/230565/large/IMG_9313-1.jpg?1680286844"
+          src="/images/team/team-in-office-1.webp"
           alt=""
           className="absolute inset-0 h-full w-full object-cover object-center"
           sizes="100vw"

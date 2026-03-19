@@ -7,7 +7,7 @@ export default function PracticeAreasIndex() {
       <section className="relative">
         <div className="relative h-[70svh] min-h-[560px] w-full overflow-hidden">
           <img
-            src="/images/hero/practice-areas.jpg"
+            src="/images/team/team-in-office-2.webp"
             alt=""
             className="h-full w-full object-cover"
           />

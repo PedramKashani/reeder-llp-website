@@ -12,6 +12,7 @@ export type Professional = {
   directDial?: string;
   email?: string;
 
+  photo?: string; // default headshot
   photoSmall?: string; // small headshot (list page)
   photoLarge?: string; // big portrait (profile page)
   badgeImages?: string[]; // awards/badges images shown on profile
@@ -58,10 +59,10 @@ export const professionals: Professional[] = [
       },
     ],
     badgeImages: [
-      "https://cdn.lawlytics.com/law-media/uploads/830/318154/large/-25_SL-_-Top-100_CR.png?1737991988",
-      "https://cdn.lawlytics.com/law-media/uploads/830/318163/large/SL---CR---10yr-badge.png?1737991989",
-      "https://cdn.lawlytics.com/law-media/uploads/830/321580/large/Chris---SL-2025.png?1740190676",
-      "https://cdn.lawlytics.com/law-media/uploads/830/337649/large/Best-Lawyers---Lawyer-Logo-Chris-2026.png?1755796220",
+      "/images/badges/super-lawyers-top-100-southern-california-2025.webp",
+      "/images/badges/super-lawyers-10yr-chris-reeder-2025.webp",
+      "/images/badges/super-lawyers-selected-chris-reeder-2026.webp",
+      "/images/badges/best-lawyers-chris-reeder-2026.webp",
     ],
     sections: {
       background: [
@@ -187,8 +188,8 @@ export const professionals: Professional[] = [
       },
     ],
     badgeImages: [
-      "https://cdn.lawlytics.com/law-media/uploads/830/318160/large/-25_10yr_DM.png?1737991989",
-      "https://cdn.lawlytics.com/law-media/uploads/830/321581/large/Duncan---SL-2025.png?1740190954",
+      "/images/badges/super-lawyers-10yr-duncan-mccreary-2025.webp.webp",
+      "/images/badges/super-lawyers-selected-duncan-mccreary-2026.webp",
     ],
     sections: {
       background: [
@@ -223,7 +224,7 @@ export const professionals: Professional[] = [
         "U.S. District Court, Central District of California",
       ],
       awards: [
-        "Named a Southern California “Super Lawyer,” Super Lawyers (2015-2025)*",
+        "Named a Southern California “Super Lawyer,” Super Lawyers (2015-2026)*",
       ],
     },
   },
@@ -249,7 +250,7 @@ export const professionals: Professional[] = [
       },
     ],
     badgeImages: [
-      "https://cdn.lawlytics.com/law-media/uploads/830/321582/large/Ben---RS-2025-blue.png?1740191549",
+      "/images/badges/super-lawyers-rising-stars-benjamin-tragish-2025.webp",
     ],
     sections: {
       background: [
@@ -307,7 +308,7 @@ export const professionals: Professional[] = [
     ],
     badgeImages: [
       "https://cdn.lawlytics.com/law-media/uploads/830/318156/large/-25_SL_15yr_MP.png?1737991988",
-      "https://cdn.lawlytics.com/law-media/uploads/830/318155/large/-25_SL_MP.png?1737991988",
+      "/images/badges/super-lawyers-selected-mark-passin-2026.webp",
       "https://cdn.lawlytics.com/law-media/uploads/830/321583/large/GW-awards-hollywood2010-2012.jpg?1740192064",
       "https://cdn.lawlytics.com/law-media/uploads/830/321579/large/ranked-in-chambers-red.png?1740190413",
     ],
@@ -341,7 +342,7 @@ export const professionals: Professional[] = [
       },
     ],
     badgeImages: [
-      "https://cdn.lawlytics.com/law-media/uploads/830/318159/large/MT_mybadge--25.png?1737991988",
+      "/images/badges/super-lawyers-rising-stars-marcus-tippens-2025.webp",
     ],
     sections: {
       background: [
@@ -370,10 +371,8 @@ export const professionals: Professional[] = [
     title: "Attorney",
     directDial: "(310) 861-2473",
     email: "john@reedermccreary.com",
-    photoSmall:
-      "https://cdn.lawlytics.com/law-media/uploads/830/337086/small/Screenshot-2025-08-14-162952.png?1755214862",
-    photoLarge:
-      "https://cdn.lawlytics.com/law-media/uploads/830/337086/large/Screenshot-2025-08-14-162952.png?1755214862",
+    photoSmall: "/images/attorneys/john-headshot.webp",
+    photoLarge: "/images/attorneys/john-headshot.webp",
     sections: {
       background: [
         "John represents clients in a wide range of corporate transactional and advisory matters, including mergers and acquisitions, corporate governance, capital investments, private dispositions, carve-outs, and other direct investment matters.",

@@ -5,7 +5,7 @@ export default function OurFavoriteThingsPage() {
     <main className="min-h-screen bg-black">
       <div className="relative min-h-[85vh] w-full overflow-hidden sm:min-h-[90vh]">
         <img
-          src="https://cdn.lawlytics.com/law-media/uploads/830/334899/large/Chris_corporate.jpg?1752871243"
+          src="/images/chris/chris-reeder-Corporate.webp"
           alt=""
           className="absolute inset-0 h-full w-full object-cover object-top"
           sizes="100vw"

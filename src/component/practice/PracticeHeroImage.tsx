@@ -2,10 +2,15 @@
 
 import { useState } from "react";
 
-const FALLBACK_HERO_IMAGE =
-  "https://cdn.lawlytics.com/law-media/uploads/830/230565/large/IMG_9313-1.jpg?1680286844";
+const FALLBACK_HERO_IMAGE = "/images/chris-duncan/chris-duncan-2.webp";
 
-export function PracticeHeroImage({ src, alt = "" }: { src: string; alt?: string }) {
+export function PracticeHeroImage({
+  src,
+  alt = "",
+}: {
+  src: string;
+  alt?: string;
+}) {
   const [imgSrc, setImgSrc] = useState(src);
 
   return (

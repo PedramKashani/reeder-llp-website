@@ -1,11 +1,11 @@
 import "./globals.css";
-import { Cormorant_Garamond } from "next/font/google";
+import { Manrope } from "next/font/google";
 import { Header } from "@/component/layout/Header";
 import { Footer } from "@/component/layout/Footer";
 
-const cormorant = Cormorant_Garamond({
+const cormorant = Manrope({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-cormorant",
   display: "swap",
 });

@@ -32,7 +32,7 @@ const LEGAL_LINKS: FooterLink[] = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-neutral-200 bg-white">
+    <footer className="relative z-20 border-t border-neutral-200 bg-white">
       <div className="mx-auto max-w-6xl px-6 py-14 md:py-20">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-7">

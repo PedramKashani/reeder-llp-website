@@ -28,14 +28,14 @@ export function AnimatedSection({
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            timeoutId = setTimeout(() => setVisible(true), delay);
-          } else {
-            if (timeoutId) clearTimeout(timeoutId);
-            setVisible(false);
+            timeoutId = setTimeout(() => {
+              setVisible(true);
+              observer.unobserve(entry.target);
+            }, delay);
           }
         });
       },
-      { threshold: 0.1, rootMargin: "0px 0px -20% 0px" }
+      { threshold: 0.01, rootMargin: "0px 0px -8% 0px" }
     );
     observer.observe(el);
     return () => {

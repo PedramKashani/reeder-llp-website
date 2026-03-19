@@ -30,9 +30,9 @@ export function HeroRotatingWords({
   }, [safeWords.length]);
 
   return (
-    <section className="snap-section relative min-h-[100vh] overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0 flex items-center justify-center bg-neutral-900">
+    <section className="snap-section relative min-h-screen overflow-hidden">
+      {/* Fixed hero image layer */}
+      <div className="fixed inset-0 z-0 flex items-center justify-center bg-neutral-900">
         <img
           src={backgroundImageUrl}
           alt=""
@@ -42,8 +42,8 @@ export function HeroRotatingWords({
         <div className="absolute inset-0 bg-neutral-950/40" />
       </div>
 
-      <div className="relative mx-auto flex max-w-6xl px-6">
-        <div className="flex min-h-[100vh] w-full items-end py-20 md:py-24">
+      <div className="relative z-10 mx-auto flex max-w-6xl px-6">
+        <div className="flex min-h-screen w-full items-end py-20 md:py-24">
           <div className="max-w-2xl">
             <div className="text-xs font-semibold uppercase tracking-[0.22em] text-white/80">
               {kicker}
@@ -59,7 +59,7 @@ export function HeroRotatingWords({
       {/* Scroll to next section button */}
       <Link
         href={`#${scrollToId}`}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 rounded-full border border-white/30 bg-white/10 p-3 text-white backdrop-blur hover:bg-white/15"
+        className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 rounded-full border border-white/30 bg-white/10 p-3 text-white backdrop-blur hover:bg-white/15"
         aria-label="Scroll to next section"
       >
         <span className="block text-xl leading-none">↓</span>

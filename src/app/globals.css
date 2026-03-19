@@ -232,13 +232,60 @@ main.bg-white p {
   opacity: 0;
 }
 
-/* One section per viewport – scroll snap so you only see one at a time */
+/* Natural page scroll (no snap jumps) */
 html {
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: none;
 }
 
 .snap-section {
-  min-height: 100vh;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+  min-height: auto;
+  scroll-snap-align: none;
+  scroll-snap-stop: normal;
+}
+
+/* Homepage practice-area editorial panels */
+.homepage-practice-row {
+  width: 100%;
+}
+
+.homepage-practice-row + .homepage-practice-row {
+  position: relative;
+}
+
+.homepage-practice-row + .homepage-practice-row::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: calc(100% - 2rem);
+  transform: translateX(-50%);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.homepage-practice-panel .section-content-in {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02) 0%,
+    rgba(255, 255, 255, 0.01) 100%
+  );
+}
+
+/* Homepage only: disable scroll/reveal effects */
+.homepage-no-scroll-effects {
+  scroll-snap-type: none;
+}
+
+.homepage-no-scroll-effects .animate-section-hidden,
+.homepage-no-scroll-effects .animate-section-visible {
+  opacity: 1;
+  transform: none;
+  animation: none;
+}
+
+.homepage-no-scroll-effects .animate-section-visible .section-content-in,
+.homepage-no-scroll-effects .animate-section-visible .section-picture-in,
+.homepage-no-scroll-effects .animate-section-visible .section-text-in {
+  opacity: 1;
+  transform: none;
+  animation: none;
 }

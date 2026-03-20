@@ -1,7 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 type NavLink = { label: string; href: string };
 type NavGroup = { title: string; links: NavLink[]; twoCols?: boolean };
@@ -76,6 +77,9 @@ const NAV_SECTIONS: NavSection[] = [
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+  const [desktopOpen, setDesktopOpen] = useState<"Who We Are" | "What We Do" | null>(null);
   const [mobileExpanded, setMobileExpanded] = useState<Record<string, boolean>>(
     {
       "Who We Are": false,
@@ -89,73 +93,256 @@ export function Header() {
     return map;
   }, []);
 
+  useEffect(() => {
+    const onScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const heroIntegrated = !isScrolled;
+  const editorialMode = true;
+
   return (
-    <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/80 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-1">
-        <Logo />
+    <header
+      key={pathname}
+      className={
+        "sticky top-0 z-50 transition-all duration-500 " +
+        (editorialMode
+          ? heroIntegrated
+            ? "bg-transparent border-transparent"
+            : "border-transparent bg-neutral-950/30 backdrop-blur-md"
+          : "border-b border-neutral-200/90 bg-white/95 shadow-[0_8px_28px_rgba(0,0,0,0.08)] backdrop-blur")
+      }
+    >
+      <div
+        className={
+          "mx-auto flex items-center justify-between transition-all duration-500 " +
+          (editorialMode
+            ? "max-w-none px-8 lg:px-14 " +
+              (isScrolled ? "py-2 lg:py-2.5" : "py-2.5 lg:py-3")
+            : "max-w-6xl px-6 py-1")
+        }
+      >
+        <Logo heroMode={editorialMode} subtleShrink={editorialMode && isScrolled} />
 
-        {/* Desktop navigation */}
-        <nav className="hidden lg:flex items-center gap-8">
-          {NAV_SECTIONS.map((section) => (
-            <DesktopNavItem key={section.label} section={section} />
-          ))}
-        </nav>
+        {editorialMode && (
+          <nav className="hidden items-center gap-10 md:flex lg:gap-12">
+            <button
+              type="button"
+              onClick={() =>
+                setDesktopOpen((prev) =>
+                  prev === "Who We Are" ? null : "Who We Are",
+                )
+              }
+              className="text-[12px] font-medium uppercase tracking-[0.2em] text-white/80 transition-colors duration-300 ease-out hover:text-white"
+            >
+              Who We Are
+            </button>
+            <button
+              type="button"
+              onClick={() =>
+                setDesktopOpen((prev) =>
+                  prev === "What We Do" ? null : "What We Do",
+                )
+              }
+              className="text-[12px] font-medium uppercase tracking-[0.2em] text-white/80 transition-colors duration-300 ease-out hover:text-white"
+            >
+              What We Do
+            </button>
+            <Link
+              href="/contact"
+              className="text-[12px] font-medium uppercase tracking-[0.2em] text-white/80 transition-colors duration-300 ease-out hover:text-white"
+            >
+              Contact
+            </Link>
+          </nav>
+        )}
 
-        <div className="hidden lg:flex items-center gap-3">
-          <PrimaryCTA />
-        </div>
-
-        {/* Mobile burger */}
         <button
           type="button"
-          className="lg:hidden inline-flex h-10 items-center justify-center rounded-xl border border-neutral-200 bg-white px-3 text-sm"
-          aria-label="Open menu"
+          className={
+            "inline-flex h-9 items-center gap-1.5 rounded-xl border px-2.5 text-sm transition " +
+            (editorialMode ? "md:hidden " : "") +
+            (editorialMode
+              ? "border-white/25 bg-transparent text-white/90 hover:bg-white/8"
+              : "border-neutral-200/70 bg-white/75 text-neutral-700 hover:bg-white")
+          }
+          aria-label="Toggle menu"
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen((v) => !v)}
         >
-          <span className="sr-only">Open menu</span>
+          <span className="text-[10px] font-medium uppercase tracking-[0.14em]">
+            Menu
+          </span>
           <div className="flex flex-col gap-1.5">
-            <span className="block h-0.5 w-5 bg-neutral-900" />
-            <span className="block h-0.5 w-5 bg-neutral-900" />
-            <span className="block h-0.5 w-5 bg-neutral-900" />
+            <span
+              className={
+                "block h-0.5 w-5 " + (editorialMode ? "bg-white" : "bg-neutral-900")
+              }
+            />
+            <span
+              className={
+                "block h-0.5 w-5 " + (editorialMode ? "bg-white" : "bg-neutral-900")
+              }
+            />
+            <span
+              className={
+                "block h-0.5 w-5 " + (editorialMode ? "bg-white" : "bg-neutral-900")
+              }
+            />
           </div>
         </button>
       </div>
 
-      {/* Mobile panel */}
+      {desktopOpen && (
+        <div className="animate-fade-in hidden border-t border-white/15 bg-neutral-950/72 shadow-[0_24px_48px_rgba(0,0,0,0.35)] backdrop-blur-xl md:block">
+          <div className="mx-auto max-w-6xl px-8 py-9 lg:px-14">
+            {desktopOpen === "Who We Are" ? (
+              <div className="grid gap-12 lg:grid-cols-2">
+                <div>
+                  <div className="text-[10px] font-medium uppercase tracking-[0.28em] text-white/50">
+                    Firm
+                  </div>
+                  <div className="mt-4 space-y-1">
+                    {[
+                      { label: "About", href: "/about" },
+                      { label: "Case Results", href: "/case-results" },
+                    ].map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className="group block py-2.5 text-[1.05rem] text-white/84 transition duration-300 ease-out hover:text-white"
+                        onClick={() => setDesktopOpen(null)}
+                      >
+                        {item.label}
+                        <span className="mt-0.5 block h-px w-0 bg-white/40 transition-all duration-300 ease-out group-hover:w-16" />
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <div className="text-[10px] font-medium uppercase tracking-[0.28em] text-white/50">
+                    Team
+                  </div>
+                  <div className="mt-4 space-y-1">
+                    {[
+                      { label: "Attorneys", href: "/professionals" },
+                      { label: "Our Favorite Things", href: "/our-favorite-things" },
+                    ].map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className="group block py-2.5 text-[1.05rem] text-white/84 transition duration-300 ease-out hover:text-white"
+                        onClick={() => setDesktopOpen(null)}
+                      >
+                        {item.label}
+                        <span className="mt-0.5 block h-px w-0 bg-white/40 transition-all duration-300 ease-out group-hover:w-16" />
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              sectionByLabel[desktopOpen].rows.flat().map((group) => (
+                <div key={group.title} className="mb-6 last:mb-0">
+                  <div className="text-[10px] font-medium uppercase tracking-[0.24em] text-white/55">
+                    {group.title}
+                  </div>
+                  <div
+                    className={
+                      "mt-4 grid gap-2 " +
+                      (group.twoCols ? "sm:grid-cols-2 lg:grid-cols-3" : "sm:grid-cols-2")
+                    }
+                  >
+                    {group.links.map((l) => (
+                      <Link
+                        key={l.href}
+                        href={l.href}
+                        className="group rounded-xl px-3 py-2.5 text-[1rem] text-white/84 transition duration-300 ease-out hover:bg-white/8 hover:text-white"
+                        onClick={() => setDesktopOpen(null)}
+                      >
+                        {l.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ))
+            )}
+          </div>
+        </div>
+      )}
+
       {mobileOpen && (
-        <div className="lg:hidden border-t border-neutral-200 bg-white">
-          <div className="mx-auto max-w-6xl px-6 py-4">
+        <div className="border-t border-white/20 bg-neutral-950/75 shadow-[0_24px_48px_rgba(0,0,0,0.35)] backdrop-blur-xl">
+          <div className="mx-auto max-w-6xl px-6 py-7">
             <div className="flex items-center justify-between">
-              <div className="text-sm text-neutral-600">Menu</div>
+              <div className="text-[11px] font-medium uppercase tracking-[0.24em] text-white/70">
+                Menu
+              </div>
               <button
                 type="button"
-                className="rounded-lg px-2 py-1 text-sm text-neutral-700 hover:bg-neutral-100"
+                className="rounded-lg px-2 py-1 text-sm text-white/80 transition hover:bg-white/10 hover:text-white"
                 onClick={() => setMobileOpen(false)}
               >
                 Close
               </button>
             </div>
 
-            <div className="mt-4 space-y-2">
+            <div className="mt-6 grid gap-3 sm:grid-cols-3">
+              <button
+                type="button"
+                className="flex items-center justify-between rounded-2xl border border-white/20 bg-white/[0.04] px-4 py-3 text-left text-sm font-medium text-white/90 transition hover:bg-white/[0.09]"
+                onClick={() =>
+                  setMobileExpanded((prev) => ({
+                    ...prev,
+                    "Who We Are": !prev["Who We Are"],
+                  }))
+                }
+              >
+                <span>Who We Are</span>
+                <span className="text-white/60">
+                  {mobileExpanded["Who We Are"] ? "–" : "+"}
+                </span>
+              </button>
+              <button
+                type="button"
+                className="flex items-center justify-between rounded-2xl border border-white/20 bg-white/[0.04] px-4 py-3 text-left text-sm font-medium text-white/90 transition hover:bg-white/[0.09]"
+                onClick={() =>
+                  setMobileExpanded((prev) => ({
+                    ...prev,
+                    "What We Do": !prev["What We Do"],
+                  }))
+                }
+              >
+                <span>What We Do</span>
+                <span className="text-white/60">
+                  {mobileExpanded["What We Do"] ? "–" : "+"}
+                </span>
+              </button>
               <Link
-                href="/"
-                className="block rounded-xl px-3 py-3 text-sm font-medium hover:bg-neutral-50"
+                href="/contact"
+                className="rounded-2xl border border-white/20 bg-white/[0.04] px-4 py-3 text-sm font-medium text-white/90 transition hover:bg-white/[0.09]"
                 onClick={() => setMobileOpen(false)}
               >
-                Home
+                Contact
               </Link>
+            </div>
+
+            <div className="mt-6 space-y-3">
               {Object.keys(mobileExpanded).map((label) => {
                 const s = sectionByLabel[label];
                 const expanded = mobileExpanded[label];
                 return (
                   <div
                     key={label}
-                    className="rounded-2xl border border-neutral-200"
+                    className="rounded-2xl border border-white/15 bg-white/[0.03]"
                   >
                     <button
                       type="button"
-                      className="w-full flex items-center justify-between px-3 py-3 text-left text-sm font-medium"
+                      className="flex w-full items-center justify-between px-4 py-3.5 text-left text-sm font-medium text-white/90"
                       onClick={() =>
                         setMobileExpanded((prev) => ({
                           ...prev,
@@ -164,29 +351,29 @@ export function Header() {
                       }
                     >
                       <span>{label}</span>
-                      <span className="text-neutral-500">
+                      <span className="text-white/60">
                         {expanded ? "–" : "+"}
                       </span>
                     </button>
 
                     {expanded && (
-                      <div className="px-3 pb-3">
-                        <div className="text-xs uppercase tracking-widest text-neutral-500">
+                      <div className="px-4 pb-4">
+                        <div className="text-[11px] uppercase tracking-[0.2em] text-white/55">
                           {s.leftBlurb}
                         </div>
 
-                        <div className="mt-3 space-y-4">
+                        <div className="mt-4 space-y-5">
                           {s.rows.flat().map((g) => (
                             <div key={g.title}>
-                              <div className="text-xs font-semibold text-neutral-700">
+                              <div className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/70">
                                 {g.title}
                               </div>
-                              <div className="mt-2 space-y-1">
+                              <div className="mt-2.5 space-y-1.5">
                                 {g.links.map((l) => (
                                   <Link
                                     key={l.href}
                                     href={l.href}
-                                    className="block rounded-lg px-2 py-2 text-sm text-neutral-700 hover:bg-neutral-50"
+                                    className="block rounded-lg px-2.5 py-2 text-sm text-white/85 transition hover:bg-white/10 hover:text-white"
                                     onClick={() => setMobileOpen(false)}
                                   >
                                     {l.label}
@@ -201,16 +388,6 @@ export function Header() {
                   </div>
                 );
               })}
-
-              <div className="pt-2">
-                <Link
-                  href="/contact"
-                  className="inline-flex w-full items-center justify-center rounded-xl bg-neutral-900 px-4 py-3 text-sm font-medium text-white hover:bg-neutral-800"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  Contact
-                </Link>
-              </div>
             </div>
           </div>
         </div>
@@ -221,138 +398,70 @@ export function Header() {
 
 /* --------------------------- Subcomponents --------------------------- */
 
-function Logo() {
+function Logo({ heroMode, subtleShrink }: { heroMode: boolean; subtleShrink: boolean }) {
   return (
-    <Link href="/" className="flex items-center gap-3">
-      <div className="grid h-12 w-36 place-items-center rounded-xl border border-neutral-200 bg-white logo-animate-in">
+    <Link
+      href="/"
+      className={
+        "flex items-center transition-all duration-500 " +
+        (heroMode ? "-ml-2 gap-3 sm:-ml-3" : "-ml-3 gap-2 sm:-ml-4")
+      }
+    >
+      <div
+        className={
+          "grid place-items-center rounded-xl logo-animate-in transition-all duration-500 " +
+          (heroMode
+            ? (subtleShrink ? "h-12 w-36" : "h-14 w-40") +
+              " border border-transparent bg-transparent"
+            : "border border-neutral-200 bg-white h-12 w-36")
+        }
+      >
         <img
           src="/images/logos/rmc-gold-logo.webp"
           alt="Reeder McCreary"
-          className="h-10 w-32 object-contain"
+          className={
+            "object-contain transition-all duration-500 " +
+            (heroMode
+              ? subtleShrink
+                ? "h-10 w-32"
+                : "h-12 w-36"
+              : "h-10 w-32")
+          }
         />
       </div>
-      <div className="hidden sm:block leading-tight">
-        <div className="text-[15px] font-semibold text-neutral-900">
+      <div
+        className={
+          "hidden sm:block overflow-hidden leading-tight transition-all duration-500 " +
+          (heroMode
+            ? (subtleShrink ? "max-w-[470px]" : "max-w-[520px]") +
+              " translate-x-0 opacity-100"
+            : "max-w-[220px] translate-x-0 opacity-100")
+        }
+      >
+        <div
+          className={
+            "font-semibold " +
+            (heroMode ? "text-white drop-shadow-[0_1px_8px_rgba(0,0,0,0.45)]" : "text-neutral-900")
+          }
+          style={
+            heroMode
+              ? {
+                  fontSize: subtleShrink
+                    ? "clamp(1.05rem, 1.2vw, 1.35rem)"
+                    : "clamp(1.15rem, 1.45vw, 1.55rem)",
+                  letterSpacing: "0.04em",
+                }
+              : undefined
+          }
+        >
           Reeder McCreary
         </div>
-        <div className="text-[9px] uppercase tracking-[0.18em] text-neutral-600">
-          Attorneys at Law
-        </div>
+        {!heroMode && (
+          <div className="text-[9px] uppercase tracking-[0.18em] text-neutral-600">
+            Attorneys at Law
+          </div>
+        )}
       </div>
     </Link>
-  );
-}
-
-function PrimaryCTA() {
-  return (
-    <Link
-      href="/contact"
-      className="inline-flex h-10 items-center justify-center rounded-xl bg-neutral-900 px-4 text-sm font-medium text-white hover:bg-neutral-800"
-    >
-      Contact
-    </Link>
-  );
-}
-
-function DesktopNavItem({ section }: { section: NavSection }) {
-  const labelContent = (
-    <>
-      {section.label}
-      <span className="text-neutral-400">▾</span>
-    </>
-  );
-  return (
-    <div className="relative group">
-      {section.mainHref ? (
-        <Link
-          href={section.mainHref}
-          className="inline-flex h-10 items-center gap-2 text-sm font-medium text-neutral-800 hover:text-neutral-950"
-        >
-          {labelContent}
-        </Link>
-      ) : (
-        <button
-          type="button"
-          className="inline-flex h-10 items-center gap-2 text-sm font-medium text-neutral-800 hover:text-neutral-950"
-        >
-          {labelContent}
-        </button>
-      )}
-
-      {/* Dropdown */}
-      <div
-        className="
-          pointer-events-none absolute left-0 top-full z-50 mt-3 w-[min(980px,calc(100vw-3rem))]
-          opacity-0 translate-y-2 transition
-          group-hover:pointer-events-auto group-hover:opacity-100 group-hover:translate-y-0
-          group-focus-within:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0
-        "
-      >
-        <div className="rounded-2xl border border-neutral-200 bg-white shadow-xl">
-          <div className="grid grid-cols-[240px_1fr] gap-10 p-8">
-            {/* Left blurb */}
-            <div className="pr-2">
-              <div className="text-xs uppercase tracking-widest text-neutral-500">
-                {section.leftBlurb}
-              </div>
-              <div className="mt-3 text-sm text-neutral-700">
-                Explore pages under{" "}
-                <span className="font-semibold">{section.label}</span>.
-              </div>
-            </div>
-
-            {/* Right groups */}
-            <div className="space-y-8">
-              {section.rows.map((row, idx) => (
-                <div key={idx} className="grid grid-cols-2 gap-8">
-                  {row.map((group) => (
-                    <div key={group.title}>
-                      <div className="text-xs uppercase tracking-widest text-neutral-500">
-                        {group.title}
-                      </div>
-
-                      <div
-                        className={
-                          "mt-4 grid gap-2 " +
-                          (group.twoCols ? "sm:grid-cols-2" : "")
-                        }
-                      >
-                        {group.links.map((l) => (
-                          <Link
-                            key={l.href}
-                            href={l.href}
-                            className="flex items-center gap-3 rounded-xl p-3 text-sm text-neutral-800 hover:bg-neutral-50"
-                          >
-                            <span className="grid h-8 w-8 place-items-center rounded-xl border border-neutral-200 bg-white text-xs font-semibold">
-                              •
-                            </span>
-                            <span>{l.label}</span>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="flex items-center justify-between border-t border-neutral-200 px-8 py-4">
-            <Link
-              href="/contact#section-form"
-              className="text-xs text-neutral-600 hover:text-neutral-900"
-            >
-              Want to talk? Let&apos;s start with a quick message.
-            </Link>
-            <Link
-              href="/contact#section-form"
-              className="rounded-xl border border-neutral-200 px-3 py-2 text-sm font-medium hover:bg-neutral-50"
-            >
-              Request a Consultation
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 }

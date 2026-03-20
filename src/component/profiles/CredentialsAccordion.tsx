@@ -79,13 +79,13 @@ export function CredentialsAccordion({ profile }: { profile: Professional }) {
                       ))}
                     </ul>
                     {item.title === "Awards" && profile.badgeImages?.length ? (
-                      <div className="mt-6 flex flex-wrap gap-4">
+                      <div className="mt-8 flex flex-wrap items-center gap-7 md:gap-8">
                         {profile.badgeImages.map((src) => (
                           <img
                             key={src}
                             src={src}
                             alt={`${profile.name} badge`}
-                            className="h-14 w-auto rounded"
+                            className="h-32 w-auto rounded md:h-40"
                             loading="lazy"
                           />
                         ))}

@@ -52,7 +52,7 @@ export function ImageContentSection({
             (reverse ? "lg:justify-self-end" : "lg:justify-self-start")
           }
         >
-          <h3 className="text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
+          <h3 className="text-4xl font-bold tracking-[0.04em] text-white md:text-5xl lg:text-6xl">
             {title}
           </h3>
           <p className="mt-5 text-xl font-medium leading-relaxed text-white md:text-2xl md:leading-[1.55]">

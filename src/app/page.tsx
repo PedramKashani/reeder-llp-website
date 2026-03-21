@@ -23,7 +23,7 @@ export default function HomePage() {
         scrollToId="welcome"
       />
 
-      <div className="relative z-20 bg-[#0a0a0a]">
+      <div className="relative z-20 flex flex-col gap-16 bg-[#0a0a0a] pb-16 md:gap-24 md:pb-20 lg:gap-28 lg:pb-24">
         <div className="snap-section flex min-h-screen flex-col justify-center">
           <SectionHeading
             id="welcome"

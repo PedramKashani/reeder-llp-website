@@ -201,12 +201,12 @@ export function Header() {
         <div className="animate-fade-in hidden border-t border-white/15 bg-neutral-950/72 shadow-[0_24px_48px_rgba(0,0,0,0.35)] backdrop-blur-xl md:block">
           <div className="mx-auto max-w-6xl px-8 py-9 lg:px-14">
             {desktopOpen === "Who We Are" ? (
-              <div className="grid gap-12 lg:grid-cols-2">
+              <div className="grid gap-16 lg:grid-cols-2">
                 <div>
                   <div className="text-[10px] font-medium uppercase tracking-[0.28em] text-white/50">
                     Firm
                   </div>
-                  <div className="mt-4 space-y-1">
+                  <div className="mt-6 space-y-2">
                     {[
                       { label: "About", href: "/about" },
                       { label: "Case Results", href: "/case-results" },
@@ -227,7 +227,7 @@ export function Header() {
                   <div className="text-[10px] font-medium uppercase tracking-[0.28em] text-white/50">
                     Team
                   </div>
-                  <div className="mt-4 space-y-1">
+                  <div className="mt-6 space-y-2">
                     {[
                       { label: "Attorneys", href: "/professionals" },
                       { label: "Our Favorite Things", href: "/our-favorite-things" },
@@ -403,7 +403,7 @@ function Logo({ heroMode, subtleShrink }: { heroMode: boolean; subtleShrink: boo
     <Link
       href="/"
       className={
-        "flex items-center transition-all duration-500 " +
+        "relative inline-flex items-center transition-all duration-500 " +
         (heroMode ? "-ml-2 gap-3 sm:-ml-3" : "-ml-3 gap-2 sm:-ml-4")
       }
     >
@@ -431,11 +431,12 @@ function Logo({ heroMode, subtleShrink }: { heroMode: boolean; subtleShrink: boo
       </div>
       <div
         className={
-          "hidden sm:block overflow-hidden leading-tight transition-all duration-500 " +
+          "pointer-events-none absolute left-full top-1/2 ml-3 hidden -translate-y-1/2 whitespace-nowrap leading-tight transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] sm:block " +
           (heroMode
-            ? (subtleShrink ? "max-w-[470px]" : "max-w-[520px]") +
-              " translate-x-0 opacity-100"
-            : "max-w-[220px] translate-x-0 opacity-100")
+            ? (subtleShrink
+                ? "translate-x-2 opacity-0 blur-[2px]"
+                : "translate-x-0 opacity-100 blur-0")
+            : "translate-x-0 opacity-100 blur-0")
         }
       >
         <div

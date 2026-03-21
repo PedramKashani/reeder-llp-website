@@ -17,7 +17,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "trials-commercial-litigation",
     title: "Trials and Commercial Litigation",
-    heroImage: "/images/practice/trials.jpg",
+    heroImage: "/images/team/team-outdoor.webp",
     paragraphs: [
       "Successful litigation requires focus, strategy, direction, and knowledge. With a wealth of legal knowledge, tight team, and a unique litigation strategy, we charge hard, don't pull punches, and are goal oriented. At trial, winning is everything and losing is not an option. Whether it is a bet-the-company or any other case, we try every case like it is our own.",
 
@@ -45,7 +45,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "real-estate",
     title: "Real Estate",
-    heroImage: "/images/practice/real-estate.jpg",
+    heroImage: "/images/team/team-outdoor.webp",
     paragraphs: [
       "Chris has represented some of the West Coast's premier real estate developers, building owners, and construction companies ranging from office/medical building owners to massive mixed-use developments and sports complexes. Chris and other Reeder McCreary professionals have successfully represented clients in acquisition/disposition disputes, partnership/investment disputes, development, due diligence, financing, contracting, public improvements, quality assurance, mechanics liens, licensing, insurance, landlord/tenant, and construction matters.",
 
@@ -61,7 +61,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "corporate",
     title: "Corporate",
-    heroImage: "/images/practice/corporate.jpg",
+    heroImage: "/images/team/team-outdoor.webp",
     paragraphs: [
       "Chris serves as general counsel to several select clients including one of the largest home improvement contracting companies in the country with an international franchise network and a hospitality company that owns a world famous night club.",
       "Chris also makes deals. Big ones and small ones.",
@@ -73,7 +73,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "franchise-dealership",
     title: "Franchise and Dealership",
-    heroImage: "/images/practice/franchise.jpg",
+    heroImage: "/images/team/team-outdoor.webp",
     paragraphs: [
       "Reeder McCreary professionals successfully represent clients in a wide variety of national and international dealership/franchise litigation and transactional matters. Reeder McCreary professionals understand the importance and system wide concerns raised by dealership/franchise issues that make these “must win” situations.",
 
@@ -93,7 +93,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "entertainment",
     title: "Entertainment",
-    heroImage: "/images/practice/entertainment.jpg",
+    heroImage: "/images/team/team-outdoor.webp",
     paragraphs: [
       "The entertainment industry is unique with its own customs, expectations, and practices. Whether the matter involves a contract, copyright or trademark, licensing, employment, publicity, privacy, the media, internet, or trade secret, Reeder McCreary professionals aggressively seek creative solutions to win.",
 
@@ -105,7 +105,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "sports",
     title: "Sports",
-    heroImage: "/images/practice/sports.jpg",
+    heroImage: "/images/team/team-outdoor.webp",
     paragraphs: [
       "Chris has won for clients in sports related litigations and transactions involving professional football, baseball, hockey, bicycling, Olympic basketball, and action sports.",
 
@@ -117,7 +117,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "employment",
     title: "Employment",
-    heroImage: "/images/practice/employment.jpg",
+    heroImage: "/images/team/team-outdoor.webp",
     paragraphs: [
       "In employment and labor situations, issues of exposure, collateral consequences, and cost effectiveness often collide. Reeder McCreary professionals place particular emphasis on a strategy at the outset that takes into account each of these issues.",
 
@@ -129,7 +129,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "intellectual-property",
     title: "Intellectual Property",
-    heroImage: "/images/practice/ip.jpg",
+    heroImage: "/images/team/team-outdoor.webp",
     paragraphs: [
       "Whether you have a copyright, trademark, or trade secret matter, the protection of your intellectual property is of utmost importance. Reeder McCreary professionals represent clients in diverse industries including franchise, hospitality, home improvement, entertainment, and food distribution.",
 
@@ -141,7 +141,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "white-collar-investigations",
     title: "White Collar Crime / Investigations",
-    heroImage: "/images/practice/white-collar.jpg",
+    heroImage: "/images/team/team-outdoor.webp",
     paragraphs: [
       "Criminal, regulatory, and investigations are some of the most high risk matters for individuals and businesses. Reeder McCreary professionals handle these matters with the utmost discretion with the goal to obtain the best disposition obtainable in the shortest amount of time with a full understanding of the stress involved in these situations.",
 

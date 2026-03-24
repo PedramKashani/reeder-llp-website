@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { professionals } from "@/data/professionals";
 
@@ -10,6 +11,23 @@ import { ProfileCTA } from "@/component/profiles/ProfileCTA";
 type Props = {
   params: Promise<{ slug: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const profile = professionals.find((p) => p.slug === slug);
+  if (!profile) return {};
+
+  const firstBioParagraph = profile.sections.background?.[0]?.trim() ?? "";
+  const firstSentenceMatch = firstBioParagraph.match(/[^.!?]+[.!?]/);
+  const firstSentence = firstSentenceMatch
+    ? firstSentenceMatch[0].trim()
+    : firstBioParagraph;
+
+  return {
+    title: `${profile.name} | Reeder McCreary, LLP`,
+    description: [profile.title, firstSentence].filter(Boolean).join(" — "),
+  };
+}
 
 export default async function ProfilePage({ params }: Props) {
   const { slug } = await params;

@@ -202,48 +202,26 @@ export function Header() {
           <div className="mx-auto max-w-6xl px-8 py-9 lg:px-14">
             {desktopOpen === "Who We Are" ? (
               <div className="grid gap-16 lg:grid-cols-2">
-                <div>
-                  <div className="text-[10px] font-medium uppercase tracking-[0.28em] text-white/50">
-                    Firm
+                {sectionByLabel["Who We Are"].rows.flat().map((group) => (
+                  <div key={group.title}>
+                    <div className="text-[10px] font-medium uppercase tracking-[0.28em] text-white/50">
+                      {group.title}
+                    </div>
+                    <div className="mt-6 space-y-2">
+                      {group.links.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className="group block py-2.5 text-[1.05rem] text-white/84 transition duration-300 ease-out hover:text-white"
+                          onClick={() => setDesktopOpen(null)}
+                        >
+                          {item.label}
+                          <span className="mt-0.5 block h-px w-0 bg-white/40 transition-all duration-300 ease-out group-hover:w-16" />
+                        </Link>
+                      ))}
+                    </div>
                   </div>
-                  <div className="mt-6 space-y-2">
-                    {[
-                      { label: "About", href: "/about" },
-                      { label: "Case Results", href: "/case-results" },
-                    ].map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className="group block py-2.5 text-[1.05rem] text-white/84 transition duration-300 ease-out hover:text-white"
-                        onClick={() => setDesktopOpen(null)}
-                      >
-                        {item.label}
-                        <span className="mt-0.5 block h-px w-0 bg-white/40 transition-all duration-300 ease-out group-hover:w-16" />
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <div className="text-[10px] font-medium uppercase tracking-[0.28em] text-white/50">
-                    Team
-                  </div>
-                  <div className="mt-6 space-y-2">
-                    {[
-                      { label: "Attorneys", href: "/professionals" },
-                      { label: "Our Favorite Things", href: "/our-favorite-things" },
-                    ].map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className="group block py-2.5 text-[1.05rem] text-white/84 transition duration-300 ease-out hover:text-white"
-                        onClick={() => setDesktopOpen(null)}
-                      >
-                        {item.label}
-                        <span className="mt-0.5 block h-px w-0 bg-white/40 transition-all duration-300 ease-out group-hover:w-16" />
-                      </Link>
-                    ))}
-                  </div>
-                </div>
+                ))}
               </div>
             ) : (
               sectionByLabel[desktopOpen].rows.flat().map((group) => (
@@ -291,40 +269,10 @@ export function Header() {
               </button>
             </div>
 
-            <div className="mt-6 grid gap-3 sm:grid-cols-3">
-              <button
-                type="button"
-                className="flex items-center justify-between rounded-2xl border border-white/20 bg-white/[0.04] px-4 py-3 text-left text-sm font-medium text-white/90 transition hover:bg-white/[0.09]"
-                onClick={() =>
-                  setMobileExpanded((prev) => ({
-                    ...prev,
-                    "Who We Are": !prev["Who We Are"],
-                  }))
-                }
-              >
-                <span>Who We Are</span>
-                <span className="text-white/60">
-                  {mobileExpanded["Who We Are"] ? "–" : "+"}
-                </span>
-              </button>
-              <button
-                type="button"
-                className="flex items-center justify-between rounded-2xl border border-white/20 bg-white/[0.04] px-4 py-3 text-left text-sm font-medium text-white/90 transition hover:bg-white/[0.09]"
-                onClick={() =>
-                  setMobileExpanded((prev) => ({
-                    ...prev,
-                    "What We Do": !prev["What We Do"],
-                  }))
-                }
-              >
-                <span>What We Do</span>
-                <span className="text-white/60">
-                  {mobileExpanded["What We Do"] ? "–" : "+"}
-                </span>
-              </button>
+            <div className="mt-6">
               <Link
                 href="/contact"
-                className="rounded-2xl border border-white/20 bg-white/[0.04] px-4 py-3 text-sm font-medium text-white/90 transition hover:bg-white/[0.09]"
+                className="block rounded-2xl border border-white/20 bg-white/[0.04] px-4 py-3 text-sm font-medium text-white/90 transition hover:bg-white/[0.09]"
                 onClick={() => setMobileOpen(false)}
               >
                 Contact

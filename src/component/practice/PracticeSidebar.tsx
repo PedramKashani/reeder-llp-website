@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { practiceAreas } from "@/data/practiceAreas";
 
 export default function PracticeSidebar({
@@ -30,7 +31,7 @@ export default function PracticeSidebar({
               const active = p.slug === activeSlug;
               return (
                 <li key={p.slug}>
-                  <a
+                  <Link
                     href={`/practice-areas/${p.slug}`}
                     className={[
                       "block rounded-lg px-3 py-2 text-sm transition",
@@ -40,7 +41,7 @@ export default function PracticeSidebar({
                     ].join(" ")}
                   >
                     {p.title}
-                  </a>
+                  </Link>
                 </li>
               );
             })}

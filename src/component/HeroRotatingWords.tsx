@@ -42,6 +42,8 @@ export function HeroRotatingWords({
         <div className="absolute inset-0 bg-neutral-950/40" />
       </div>
 
+      <h1 className="sr-only">Reeder McCreary, LLP</h1>
+
       <div className="relative z-10 mx-auto flex max-w-6xl px-6">
         <div className="flex min-h-screen w-full items-end py-20 md:py-24">
           <div className="max-w-2xl">
@@ -49,9 +51,9 @@ export function HeroRotatingWords({
               {kicker}
             </div>
 
-            <h1 className="mt-3 text-5xl font-semibold tracking-tight text-white md:text-7xl">
+            <p className="mt-3 text-5xl font-semibold tracking-tight text-white md:text-7xl">
               <span className="inline-block">{safeWords[idx]}</span>
-            </h1>
+            </p>
           </div>
         </div>
       </div>

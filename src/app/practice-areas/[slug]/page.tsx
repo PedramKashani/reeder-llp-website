@@ -1,9 +1,22 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { practiceAreas } from "@/data/practiceAreas";
 import { PracticeHeroImage } from "@/component/practice/PracticeHeroImage";
 
 type Props = { params: Promise<{ slug: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const area = practiceAreas.find((a) => a.slug === slug);
+  if (!area) {
+    return {};
+  }
+  return {
+    title: area.metaTitle ?? area.title,
+    description: area.metaDescription ?? area.excerpt,
+  };
+}
 
 function ArrowDownIcon() {
   return (
@@ -32,19 +45,23 @@ export default async function PracticeAreaPage({ params }: Props) {
   if (!area) return notFound();
 
   const contentBlocks =
-    area.sections?.map((s) => ({
-      heading: s.heading,
-      paragraphs: s.paragraphs,
-    })) ??
-    (area.paragraphs?.length
-      ? [{ heading: undefined, paragraphs: area.paragraphs }]
-      : []);
+    area.sections && area.sections.length > 0
+      ? area.sections.map((s) => ({
+          heading: s.heading,
+          paragraphs: s.paragraphs,
+        }))
+      : area.paragraphs?.length
+        ? [{ heading: undefined, paragraphs: area.paragraphs }]
+        : [];
 
   return (
     <div className="main min-h-screen bg-neutral-950 text-white">
       {/* Hero - full height */}
       <div className="hero relative min-h-[100svh] w-full overflow-hidden">
-        <PracticeHeroImage src={area.heroImage} alt="" />
+        <PracticeHeroImage
+          src={area.heroImage}
+          alt={area.heroImageAlt ?? ""}
+        />
         <div className="absolute inset-0 bg-black/40" />
 
         <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl items-end px-6">
@@ -81,9 +98,9 @@ export default async function PracticeAreaPage({ params }: Props) {
             {contentBlocks.map((block, i) => (
               <div key={i}>
                 {block.heading && (
-                  <h6 className="mb-6 text-lg font-semibold uppercase tracking-[0.18em] text-white md:text-xl">
+                  <h2 className="mb-6 text-lg font-semibold uppercase tracking-[0.18em] text-white md:text-xl">
                     {block.heading}
-                  </h6>
+                  </h2>
                 )}
                 <div className="space-y-8">
                   {block.paragraphs.map((p, j) => (

@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import type { Professional } from "@/data/professionals";
 
 export function BioShowMore({ profile }: { profile: Professional }) {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(true);
 
   const paragraphs = useMemo(() => {
     return profile.sections.background ?? [];

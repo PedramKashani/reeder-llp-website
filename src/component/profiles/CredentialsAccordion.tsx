@@ -10,13 +10,13 @@ export function CredentialsAccordion({ profile }: { profile: Professional }) {
     const s = profile.sections;
     const out: Item[] = [];
 
+    if (s.awards?.length) out.push({ title: "Awards", lines: s.awards });
     if (s.education?.length)
       out.push({ title: "Education", lines: s.education });
     if (s.admissions?.length)
       out.push({ title: "Admissions", lines: s.admissions });
     if (s.associations?.length)
       out.push({ title: "Associations", lines: s.associations });
-    if (s.awards?.length) out.push({ title: "Awards", lines: s.awards });
     if (s.publications?.length)
       out.push({ title: "Publications", lines: s.publications });
     if (s.speakingEngagements?.length)

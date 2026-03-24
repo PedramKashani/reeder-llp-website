@@ -431,7 +431,7 @@ function Logo({ heroMode, subtleShrink }: { heroMode: boolean; subtleShrink: boo
       </div>
       <div
         className={
-          "pointer-events-none absolute left-full top-1/2 ml-3 hidden -translate-y-1/2 whitespace-nowrap leading-tight transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] sm:block " +
+          "absolute left-full top-1/2 ml-3 hidden -translate-y-1/2 whitespace-nowrap leading-tight transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] sm:block " +
           (heroMode
             ? (subtleShrink
                 ? "translate-x-2 opacity-0 blur-[2px]"

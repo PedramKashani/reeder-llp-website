@@ -63,11 +63,17 @@ export const practiceAreas: PracticeArea[] = [
     title: "Corporate",
     heroImage: "/images/team/team-outdoor.webp",
     paragraphs: [
-      "Chris serves as general counsel to several select clients including one of the largest home improvement contracting companies in the country with an international franchise network and a hospitality company that owns a world famous night club.",
+      "Corporate law governs the structure and day-to-day operations of businesses, including transactions, compliance, governance, and strategic growth.",
+
+      "Chris serves as general counsel to a select group of clients, including one of the nation’s largest home improvement contracting companies with an international franchise network, as well as a hospitality company that owns a world-renowned nightclub and other investments and properties. Reeder McCreary, LLP functions as an extension of in-house legal departments, managing entity compliance, human resource matters, and ongoing operational needs.",
+
       "Chris also makes deals. Big ones and small ones.",
-      "Chris acted as general counsel in the re-acquisition of the majority interest in a major night club and associated financing, the $100 million sale of an international food distributor, closed several acquisitions of home improvement companies, managed the acquisition of a bottling company, closed on a transaction to acquire another nightclub along with a lease transaction, managed the re-financing of a credit facility for a home improvement holding company with a franchise network, and closed on an interest in a high end restaurant.",
-      "Chris also has closed several acquisitions, related financing's, and lease transactions for real estate developer and holding company including an $18 million acquisition of an industrial building with unique title and zoning issues.",
-      "Chris has also successfully represented a water container and distribution company in several acquisitions of retail locations as well as establishment of a franchising unit.",
+
+      "He has acted as general counsel in the re-acquisition of a majority interest in a major nightclub and its related financing, the $100 million sale of an international food distributor, and has closed multiple acquisitions involving home improvement companies. His experience also includes managing the acquisition of a bottling company, negotiating the purchase and lease of another nightclub, managing the re-financing of a credit facility for a home improvement holding company with a franchise network, and closing on an ownership interest in a high-end restaurant.",
+
+      "In addition, Chris has closed numerous acquisitions, related financings, and lease transactions for real estate developers and holding companies, including an $18 million acquisition of an industrial property with complex title and zoning issues.",
+
+      "Chris has also successfully represented a water container and distribution company in several retail acquisitions and the establishment of a franchising unit.",
     ],
   },
   {
@@ -75,19 +81,21 @@ export const practiceAreas: PracticeArea[] = [
     title: "Franchise and Dealership",
     heroImage: "/images/team/team-outdoor.webp",
     paragraphs: [
-      "Reeder McCreary professionals successfully represent clients in a wide variety of national and international dealership/franchise litigation and transactional matters. Reeder McCreary professionals understand the importance and system wide concerns raised by dealership/franchise issues that make these “must win” situations.",
+      "Franchise and dealership law governs the relationships between franchisors, franchisees, manufacturers, and dealers which often involve high-stakes disputes, system-wide negotiations, and complex transactional matters that can impact brands and networks.",
 
-      "Reeder McCreary professionals provide general counsel and transactional services in this complicated field. Reeder McCreary professionals has represented clients in system wide negotiations with franchisee associations resulting in the successful establishment of a uniform system-wide franchise agreement.",
+      "Reeder McCreary professionals successfully represent clients in a wide range of national and international dealerships, franchise litigation, and transactional matters. They understand the importance and system-wide implications of franchise and dealership issues that often make these “must win” situations.",
 
-      "Reeder McCreary professionals provide Franchise Agreements and associated documents, counsel on system wide and individual franchise situations, and establish unique workout solutions for troubled franchises. Reeder McCreary professionals also manage and enforce trademark portfolios for franchise clients.",
+      "Reeder McCreary professionals provide general counsel and transactional services in this complex field. They have represented clients in system-wide negotiations with franchisee associations, resulting in the successful establishment of uniform, system-wide franchise agreements.",
 
-      "Chris is national counsel to an international franchisor and has successfully established its rights under the Franchise Agreement against various franchisees seeking to depart the franchise system resulting in injunctions and monetary judgments in numerous jurisdictions.",
+      "The firm prepares franchise agreements and related documents, advises on both system-wide and individual franchise matters, and develops tailored workout solutions for troubled franchises. Reeder McCreary professionals also manage and enforce trademark portfolios for franchise clients.",
 
-      "Representing another national franchisor/distributor, Chris and Reeder McCreary professionals defeated an association of franchisees/distributors, enforced the client's rights to impose a variety of charges on the network, and obtained an outright dismissal of the association's claims.",
+      "Chris serves as national counsel to an international franchisor and has successfully established its rights under the Franchise Agreements against franchisees attempting to depart the system, resulting in injunctions and monetary judgments across multiple jurisdictions.",
 
-      "Chris and Reeder McCreary professionals also successfully represented an automobile dealership in litigation over the sale of a $30 million dealership.",
+      "In representing another national franchisor/distributor, Chris and Reeder McCreary professionals defeated an association of franchisees/distributors, enforced the client’s rights to impose various network charges, and secured a complete dismissal of the association’s claims.",
 
-      "Chris and Reeder McCreary professionals also successfully closed several franchise acquisitions for a national franchisor.",
+      "Chris and Reeder McCreary professionals also successfully represented an automobile dealership in litigation involving the sale of a $30 million dealership.",
+
+      "They have also successfully closed several franchise acquisitions for a national franchisor.",
     ],
   },
   {
@@ -95,11 +103,11 @@ export const practiceAreas: PracticeArea[] = [
     title: "Entertainment",
     heroImage: "/images/team/team-outdoor.webp",
     paragraphs: [
-      "The entertainment industry is unique with its own customs, expectations, and practices. Whether the matter involves a contract, copyright or trademark, licensing, employment, publicity, privacy, the media, internet, or trade secret, Reeder McCreary professionals aggressively seek creative solutions to win.",
+      "The entertainment industry operates within a distinct set of customs, expectations, and business practices. Whether the matter involves contracts, copyright or trademark issues, licensing, employment, publicity, privacy, media, internet, or trade secrets, Reeder McCreary delivers strategic, creative solutions tailored to each client’s needs.",
 
-      "Chris and Reeder McCreary professionals has successfully represented entertainment industry clients including major film production companies, business managers, film editors, magazine editors, producers, a recording artist, and sporting event promoters in a variety of cases.",
+      "Chris and Reeder McCreary professionals have successfully represented a wide range of entertainment industry clients, including major film production companies, business managers, film and magazine editors, producers, recording artists, and sporting event promoters.",
 
-      "For example, Chris successfully represented a major film production company in litigation against another production company related to a major motion picture. Chris also developed and implemented the employment policies and procedures as well as artist/executive agreements for a film editing company accommodating for the unique structure of its working environment and structure. Chris also represented a film editing company in a dispute with an editor seeking to leave the company resulting in a restoration of the relationship. Finally, Chris has successfully represented numerous entertainment industry executives in employment and severance matters resulting in lucrative severance packages.",
+      "For example, Chris successfully represented a major film production company in litigation against another production company related to a major motion picture. Chris has also developed and implemented employment policies and procedures as well as artist/executive agreements for a film editing company, carefully tailored to its unique operational structure. In addition, Chris has represented a film editing company in a dispute with an editor seeking to leave the company resulting in a restoration of the relationship. Finally, Chris has successfully represented numerous entertainment industry executives in employment and severance matters resulting in lucrative severance packages.",
     ],
   },
   {
@@ -107,11 +115,13 @@ export const practiceAreas: PracticeArea[] = [
     title: "Sports",
     heroImage: "/images/team/team-outdoor.webp",
     paragraphs: [
-      "Chris has won for clients in sports related litigations and transactions involving professional football, baseball, hockey, bicycling, Olympic basketball, and action sports.",
+      "Sports law focuses on the legal and business issues that arise in the sports industry. It covers areas such as financial disputes, contracts, employment matters, and transactions involving teams, athletes, agents, event promoters, and investors. Whether it’s resolving conflicts or advising on complex deals, sports law requires practical understanding of both the industry and the laws within that industry—an approach that is reflected in Chris’s work across a wide range of sports and high-stake matters.",
 
-      "Chris has successfully represented event promoters, executives, agents, developers, and investors in a wide variety of matters including profits litigation, employment, and real estate development.",
+      "Chris has successfully represented clients in sports-related litigation and transactions involving professional football, baseball, hockey, cycling, Olympic basketball, and action sports.",
 
-      "Chris recently won a multimillion dollar settlement in profits litigation on behalf of the minority partners of a major sporting event against an international sport conglomerate.",
+      "He has represented event promoters, executives, agents, developers, and investors in a wide range of matters, including profits litigation, employment disputes, and real estate development related to sports ventures.",
+
+      "Most recently, Chris secured a multimillion-dollar settlement in a profits dispute on behalf of minority partners of a major sporting event against an international sport conglomerate.",
     ],
   },
   {
@@ -119,11 +129,15 @@ export const practiceAreas: PracticeArea[] = [
     title: "Employment",
     heroImage: "/images/team/team-outdoor.webp",
     paragraphs: [
-      "In employment and labor situations, issues of exposure, collateral consequences, and cost effectiveness often collide. Reeder McCreary professionals place particular emphasis on a strategy at the outset that takes into account each of these issues.",
+      "In employment and labor matters, issues of exposure, collateral consequences, and cost-effectiveness often intersect. Reeder McCreary approaches these matters strategically from the outset, developing solutions that account for each of these competing considerations.",
 
-      "Chris and Reeder McCreary professionals has won for clients in major wage and hour class action, discrimination, executive compensation, labor, fiduciary duty, trade secret litigation, and administrative proceedings.",
+      "Chris and the professionals at Reeder McCreary have achieved successful outcomes for clients in matters involving wage and hour class actions, discrimination claims, executive compensation disputes, labor issues, fiduciary duty claims, trade secret litigation, and administrative proceedings.",
 
-      "Chris has also represented several high level executives in employment agreement negotiations, severance issues, and termination disputes including the executive vice president of a major recording label, the executive editor of one of the most famous adult magazines, a professional hockey team executive, and the portfolio manager for a major recording artist.",
+      "Chris has significantly mitigated wage and hour exposure to several large home improvement companies in multiple class actions. He has also successfully prosecuted claims against aircraft industry executives for breach of fiduciary duty and usurpation of corporate opportunities and protected the trade secrets of an international food distributor in litigation against former employees seeking to establish a competing business.",
+
+      "Beyond litigation, Reeder McCreary professionals advise companies on the development of employment policies and procedures, handle day-to-day employment issues, and negotiate executive and artist employment agreements. Chris has also managed high-risk employment situations, including internal investigations, independent investigations, regulatory inquiries, and reduction-in-force events.",
+
+      "Chris has represented numerous high-level executives in employment agreement negotiations, severance matters, and termination disputes, including the executive vice president of a major recording label, the executive editor of one of the country’s most widely known adult magazines, a professional hockey team executive, and the portfolio manager for a major recording artist.",
     ],
   },
   {
@@ -131,11 +145,13 @@ export const practiceAreas: PracticeArea[] = [
     title: "Intellectual Property",
     heroImage: "/images/team/team-outdoor.webp",
     paragraphs: [
-      "Whether you have a copyright, trademark, or trade secret matter, the protection of your intellectual property is of utmost importance. Reeder McCreary professionals represent clients in diverse industries including franchise, hospitality, home improvement, entertainment, and food distribution.",
+      "Intellectual property law protects the creations that drive your business, including your brand, content, designs, and proprietary information, from unauthorized use and unfair competition. Whether your matter involves copyrights, trademarks, or trade secrets, protecting your intellectual property is critical.",
 
-      "Chris and Reeder McCreary professionals have successfully prosecuted claims on behalf of and defended clients in trade secret, trademark, design patent, and copyright litigation including an international food distributor, one of the nation's largest home improvement contractors, and a national bottling company.",
+      "Reeder McCreary represents clients across a range of industries, including franchise, hospitality, home improvement, entertainment, and food distribution.",
 
-      "With a full appreciation of the importance of their clients' creative works, branding, and trade names, Reeder McCreary professionals manage the trademark/service mark portfolios for several clients. Reeder McCreary professionals are also highly experienced in assisting clients license the use of their intellectual property.",
+      "Chris and Reeder McCreary professionals have successfully prosecuted and defended claims involving trade secrets, trademarks, design patents, and copyrights, representing clients such as an international food distributor, one of the nation’s largest home improvement contractors, and a national bottling company.",
+
+      "With a clear understanding of the value of creative works, branding, and trade names, Reeder McCreary manages trademark and service mark portfolios for multiple clients and advises them on the strategic licensing of intellectual property.",
     ],
   },
   {
@@ -143,13 +159,13 @@ export const practiceAreas: PracticeArea[] = [
     title: "White Collar Crime / Investigations",
     heroImage: "/images/team/team-outdoor.webp",
     paragraphs: [
-      "Criminal, regulatory, and investigations are some of the most high risk matters for individuals and businesses. Reeder McCreary professionals handle these matters with the utmost discretion with the goal to obtain the best disposition obtainable in the shortest amount of time with a full understanding of the stress involved in these situations.",
+      "White collar crime and investigations involve high-stakes, non-violent matters such as fraud, bribery, and breaches of fiduciary duty. These matters present significant risks for both individuals and businesses. Reeder McCreary approaches these cases with efficiency, discretion, and a clear focus on achieving the best possible outcome in the shortest amount of time.",
 
-      "As such, Chris' best wins in white collar crime cases have been avoiding charges being brought against clients altogether in numerous matters including on behalf of a real estate investor under investigation for the alleged bribing of a public official and a celebrity recording artist in a fiduciary matter.",
+      "Chris has secured notable results in white collar matters, including preventing charges from being filed altogether in cases involving alleged bribery and fiduciary disputes for high-profile clients.",
 
-      "Chris has conducted numerous internal and independent investigations for clients in a wide variety of matters including embezzlement, theft from clients, fiduciary, accounting, and employment related issues greatly mitigating exposure to clients.",
+      "Chris has also conducted internal and independent investigations across a wide range of issues, including embezzlement, client fund misappropriation, accounting irregularities, and employment matters, helping clients identify risks early and mitigate potential exposure.",
 
-      "Chris has also successfully represented clients in numerous regulatory investigative proceedings and enforcement actions involving securities, fiduciary, contracting, employment, and advertising.",
+      "In addition, Chris represents clients in regulatory proceedings and enforcement actions involving securities, fiduciary duties, contracting, employment, and advertising.",
     ],
   },
 ];

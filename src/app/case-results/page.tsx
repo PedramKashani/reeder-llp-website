@@ -51,7 +51,7 @@ export default function CaseResultsPage() {
       {/* Cinematic hero — same style as professionals pages */}
       <div className="case-results-hero relative min-h-[85vh] w-full overflow-hidden sm:min-h-[90vh]">
         <img
-          src="/images/team/reeder-banner.webp"
+          src="/images/logos/RMC-Logo-White-Bkgd.webp"
           alt=""
           className="absolute inset-0 h-full w-full object-contain object-center"
           sizes="100vw"

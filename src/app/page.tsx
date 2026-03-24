@@ -17,7 +17,7 @@ export default function HomePage() {
     <main className="homepage-no-scroll-effects" style={homeAnimStyle}>
       <HeroRotatingWords
         // Use a Reeder image if you want; keeping placeholder for now
-        backgroundImageUrl="images/chris-duncan/chris-duncan-2.webp"
+        backgroundImageUrl="/images/team/team-outdoor.webp"
         kicker="We were born to be"
         words={["Litigators", "Deal Makers", "Trial Lawyers"]}
         scrollToId="welcome"

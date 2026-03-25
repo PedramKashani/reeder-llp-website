@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { AnimatedSection } from "@/component/AnimatedSection";
 
@@ -37,10 +38,12 @@ export function ImageContentSection({
               aria-hidden
             />
             <div className="relative z-10 aspect-[4/5] w-full overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-100">
-              <img
+              <Image
                 src={imageUrl}
                 alt=""
-                className="absolute inset-0 h-full w-full object-cover object-center"
+                fill
+                sizes="(max-width: 1024px) min(100vw - 3rem, 540px), min(540px, calc(50vw - 4rem))"
+                className="object-cover object-center"
               />
             </div>
           </div>

@@ -16,17 +16,13 @@ function EditorialFavoriteItem({ item }: { item: FavoriteThing }) {
 
   const content = (
     <>
-      {/* Normalized logo stage — consistent weight on black; lifts faint marks */}
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-b from-white/[0.09] to-white/[0.03] p-10 ring-1 ring-white/[0.12] md:p-12">
-        <div
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_40%,rgba(255,255,255,0.08),transparent_65%)]"
-          aria-hidden
-        />
-        <div className="relative flex min-h-[120px] items-center justify-center md:min-h-[140px]">
+      {/* Logo stage — white field so marks read clearly on the dark page */}
+      <div className="relative overflow-hidden rounded-2xl bg-white p-5 shadow-sm ring-1 ring-neutral-200/90 sm:p-6 md:p-7">
+        <div className="relative flex min-h-[200px] items-center justify-center sm:min-h-[220px] md:min-h-[248px]">
           <img
             src={item.img}
             alt=""
-            className="max-h-[88px] w-auto max-w-[min(100%,260px)] object-contain brightness-[1.05] contrast-[1.02] transition duration-500 ease-out group-hover:brightness-110 md:max-h-[104px]"
+            className="max-h-[180px] w-auto max-w-[min(100%,480px)] object-contain object-center transition duration-500 ease-out group-hover:opacity-95 sm:max-h-[200px] md:max-h-[224px]"
             loading="lazy"
           />
         </div>

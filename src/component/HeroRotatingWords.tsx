@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 type HeroRotatingWordsProps = {
@@ -32,12 +33,17 @@ export function HeroRotatingWords({
   return (
     <section className="snap-section relative min-h-screen overflow-hidden">
       {/* Fixed hero image layer */}
-      <div className="fixed inset-0 z-0 flex items-center justify-center bg-neutral-900">
-        <img
-          src={backgroundImageUrl}
-          alt=""
-          className="h-full w-full object-contain"
-        />
+      <div className="fixed inset-0 z-0 bg-neutral-900">
+        <div className="absolute inset-0">
+          <Image
+            src={backgroundImageUrl}
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-contain"
+          />
+        </div>
         {/* Overlay for readability */}
         <div className="absolute inset-0 bg-neutral-950/40" />
       </div>

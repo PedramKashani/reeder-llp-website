@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -364,18 +365,25 @@ function Logo({ heroMode, subtleShrink }: { heroMode: boolean; subtleShrink: boo
             : "border border-neutral-200 bg-white h-12 w-36")
         }
       >
-        <img
-          src="/images/logos/rmc-gold-logo.webp"
-          alt="Reeder McCreary"
+        <div
           className={
-            "object-contain transition-all duration-500 " +
+            "relative transition-all duration-500 " +
             (heroMode
               ? subtleShrink
                 ? "h-10 w-32"
                 : "h-12 w-36"
               : "h-10 w-32")
           }
-        />
+        >
+          <Image
+            src="/images/logos/rmc-gold-logo.webp"
+            alt="Reeder McCreary"
+            fill
+            priority
+            sizes="(max-width: 640px) 128px, 144px"
+            className="object-contain"
+          />
+        </div>
       </div>
       <div
         className={

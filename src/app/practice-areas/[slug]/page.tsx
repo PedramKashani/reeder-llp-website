@@ -15,6 +15,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: area.metaTitle ?? area.title,
     description: area.metaDescription ?? area.excerpt,
+    alternates: {
+      canonical: `/practice-areas/${slug}`,
+    },
   };
 }
 

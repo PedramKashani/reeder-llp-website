@@ -10,6 +10,7 @@ const FOOTER_COLUMNS: FooterColumn[] = [
       { label: "Home", href: "/" },
       { label: "Professionals", href: "/professionals" },
       { label: "Practice Areas", href: "/practice-areas" },
+      { label: "Case Results", href: "/case-results" },
       { label: "Our Favorite Things", href: "/our-favorite-things" },
       { label: "About Us", href: "/about" },
       { label: "Contact", href: "/contact" },
@@ -18,8 +19,11 @@ const FOOTER_COLUMNS: FooterColumn[] = [
   {
     title: "Connect",
     links: [
-      { label: "X", href: "https://x.com/" },
-      { label: "LinkedIn", href: "https://www.linkedin.com/" },
+      { label: "X", href: "https://x.com/ReederMcCreary" },
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/company/reeder-mccreary-llp-/",
+      },
     ],
   },
 ];

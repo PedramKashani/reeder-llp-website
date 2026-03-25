@@ -76,37 +76,42 @@ export const practiceAreas: PracticeArea[] = [
     slug: "real-estate",
     title: "Real Estate",
     excerpt:
-      "Developers, owners, lenders, and investors—litigation and transactions involving development, finance, leasing, construction, and mixed-use and sports-adjacent projects.",
+      "Acquisition, development, financing, leasing, and disputes across complex real estate projects, including mixed-use developments and sports-adjacent properties.",
     heroImage: "/images/team/team-outdoor.webp",
     heroImageAlt:
       "Reeder McCreary attorneys and professionals standing together outdoors in business attire.",
     metaTitle: "Real Estate Law & Litigation | Reeder McCreary, LLP",
     metaDescription:
-      "Real estate counsel in disputes and closings: development, partnership and lender conflicts, acquisitions, leasing, and renewable energy–related projects for West Coast and multi-state clients.",
+      "Real estate counsel in disputes and transactions, including development, financing, leasing, and complex litigation for developers, investors, and lenders.",
     sections: [
       {
         paragraphs: [
-          "Chris has represented some of the West Coast's premier real estate developers, building owners, and construction companies ranging from office/medical building owners to massive mixed-use developments and sports complexes. Chris and other Reeder McCreary professionals have successfully represented clients in acquisition/disposition disputes, partnership/investment disputes, development, due diligence, financing, contracting, public improvements, quality assurance, mechanics liens, licensing, insurance, landlord/tenant, and construction matters.",
+          "Real estate law addresses the acquisition, development, financing, leasing, and disposition of property, as well as the complex disputes that often arise throughout these processes. It intersects with construction, investment, and regulatory matters, requiring both transactional precision and litigation experience.",
+        ],
+      },
+      {
+        paragraphs: [
+          "Chris has represented some of the West Coast’s premier real estate developers, building owners, and construction companies, with projects ranging from office and medical buildings massive mixed-use developments and sports complexes. Chris and other Reeder McCreary professionals have successfully handled matters involving acquisition and disposition disputes, partnership and investment conflicts, development and due diligence, financing, contracting, public improvements, quality assurance, mechanics’ liens, licensing, insurance, landlord-tenant issues, and construction disputes.",
         ],
       },
       {
         heading: "Litigation and Dispute Resolution",
         paragraphs: [
-          "Chris has won almost every real estate related case imaginable in several states from ultra-complex lender disputes involving hundreds of millions of dollars and high profile projects, to public improvement leasehold and development projects, to circumvention by joint venture partners in casino/condominium/hotel developments, to complex agreements involving technical development/construction obligations, to partner disputes related to the profitability of a project, to investor claims relating to missed opportunities, to disputes involving development rights and obligations, to disputes involving financial institution funding obligations, to disputes involving representations and warranties, to disputes involving deposits, to disputes involving brokerage commissions, and to unlawful detainer cases. We represent owners, buyers, sellers, joint venture partners, developers, lenders, lessors, lessees, and brokers.",
+          "Chris has won almost every real estate related case imaginable in several states, including ultra-complex lender disputes involving hundreds of millions of dollars and high-profile projects. His experience also includes public improvement leasehold and development matters; joint venture disputes in casino, condominium, and hotel developments; and complex agreements involving construction and development obligations. He has represented clients in disputes concerning project profitability, investor claims related to missed opportunities, development rights and obligations, financial institution funding issues, representations and warranties, deposits, brokerage commissions, and unlawful detainer cases. His clients include owners, buyers, sellers, joint venture partners, developers, lenders, lessors, lessees, and brokers.",
         ],
       },
       {
         heading: "Renewable Energy",
         paragraphs: [
-          "Chris has also successfully represented clients in the wind and solar power industries. Chris has obtained winning results for these clients with a particular emphasis on the complicated business issues and timing critical in these industries.",
+          "In addition, Chris has represented clients in the wind and solar power industries, achieving successful outcomes in matters where timing and complex business considerations are critical.",
         ],
       },
       {
         heading: "Transactions and Leasing",
         paragraphs: [
-          "Chris has also successfully represented clients in closing real estate acquisitions and dispositions as well as associated financing's involving major sports facilities, mixed-use developments, a world famous nightclub, industrial buildings, office buildings, restaurants, and bars. Reeder McCreary, LLP also provide day to day real estate advice, manage problem situations, and close commercial office/medical leases.",
+          "Chris also has extensive experience in closing real estate acquisitions and dispositions, as well as structuring and negotiating associated financing for projects involving major sports facilities, mixed-use developments, a world-renowned nightclub, industrial properties, office buildings, restaurants, and bars. Reeder McCreary, LLP also provides day-to-day real estate counsel, resolves complex issues efficiently, and handles commercial office and medical lease transactions.",
 
-          "Chris has also obtained a settlement massively reducing triple net lease charges for several groups of medical professionals based on claims of fraud in the procurement of leases and lease extensions after the acquisition of several Class A medical buildings.",
+          "Notably, Chris obtained a settlement that substantially reduced triple net lease charges for multiple groups of medical professionals, arising from fraud claims in the procurement of leases and lease extensions following the acquisition of several Class A medical buildings.",
         ],
       },
     ],

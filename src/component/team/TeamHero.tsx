@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 
 type Props = {
@@ -18,10 +19,13 @@ export function TeamHero({
   return (
     <section className="relative min-h-[calc(100vh-72px)] overflow-hidden">
       <div className="absolute inset-0">
-        <img
+        <Image
           src={backgroundImageUrl}
           alt=""
-          className="h-full w-full object-cover"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-neutral-950/45" />
       </div>

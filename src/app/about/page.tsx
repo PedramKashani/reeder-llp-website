@@ -1,15 +1,28 @@
+import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "About the Firm | Reeder McCreary, LLP",
+  description:
+    "Learn about Reeder McCreary, LLP—a Los Angeles business litigation firm led by trial lawyer Chris Reeder, focused on results-driven counsel for companies, investors, and individuals.",
+  alternates: {
+    canonical: "/about",
+  },
+};
 
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-neutral-950 text-white">
       {/* Cinematic hero – match case results/professionals style */}
       <div className="relative min-h-[85vh] w-full overflow-hidden sm:min-h-[90vh]">
-        <img
+        <Image
           src="/images/team/team-in-office-1.webp"
           alt=""
-          className="absolute inset-0 h-full w-full object-cover object-center"
+          fill
+          priority
           sizes="100vw"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-black/35" aria-hidden />
         <div

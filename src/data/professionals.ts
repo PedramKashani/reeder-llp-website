@@ -19,6 +19,9 @@ export type Professional = {
 
   links?: ProfessionalLink[]; // Super Lawyers, Best Lawyers, etc.
 
+  /** Practice area slugs this attorney is associated with (see `practiceAreas`). */
+  relatedPracticeSlugs?: string[];
+
   sections: {
     background?: string[]; // paragraphs
     winningResults?: string[]; // Ben has "Winning Results"
@@ -61,6 +64,17 @@ export const professionals: Professional[] = [
       "/images/badges/super-lawyers-10yr-chris-reeder-2025.webp",
       "/images/badges/super-lawyers-selected-chris-reeder-2026.webp",
       "/images/badges/best-lawyers-chris-reeder-2026.webp",
+    ],
+    relatedPracticeSlugs: [
+      "trials-commercial-litigation",
+      "real-estate",
+      "corporate",
+      "franchise-dealership",
+      "entertainment",
+      "sports",
+      "employment",
+      "intellectual-property",
+      "white-collar-investigations",
     ],
     sections: {
       background: [
@@ -187,6 +201,14 @@ export const professionals: Professional[] = [
       "/images/badges/super-lawyers-10yr-duncan-mccreary-2025.webp.webp",
       "/images/badges/super-lawyers-selected-duncan-mccreary-2026.webp",
     ],
+    relatedPracticeSlugs: [
+      "trials-commercial-litigation",
+      "franchise-dealership",
+      "real-estate",
+      "employment",
+      "sports",
+      "white-collar-investigations",
+    ],
     sections: {
       background: [
         "Duncan is a trial lawyer and problem solver.",
@@ -246,6 +268,14 @@ export const professionals: Professional[] = [
     badgeImages: [
       "/images/badges/super-lawyers-rising-stars-benjamin-tragish-2025.webp",
     ],
+    relatedPracticeSlugs: [
+      "trials-commercial-litigation",
+      "employment",
+      "corporate",
+      "real-estate",
+      "intellectual-property",
+      "franchise-dealership",
+    ],
     sections: {
       background: [
         "Counsel Ben Tragish delivers focused litigation, trial, and general counsel services to clients across an array of industries.",
@@ -304,6 +334,7 @@ export const professionals: Professional[] = [
       "/images/badges/the-hollywood-reporter-mark.webp",
       "/images/badges/ranked-in-chambers-red-mark.webp",
     ],
+    relatedPracticeSlugs: ["entertainment", "intellectual-property"],
     sections: {
       background: [
         "Mark focuses his practice on high-profile contract disputes between major recording artists and record companies, including royalty audit and copyright termination matters, disputes between songwriters and music publishing companies, motion picture and television cases, including profit participation and film delivery cases, copyright and trademark infringement cases, disputes between artists and managers under the Talent Agencies Act, advertising industry cases, as well as defamation, right of privacy and right of publicity cases.",
@@ -338,6 +369,11 @@ export const professionals: Professional[] = [
     badgeImages: [
       "/images/badges/super-lawyers-rising-stars-marcus-tippens-2025.webp",
     ],
+    relatedPracticeSlugs: [
+      "trials-commercial-litigation",
+      "corporate",
+      "employment",
+    ],
     sections: {
       background: [
         "Marcus Tippens represents clients in a variety of practice areas including professional liability, corporate governance, complex civil litigation, and business litigation.",
@@ -367,6 +403,7 @@ export const professionals: Professional[] = [
     email: "john@reedermccreary.com",
     photoSmall: "/images/attorneys/john-headshot.webp",
     photoLarge: "/images/attorneys/john-headshot.webp",
+    relatedPracticeSlugs: ["corporate"],
     sections: {
       background: [
         "John represents clients in a wide range of corporate transactional and advisory matters, including mergers and acquisitions, corporate governance, capital investments, private dispositions, carve-outs, and other direct investment matters.",

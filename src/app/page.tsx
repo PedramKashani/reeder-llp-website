@@ -1,8 +1,31 @@
+import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import { HeroRotatingWords } from "@/component/HeroRotatingWords";
 import { SectionHeading } from "@/component/SectionHeading";
 import { ImageContentSection } from "@/component/ImageContentSection";
 import { CTASection } from "@/component/CTASection";
+
+export const metadata: Metadata = {
+  title:
+    "Business Litigation, Trials & Corporate Counsel | Reeder McCreary, LLP",
+  description:
+    "Los Angeles trial lawyers and strategic business counsel for complex litigation, high-stakes trials, and transactions. Reeder McCreary, LLP serves companies, investors, and individuals with a focused, results-driven approach.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title:
+      "Business Litigation, Trials & Corporate Counsel | Reeder McCreary, LLP",
+    description:
+      "Los Angeles trial lawyers and strategic business counsel for complex litigation, high-stakes trials, and transactions. Reeder McCreary, LLP serves companies, investors, and individuals with a focused, results-driven approach.",
+  },
+  twitter: {
+    title:
+      "Business Litigation, Trials & Corporate Counsel | Reeder McCreary, LLP",
+    description:
+      "Los Angeles trial lawyers and strategic business counsel for complex litigation, high-stakes trials, and transactions. Reeder McCreary, LLP serves companies, investors, and individuals with a focused, results-driven approach.",
+  },
+};
 
 export default function HomePage() {
   const homeAnimStyle = {
@@ -50,7 +73,7 @@ export default function HomePage() {
             body="We make deals – we don’t break them. We solve problems – we don’t create them. From company sales and real estate transactions, to regulatory, corporate, and intellectual property compliance, to consulting on a business/legal issue, we are your go-to in-house counsel."
             imageUrl="/images/chris/chris-reeder-Corporate.webp"
             ctaLabel="Learn More"
-            ctaHref="/about"
+            ctaHref="/practice-areas/corporate"
           />
         </div>
 

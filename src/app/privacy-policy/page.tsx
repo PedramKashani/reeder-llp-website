@@ -1,4 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | Reeder McCreary, LLP",
+  description:
+    "How Reeder McCreary, LLP collects, uses, and protects information when you visit our website or contact the firm, and your choices regarding personal data.",
+  alternates: {
+    canonical: "/privacy-policy",
+  },
+};
 
 export default function PrivacyPolicyPage() {
   return (

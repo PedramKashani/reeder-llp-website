@@ -7,6 +7,7 @@ import { BioShowMore } from "@/component/profiles/BioShowMore";
 import { CredentialsAccordion } from "@/component/profiles/CredentialsAccordion";
 import { MeetOthers } from "@/component/profiles/MeetOthers";
 import { ProfileCTA } from "@/component/profiles/ProfileCTA";
+import { RelatedPracticeAreas } from "@/component/profiles/RelatedPracticeAreas";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -26,6 +27,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${profile.name} | Reeder McCreary, LLP`,
     description: [profile.title, firstSentence].filter(Boolean).join(" — "),
+    alternates: {
+      canonical: `/professionals/${slug}`,
+    },
   };
 }
 
@@ -47,6 +51,8 @@ export default async function ProfilePage({ params }: Props) {
       <BioShowMore profile={profile} />
 
       <CredentialsAccordion profile={profile} />
+
+      <RelatedPracticeAreas profile={profile} />
 
       <MeetOthers current={profile} others={others} />
 

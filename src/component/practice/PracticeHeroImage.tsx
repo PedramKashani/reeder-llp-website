@@ -1,25 +1,21 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 const FALLBACK_HERO_IMAGE = "/images/chris-duncan/chris-duncan-2.webp";
 
-export function PracticeHeroImage({
-  src,
-  alt = "",
-}: {
-  src: string;
-  alt?: string;
-}) {
+export function PracticeHeroImage({ src, alt = "" }: { src: string; alt?: string }) {
   const [imgSrc, setImgSrc] = useState(src);
 
   return (
-    <img
+    <Image
       src={imgSrc}
       alt={alt}
-      className="absolute inset-0 h-full w-full object-cover object-center"
+      fill
+      priority
       sizes="100vw"
-      fetchPriority="high"
+      className="object-cover object-center"
       onError={() => setImgSrc(FALLBACK_HERO_IMAGE)}
     />
   );

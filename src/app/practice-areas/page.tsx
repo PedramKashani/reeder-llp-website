@@ -1,15 +1,29 @@
+import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { practiceAreas } from "@/data/practiceAreas";
+
+export const metadata: Metadata = {
+  title: "Practice Areas | Reeder McCreary, LLP",
+  description:
+    "Explore Reeder McCreary, LLP’s practice areas—from commercial litigation and trials to corporate, real estate, franchise, entertainment, employment, and white collar matters.",
+  alternates: {
+    canonical: "/practice-areas",
+  },
+};
 
 export default function PracticeAreasIndex() {
   return (
     <div className="bg-black text-white">
       <section className="relative">
         <div className="relative h-[70svh] min-h-[560px] w-full overflow-hidden">
-          <img
+          <Image
             src="/images/team/team-in-office-2.webp"
-            alt=""
-            className="h-full w-full object-cover"
+            alt="Reeder McCreary attorneys and professionals together in the firm’s office."
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-black/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-black/10" />
@@ -36,7 +50,10 @@ export default function PracticeAreasIndex() {
 
       <section className="border-t border-white/10 bg-black">
         <div className="mx-auto max-w-6xl px-6 py-14">
-          <div className="grid gap-5 md:grid-cols-2">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.28em] text-white/55">
+            Our practice areas
+          </h2>
+          <div className="mt-8 grid gap-5 md:grid-cols-2">
             {practiceAreas.map((a) => (
               <Link
                 key={a.slug}

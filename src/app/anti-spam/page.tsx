@@ -1,4 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Anti-Spam Policy | Reeder McCreary, LLP",
+  description:
+    "Reeder McCreary, LLP’s policy on unsolicited commercial email and communications, including how we handle marketing messages and respect your inbox.",
+  alternates: {
+    canonical: "/anti-spam",
+  },
+};
 
 export default function AntiSpamPage() {
   return (

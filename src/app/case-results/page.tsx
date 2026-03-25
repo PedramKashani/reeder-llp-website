@@ -1,5 +1,16 @@
+import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { CaseResultsList } from "@/component/case-results/CaseResultsList";
+
+export const metadata: Metadata = {
+  title: "Case Results | Reeder McCreary, LLP",
+  description:
+    "Representative matters and outcomes from Reeder McCreary, LLP in complex commercial litigation, trials, and high-stakes disputes. Past results do not guarantee a similar outcome.",
+  alternates: {
+    canonical: "/case-results",
+  },
+};
 
 const CASE_RESULTS = [
   {
@@ -50,11 +61,13 @@ export default function CaseResultsPage() {
     <main className="min-h-screen bg-white">
       {/* Cinematic hero — same style as professionals pages */}
       <div className="case-results-hero relative min-h-[85vh] w-full overflow-hidden sm:min-h-[90vh]">
-        <img
+        <Image
           src="/images/logos/RMC-Logo-White-Bkgd.webp"
           alt=""
-          className="absolute inset-0 h-full w-full object-contain object-center"
+          fill
+          priority
           sizes="100vw"
+          className="object-contain object-center"
         />
         <div className="absolute inset-0 bg-black/35" aria-hidden />
         <div

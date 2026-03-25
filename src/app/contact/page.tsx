@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 
 const HOURS = [
@@ -177,37 +178,7 @@ export default function ContactPage() {
 
             <div className="md:col-span-8">
               <div className="rounded-2xl border border-neutral-200 p-6 md:p-10">
-                <form
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    alert("Form submitted (wire API next).");
-                  }}
-                  className="space-y-6"
-                >
-                  <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                    <Field label="Name" name="name" placeholder="Name" />
-                    <Field label="Phone" name="phone" placeholder="Phone" />
-                  </div>
-                  <Field
-                    label="Email"
-                    name="email"
-                    placeholder="Email"
-                    type="email"
-                  />
-                  <TextArea
-                    label="Message"
-                    name="message"
-                    placeholder="How can we help you?"
-                  />
-                  <div className="pt-2">
-                    <button
-                      type="submit"
-                      className="inline-flex w-full items-center justify-center rounded-full bg-neutral-950 px-6 py-3 text-sm font-medium text-white transition hover:bg-neutral-800 md:w-auto"
-                    >
-                      Submit
-                    </button>
-                  </div>
-                </form>
+                <ContactForm />
               </div>
 
               <div className="mt-8 overflow-hidden rounded-2xl border border-neutral-200">
@@ -240,6 +211,176 @@ export default function ContactPage() {
         </div>
       </section>
     </main>
+  );
+}
+
+function ContactForm() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [formError, setFormError] = useState<string | null>(null);
+  const [fieldErrors, setFieldErrors] = useState<{
+    name?: string;
+    email?: string;
+    message?: string;
+  }>({});
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    setFormError(null);
+    setFieldErrors({});
+    setSuccess(false);
+
+    const fd = new FormData(form);
+    const name = String(fd.get("name") ?? "").trim();
+    const email = String(fd.get("email") ?? "").trim();
+    const phone = String(fd.get("phone") ?? "").trim();
+    const message = String(fd.get("message") ?? "").trim();
+    const website = String(fd.get("website") ?? "").trim();
+
+    const next: typeof fieldErrors = {};
+    if (!name) next.name = "Please enter your name.";
+    else if (name.length > 200) next.name = "Name is too long.";
+
+    if (!email) next.email = "Please enter your email.";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+      next.email = "Please enter a valid email address.";
+    else if (email.length > 320) next.email = "Email is too long.";
+
+    if (!message) next.message = "Please enter a message.";
+    else if (message.length < 3)
+      next.message = "Please enter a longer message.";
+    else if (message.length > 10_000) next.message = "Message is too long.";
+
+    if (Object.keys(next).length) {
+      setFieldErrors(next);
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, phone, message, website }),
+      });
+
+      let data: { ok?: boolean; error?: string; fields?: string[] } = {};
+      try {
+        data = (await res.json()) as typeof data;
+      } catch {
+        /* ignore */
+      }
+
+      if (res.ok && data.ok) {
+        form.reset();
+        setSuccess(true);
+        return;
+      }
+
+      if (res.status === 503 && data.error === "unavailable") {
+        setFormError(
+          "We couldn’t send your message through the site right now. Please call 310-861-2470.",
+        );
+        return;
+      }
+
+      if (
+        res.status === 400 &&
+        data.error === "validation" &&
+        Array.isArray(data.fields)
+      ) {
+        const serverFields: typeof fieldErrors = {};
+        if (data.fields.includes("name"))
+          serverFields.name = "Please check your name.";
+        if (data.fields.includes("email"))
+          serverFields.email = "Please check your email.";
+        if (data.fields.includes("message"))
+          serverFields.message = "Please check your message.";
+        setFieldErrors(serverFields);
+        setFormError("Please review the highlighted fields.");
+        return;
+      }
+
+      setFormError(
+        "Something went wrong. Please try again or call 310-861-2470.",
+      );
+    } catch {
+      setFormError(
+        "Something went wrong. Please try again or call 310-861-2470.",
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-6">
+      {success ? (
+        <div
+          className="rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-800"
+          role="status"
+        >
+          Thank you for your message. We will respond as soon as we can.
+        </div>
+      ) : null}
+      {formError ? (
+        <div
+          className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-900"
+          role="alert"
+        >
+          {formError}
+        </div>
+      ) : null}
+
+      <div className="sr-only" aria-hidden="true">
+        <label htmlFor="contact-website">Leave this field empty</label>
+        <input
+          id="contact-website"
+          type="text"
+          name="website"
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
+
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <Field
+          label="Name"
+          name="name"
+          placeholder="Name"
+          error={fieldErrors.name}
+        />
+        <Field
+          label="Phone"
+          name="phone"
+          placeholder="Phone"
+          required={false}
+        />
+      </div>
+      <Field
+        label="Email"
+        name="email"
+        placeholder="Email"
+        type="email"
+        error={fieldErrors.email}
+      />
+      <TextArea
+        label="Message"
+        name="message"
+        placeholder="How can we help you?"
+        error={fieldErrors.message}
+      />
+      <div className="pt-2">
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="inline-flex w-full items-center justify-center rounded-full bg-neutral-950 px-6 py-3 text-sm font-medium text-white transition hover:bg-neutral-800 disabled:cursor-not-allowed disabled:opacity-60 md:w-auto"
+        >
+          {isSubmitting ? "Sending…" : "Submit"}
+        </button>
+      </div>
+    </form>
   );
 }
 
@@ -299,24 +440,39 @@ function Field({
   name,
   placeholder,
   type = "text",
+  required = true,
+  error,
 }: {
   label: string;
   name: string;
   placeholder: string;
   type?: string;
+  required?: boolean;
+  error?: string;
 }) {
   return (
     <label className="block">
       <span className="block text-xs uppercase tracking-[0.35em] text-neutral-500">
-        {label} <span className="text-neutral-400">*</span>
+        {label}{" "}
+        {required ? <span className="text-neutral-400">*</span> : null}
       </span>
       <input
-        required
+        required={required}
         name={name}
         type={type}
         placeholder={placeholder}
-        className="mt-2 w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-neutral-400"
+        className={
+          "mt-2 w-full rounded-xl border bg-white px-4 py-3 text-sm outline-none transition focus:border-neutral-400 " +
+          (error ? "border-red-400" : "border-neutral-200")
+        }
+        aria-invalid={error ? true : undefined}
+        aria-describedby={error ? `${name}-error` : undefined}
       />
+      {error ? (
+        <p id={`${name}-error`} className="mt-1.5 text-sm text-red-700" role="alert">
+          {error}
+        </p>
+      ) : null}
     </label>
   );
 }
@@ -325,10 +481,12 @@ function TextArea({
   label,
   name,
   placeholder,
+  error,
 }: {
   label: string;
   name: string;
   placeholder: string;
+  error?: string;
 }) {
   return (
     <label className="block">
@@ -340,8 +498,18 @@ function TextArea({
         name={name}
         placeholder={placeholder}
         rows={7}
-        className="mt-2 w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-neutral-400"
+        className={
+          "mt-2 w-full rounded-xl border bg-white px-4 py-3 text-sm outline-none transition focus:border-neutral-400 " +
+          (error ? "border-red-400" : "border-neutral-200")
+        }
+        aria-invalid={error ? true : undefined}
+        aria-describedby={error ? `${name}-error` : undefined}
       />
+      {error ? (
+        <p id={`${name}-error`} className="mt-1.5 text-sm text-red-700" role="alert">
+          {error}
+        </p>
+      ) : null}
     </label>
   );
 }

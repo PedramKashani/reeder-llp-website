@@ -1,4 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Terms of Use | Reeder McCreary, LLP",
+  description:
+    "Terms of use for the Reeder McCreary, LLP website, including conditions for accessing content, disclaimers, and limitations applicable to your use of this site.",
+  alternates: {
+    canonical: "/terms",
+  },
+};
 
 export default function TermsOfUsePage() {
   return (

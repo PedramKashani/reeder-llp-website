@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { professionals } from "@/data/professionals";
 
@@ -40,13 +41,16 @@ function MemberCard({
         aria-label={`View profile: ${name}`}
       />
 
-      <div className="relative">
-        <img
-          src={imageUrl}
-          alt={name}
-          className="h-[440px] w-full object-cover transition duration-500 group-hover:scale-[1.03]"
-          loading="lazy"
-        />
+      <div className="relative h-[440px] w-full">
+        {imageUrl ? (
+          <Image
+            src={imageUrl}
+            alt={name}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover transition duration-500 group-hover:scale-[1.03]"
+          />
+        ) : null}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-neutral-950/70 via-neutral-950/10 to-transparent opacity-95" />
       </div>
 

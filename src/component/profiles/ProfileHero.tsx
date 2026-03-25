@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Professional } from "@/data/professionals";
 
 export function ProfileHero({ profile }: { profile: Professional }) {
@@ -14,11 +15,12 @@ export function ProfileHero({ profile }: { profile: Professional }) {
         {/* Portrait — shows more upper body / shoulders; not full-bleed face crop */}
         <div className="relative order-1 min-h-[42vh] sm:min-h-[48vh] lg:order-2 lg:min-h-[min(88vh,880px)]">
           {photoUrl ? (
-            <img
+            <Image
               src={photoUrl}
               alt=""
-              className="absolute inset-0 h-full w-full object-cover object-[center_28%] sm:object-[center_26%]"
+              fill
               sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover object-[center_28%] sm:object-[center_26%]"
             />
           ) : null}
           {/* Mobile: subtle overlay so scroll cue / balance */}

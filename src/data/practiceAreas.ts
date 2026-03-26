@@ -1,29 +1,12 @@
-export type PracticeAreaSection = {
-  heading?: string;
-  paragraphs: string[];
-};
+import type { PracticeArea } from "@/types/practiceArea";
 
-export type PracticeArea = {
-  slug: string;
-  title: string;
-  /** Short card / index summary; also a strong default for meta description when metaDescription is omitted. */
-  excerpt?: string;
-  heroSubtitle?: string; // e.g. "Practice Areas" or "Litigation"
-  heroImage: string;
-  /** Descriptive text for the hero image (non-decorative photography). */
-  heroImageAlt?: string;
-  /** Overrides the HTML page title for this practice route when set. */
-  metaTitle?: string;
-  /** Overrides meta description (and Open Graph description when wired) when set. */
-  metaDescription?: string;
-  sections?: PracticeAreaSection[]; // heading + paragraphs; if omitted, use paragraphs
-  paragraphs?: string[]; // legacy: flat list when sections not used
-};
+export type { PracticeArea, PracticeAreaSection } from "@/types/practiceArea";
 
 export const practiceAreas: PracticeArea[] = [
   {
     slug: "trials-commercial-litigation",
     title: "Trials and Commercial Litigation",
+    navLabel: "Trials & Commercial Litigation",
     excerpt:
       "Complex commercial trial and litigation for plaintiffs and defendants—disputes across real estate, franchise, hospitality, construction, entertainment, sports, energy, and finance.",
     heroImage: "/images/team/team-outdoor.webp",
@@ -156,6 +139,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "franchise-dealership",
     title: "Franchise and Dealership",
+    navLabel: "Franchise & Dealership",
     excerpt:
       "Franchise and dealership disputes, system-wide negotiations, agreement drafting, and transactions for franchisors, franchisees, manufacturers, and dealers.",
     heroImage: "/images/team/team-outdoor.webp",
@@ -341,6 +325,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "white-collar-investigations",
     title: "White Collar Crime / Investigations",
+    navLabel: "White Collar / Investigations",
     excerpt:
       "Government and internal investigations, regulatory proceedings, and defense-oriented strategy in fraud, fiduciary, securities, and related white collar matters.",
     heroImage: "/images/team/team-outdoor.webp",
@@ -372,3 +357,8 @@ export const practiceAreas: PracticeArea[] = [
     ],
   },
 ];
+
+export const practiceAreaNavLinks = practiceAreas.map((pa) => ({
+  label: pa.navLabel ?? pa.title,
+  href: `/practice-areas/${pa.slug}`,
+}));

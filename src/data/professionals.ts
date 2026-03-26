@@ -1,40 +1,6 @@
-export type ProfessionalLink = {
-  label: string;
-  href: string;
-};
+import type { Professional } from "@/types/professional";
 
-export type Professional = {
-  slug: string;
-  name: string;
-  title: string;
-
-  officePhone?: string;
-  directDial?: string;
-  email?: string;
-
-  photo?: string; // default headshot
-  photoSmall?: string; // small headshot (list page)
-  photoLarge?: string; // big portrait (profile page)
-  badgeImages?: string[]; // awards/badges images shown on profile
-
-  links?: ProfessionalLink[]; // Super Lawyers, Best Lawyers, etc.
-
-  /** Practice area slugs this attorney is associated with (see `practiceAreas`). */
-  relatedPracticeSlugs?: string[];
-
-  sections: {
-    background?: string[]; // paragraphs
-    winningResults?: string[]; // Ben has "Winning Results"
-    winningTrialLitigation?: string[]; // Chris/Duncan
-    winningTransaction?: string[]; // Chris/Duncan
-    education?: string[];
-    associations?: string[]; // Chris
-    admissions?: string[];
-    publications?: string[]; // Chris
-    awards?: string[];
-    speakingEngagements?: string[]; // Chris
-  };
-};
+export type { Professional, ProfessionalLink } from "@/types/professional";
 
 export const professionals: Professional[] = [
   // -------------------------

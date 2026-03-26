@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { professionals } from "@/data/professionals";
+import type { Professional } from "@/types/professional";
 
-export function MembersGrid() {
+export function MembersGrid({ professionals }: { professionals: Professional[] }) {
   return (
     <section className="border-b border-neutral-200">
       <div className="mx-auto max-w-6xl px-6 pb-16 md:pb-24">

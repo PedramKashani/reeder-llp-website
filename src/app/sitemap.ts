@@ -1,8 +1,7 @@
 import type { MetadataRoute } from "next";
 import { practiceAreas } from "@/data/practiceAreas";
 import { professionals } from "@/data/professionals";
-
-const SITE_URL = "https://www.reedermccreary.com";
+import { SITE_URL } from "@/data/firm";
 
 const STATIC_ROUTES: string[] = [
   "/",

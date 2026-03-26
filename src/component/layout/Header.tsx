@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { practiceAreaNavLinks } from "@/data/practiceAreas";
 
 type NavLink = { label: string; href: string };
 type NavGroup = { title: string; links: NavLink[]; twoCols?: boolean };
@@ -47,29 +48,7 @@ const NAV_SECTIONS: NavSection[] = [
         {
           title: "Core",
           twoCols: true,
-          links: [
-            {
-              label: "Trials & Commercial Litigation",
-              href: "/practice-areas/trials-commercial-litigation",
-            },
-            { label: "Real Estate", href: "/practice-areas/real-estate" },
-            { label: "Corporate", href: "/practice-areas/corporate" },
-            {
-              label: "Franchise & Dealership",
-              href: "/practice-areas/franchise-dealership",
-            },
-            { label: "Entertainment", href: "/practice-areas/entertainment" },
-            { label: "Sports", href: "/practice-areas/sports" },
-            { label: "Employment", href: "/practice-areas/employment" },
-            {
-              label: "Intellectual Property",
-              href: "/practice-areas/intellectual-property",
-            },
-            {
-              label: "White Collar / Investigations",
-              href: "/practice-areas/white-collar-investigations",
-            },
-          ],
+          links: practiceAreaNavLinks,
         },
       ],
     ],

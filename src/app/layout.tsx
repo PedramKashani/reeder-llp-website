@@ -3,9 +3,10 @@ import "./globals.css";
 import { Manrope } from "next/font/google";
 import { Header } from "@/component/layout/Header";
 import { Footer } from "@/component/layout/Footer";
+import { SITE_URL as SITE_URL_STRING, PHONE_E164, ADDRESS } from "@/data/firm";
 
 /** Production site origin — canonical URLs use paths relative to this base in each route’s `alternates.canonical`. */
-export const siteUrl = new URL("https://www.reedermccreary.com");
+export const siteUrl = new URL(SITE_URL_STRING);
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,
@@ -49,12 +50,14 @@ const organizationJsonLd = {
   name: "Reeder McCreary, LLP",
   url: siteUrl.toString(),
   logo: new URL("/images/logos/rmc-gold-logo.webp", siteUrl).toString(),
-  telephone: "+1-310-861-2470",
+  telephone: PHONE_E164,
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Los Angeles",
-    addressRegion: "CA",
-    addressCountry: "US",
+    streetAddress: `${ADDRESS.street}, ${ADDRESS.suite}`,
+    addressLocality: ADDRESS.city,
+    addressRegion: ADDRESS.region,
+    postalCode: ADDRESS.zip,
+    addressCountry: ADDRESS.country,
   },
 };
 

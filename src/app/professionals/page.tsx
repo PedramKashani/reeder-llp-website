@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { professionals } from "@/data/professionals";
 import { TeamHero } from "@/component/team/TeamHero";
 import { SectionHeading } from "@/component/SectionHeading";
 import { MembersGrid } from "@/component/team/MembersGrid";
@@ -25,7 +26,7 @@ export default function ProfessionalsPage() {
 
       <SectionHeading id="team" kicker="Meet our" title="Legal Team" />
 
-      <MembersGrid />
+      <MembersGrid professionals={professionals} />
 
       <TeamCTA
         title="Need Counsel?"

@@ -1,3 +1,5 @@
+import { PHONE, PHONE_HREF, ADDRESS } from "@/data/firm";
+
 export default function PracticeSpacesFooter() {
   return (
     <section className="bg-black">
@@ -21,15 +23,15 @@ export default function PracticeSpacesFooter() {
             </h3>
             <div className="mt-6 h-px w-20 bg-[#c8a24a]" />
             <p className="mt-6 text-[15px] leading-relaxed text-white/75">
-              11766 Wilshire Blvd, Suite 1470
+              {ADDRESS.street}, {ADDRESS.suite}
               <br />
-              Los Angeles, CA 90025
+              {ADDRESS.city}, {ADDRESS.region} {ADDRESS.zip}
             </p>
             <a
               className="mt-6 inline-block rounded-full border border-white/15 px-6 py-3 text-xs uppercase tracking-[0.22em] text-white/80 hover:bg-white/10 hover:text-white"
-              href="tel:310-861-2470"
+              href={PHONE_HREF}
             >
-              310-861-2470
+              {PHONE}
             </a>
           </div>
         </div>

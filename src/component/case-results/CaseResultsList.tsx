@@ -1,8 +1,7 @@
 import { AnimatedSection } from "@/component/AnimatedSection";
+import type { CaseResult } from "@/types/caseResult";
 
-type Result = { title: string; description: string };
-
-export function CaseResultsList({ results }: { results: Result[] }) {
+export function CaseResultsList({ results }: { results: CaseResult[] }) {
   return (
     <div className="space-y-14 md:space-y-16">
       {results.map((result, i) => (

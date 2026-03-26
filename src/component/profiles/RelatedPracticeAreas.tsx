@@ -1,8 +1,14 @@
 import Link from "next/link";
-import { practiceAreas, type PracticeArea } from "@/data/practiceAreas";
-import type { Professional } from "@/data/professionals";
+import type { PracticeArea } from "@/types/practiceArea";
+import type { Professional } from "@/types/professional";
 
-export function RelatedPracticeAreas({ profile }: { profile: Professional }) {
+export function RelatedPracticeAreas({
+  profile,
+  practiceAreas,
+}: {
+  profile: Professional;
+  practiceAreas: PracticeArea[];
+}) {
   const slugs = profile.relatedPracticeSlugs;
   if (!slugs?.length) return null;
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { professionals } from "@/data/professionals";
+import { practiceAreas } from "@/data/practiceAreas";
 
 import { ProfileHero } from "@/component/profiles/ProfileHero";
 import { BioShowMore } from "@/component/profiles/BioShowMore";
@@ -52,7 +53,7 @@ export default async function ProfilePage({ params }: Props) {
 
       <CredentialsAccordion profile={profile} />
 
-      <RelatedPracticeAreas profile={profile} />
+      <RelatedPracticeAreas profile={profile} practiceAreas={practiceAreas} />
 
       <MeetOthers current={profile} others={others} />
 

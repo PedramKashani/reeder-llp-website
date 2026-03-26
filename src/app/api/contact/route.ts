@@ -1,10 +1,6 @@
 import { NextResponse } from "next/server";
-
-const LIMITS = { name: 200, email: 320, phone: 80, message: 10_000 } as const;
-
-function isValidEmail(s: string): boolean {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s);
-}
+import { LIMITS, isValidEmail } from "@/lib/validation";
+import type { ContactFormFields } from "@/types/contact";
 
 export async function POST(request: Request) {
   let body: unknown;
@@ -18,7 +14,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "invalid_body" }, { status: 400 });
   }
 
-  const data = body as Record<string, unknown>;
+  const data = body as Partial<ContactFormFields>;
   const honeypot = typeof data.website === "string" ? data.website.trim() : "";
   if (honeypot !== "") {
     return NextResponse.json({ ok: true }, { status: 200 });
@@ -34,7 +30,7 @@ export async function POST(request: Request) {
   if (!name || name.length > LIMITS.name) errors.push("name");
   if (!email || email.length > LIMITS.email || !isValidEmail(email))
     errors.push("email");
-  if (!message || message.length < 3 || message.length > LIMITS.message)
+  if (!message || message.length < LIMITS.messageMin || message.length > LIMITS.message)
     errors.push("message");
 
   if (errors.length > 0) {

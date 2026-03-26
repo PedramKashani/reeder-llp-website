@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
+import { PageHero } from "@/src/components/PageHero";
 import { CaseResultsList } from "@/src/components/case-results/CaseResultsList";
 import { CASE_RESULTS } from "@/data/caseResults";
 
@@ -16,37 +16,16 @@ export const metadata: Metadata = {
 export default function CaseResultsPage() {
   return (
     <main className="min-h-screen bg-white">
-      {/* Cinematic hero — same style as professionals pages */}
-      <div className="case-results-hero relative min-h-[85vh] w-full overflow-hidden sm:min-h-[90vh]">
-        <Image
-          src="/images/logos/RMC-Logo-White-Bkgd.webp"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-contain object-center"
-        />
-        <div className="absolute inset-0 bg-black/35" aria-hidden />
-        <div
-          className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50"
-          aria-hidden
-        />
-        <div
-          className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"
-          aria-hidden
-        />
-        <div className="relative z-10 flex min-h-[85vh] flex-col justify-end sm:min-h-[90vh]">
-          <div className="w-full px-6 pb-14 pt-20 md:px-12 md:pb-20 lg:px-16 lg:pb-24">
-            <div className="mb-5 h-px w-14 bg-white/70" />
-            <h6 className="text-xs font-semibold uppercase tracking-[0.28em] text-white/90 md:text-sm">
-              Highlighted
-            </h6>
-            <h1 className="mt-3 text-4xl font-semibold tracking-tight text-white drop-shadow-[0_2px_24px_rgba(0,0,0,0.6)] md:text-5xl lg:text-6xl xl:text-7xl">
-              Case Results
-            </h1>
-          </div>
-        </div>
-      </div>
+      <PageHero
+        imageSrc="/images/logos/RMC-Logo-White-Bkgd.webp"
+        imageClassName="object-contain object-center"
+        className="case-results-hero"
+        contentClassName="w-full px-6 pb-14 pt-20 md:px-12 md:pb-20 lg:px-16 lg:pb-24"
+        subtitle="Highlighted"
+        subtitleClassName="text-xs font-semibold uppercase tracking-[0.28em] text-white/90 md:text-sm"
+        title="Case Results"
+        titleClassName="mt-3 text-4xl font-semibold tracking-tight text-white drop-shadow-[0_2px_24px_rgba(0,0,0,0.6)] md:text-5xl lg:text-6xl xl:text-7xl"
+      />
 
       <section className="border-b border-neutral-200 bg-white py-16 md:py-24 text-neutral-900">
         <div className="mx-auto max-w-6xl px-6 md:max-w-7xl md:px-10 lg:px-12 [&_h3]:text-neutral-900 [&_p]:text-neutral-700">

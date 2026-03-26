@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
+import { PageHero } from "@/src/components/PageHero";
 
 export const metadata: Metadata = {
   title: "About the Firm | Reeder McCreary, LLP",
@@ -14,37 +14,11 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-neutral-950 text-white">
-      {/* Cinematic hero – match case results/professionals style */}
-      <div className="relative min-h-[85vh] w-full overflow-hidden sm:min-h-[90vh]">
-        <Image
-          src="/images/team/team-in-office-1.webp"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-black/35" aria-hidden />
-        <div
-          className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50"
-          aria-hidden
-        />
-        <div
-          className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"
-          aria-hidden
-        />
-        <div className="relative z-10 flex min-h-[85vh] flex-col justify-end sm:min-h-[90vh]">
-          <div className="mx-auto w-full max-w-6xl px-8 pb-14 pt-20 md:px-12 md:pb-20 lg:px-16 lg:pb-24">
-            <div className="mb-5 h-px w-14 bg-white/70" />
-            <h6 className="text-sm font-semibold uppercase tracking-[0.28em] text-white/95 md:text-base">
-              About the Firm
-            </h6>
-            <h1 className="mt-3 text-5xl font-semibold tracking-tight text-white drop-shadow-[0_2px_24px_rgba(0,0,0,0.6)] md:text-6xl lg:text-7xl">
-              Reeder McCreary
-            </h1>
-          </div>
-        </div>
-      </div>
+      <PageHero
+        imageSrc="/images/team/team-in-office-1.webp"
+        subtitle="About the Firm"
+        title="Reeder McCreary"
+      />
 
       <section className="border-b border-white/10 bg-neutral-950 py-24 md:py-32">
         <div className="mx-auto w-full max-w-7xl px-8 md:px-12 lg:px-16">

@@ -37,10 +37,10 @@ export const metadata: Metadata = {
   },
 };
 
-const cormorant = Manrope({
+const manrope = Manrope({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-cormorant",
+  variable: "--font-manrope",
   display: "swap",
 });
 
@@ -67,8 +67,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={cormorant.variable}>
-      <body className={cormorant.className}>
+    <html lang="en" className={manrope.variable}>
+      <body className={manrope.className}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

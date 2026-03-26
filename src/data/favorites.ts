@@ -20,8 +20,7 @@ export const CATEGORY_INTRO: Record<string, string> = {
     "Practitioners and teams we suggest when discretion, expertise, and outcomes are non‑negotiable.",
   "Real Estate & Business":
     "Professional resources that meet the standard we hold in our own practice.",
-  "More Favorites":
-    "A handful of other names we're glad to pass along.",
+  "More Favorites": "A handful of other names we're glad to pass along.",
 };
 
 export const favorites: FavoriteThing[] = [
@@ -35,7 +34,7 @@ export const favorites: FavoriteThing[] = [
   },
   {
     href: "https://instagram.com/tonyynotstyle?igshid=c35cnto6g6s",
-    img: "/images/favorites/favorite-tonywebp.webp",
+    img: "/images/favorites/favorite-tony.webp",
     alt: "Tony Ynot Style",
     category: "Retail & Style",
     description:

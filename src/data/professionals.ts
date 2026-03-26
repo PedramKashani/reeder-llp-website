@@ -164,7 +164,7 @@ export const professionals: Professional[] = [
       },
     ],
     badgeImages: [
-      "/images/badges/super-lawyers-10yr-duncan-mccreary-2025.webp.webp",
+      "/images/badges/super-lawyers-10yr-duncan-mccreary-2025.webp",
       "/images/badges/super-lawyers-selected-duncan-mccreary-2026.webp",
     ],
     relatedPracticeSlugs: [

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { CaseResultsList } from "@/component/case-results/CaseResultsList";
+import { CaseResultsList } from "@/src/components/case-results/CaseResultsList";
 import { CASE_RESULTS } from "@/data/caseResults";
 
 export const metadata: Metadata = {
@@ -12,7 +12,6 @@ export const metadata: Metadata = {
     canonical: "/case-results",
   },
 };
-
 
 export default function CaseResultsPage() {
   return (

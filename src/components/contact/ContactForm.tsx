@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { PHONE } from "@/data/firm";
 import { LIMITS, isValidEmail } from "@/lib/validation";
-import { Field } from "@/component/ui/Field";
-import { TextArea } from "@/component/ui/TextArea";
+import { Field } from "@/src/components/ui/Field";
+import { TextArea } from "@/src/components/ui/TextArea";
 import type { ContactFieldErrors, ContactApiResponse } from "@/types/contact";
 
 export function ContactForm() {
@@ -39,7 +39,8 @@ export function ContactForm() {
     if (!message) next.message = "Please enter a message.";
     else if (message.length < LIMITS.messageMin)
       next.message = "Please enter a longer message.";
-    else if (message.length > LIMITS.message) next.message = "Message is too long.";
+    else if (message.length > LIMITS.message)
+      next.message = "Message is too long.";
 
     if (Object.keys(next).length) {
       setFieldErrors(next);
@@ -91,13 +92,9 @@ export function ContactForm() {
         return;
       }
 
-      setFormError(
-        `Something went wrong. Please try again or call ${PHONE}.`,
-      );
+      setFormError(`Something went wrong. Please try again or call ${PHONE}.`);
     } catch {
-      setFormError(
-        `Something went wrong. Please try again or call ${PHONE}.`,
-      );
+      setFormError(`Something went wrong. Please try again or call ${PHONE}.`);
     } finally {
       setIsSubmitting(false);
     }

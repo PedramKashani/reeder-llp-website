@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { professionals } from "@/data/professionals";
-import { TeamHero } from "@/component/team/TeamHero";
-import { SectionHeading } from "@/component/SectionHeading";
-import { MembersGrid } from "@/component/team/MembersGrid";
-import { TeamCTA } from "@/component/team/TeamCTA";
+import { TeamHero } from "@/src/components/team/TeamHero";
+import { SectionHeading } from "@/src/components/SectionHeading";
+import { MembersGrid } from "@/src/components/team/MembersGrid";
+import { TeamCTA } from "@/src/components/team/TeamCTA";
 
 export const metadata: Metadata = {
   title: "Attorneys & Professionals | Reeder McCreary, LLP",

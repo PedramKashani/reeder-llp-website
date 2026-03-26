@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import { PHONE, PHONE_HREF } from "@/data/firm";
-import { ContactForm } from "@/component/contact/ContactForm";
-import { InfoCard } from "@/component/contact/InfoCard";
+import { ContactForm } from "@/src/components/contact/ContactForm";
+import { InfoCard } from "@/src/components/contact/InfoCard";
 
 const HOURS = [
   { day: "Monday", hours: "9am – 5pm" },

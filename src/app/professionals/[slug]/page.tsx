@@ -3,12 +3,12 @@ import { notFound } from "next/navigation";
 import { professionals } from "@/data/professionals";
 import { practiceAreas } from "@/data/practiceAreas";
 
-import { ProfileHero } from "@/component/profiles/ProfileHero";
-import { BioShowMore } from "@/component/profiles/BioShowMore";
-import { CredentialsAccordion } from "@/component/profiles/CredentialsAccordion";
-import { MeetOthers } from "@/component/profiles/MeetOthers";
-import { ProfileCTA } from "@/component/profiles/ProfileCTA";
-import { RelatedPracticeAreas } from "@/component/profiles/RelatedPracticeAreas";
+import { ProfileHero } from "@/src/components/profiles/ProfileHero";
+import { BioShowMore } from "@/src/components/profiles/BioShowMore";
+import { CredentialsAccordion } from "@/src/components/profiles/CredentialsAccordion";
+import { MeetOthers } from "@/src/components/profiles/MeetOthers";
+import { ProfileCTA } from "@/src/components/profiles/ProfileCTA";
+import { RelatedPracticeAreas } from "@/src/components/profiles/RelatedPracticeAreas";
 
 type Props = {
   params: Promise<{ slug: string }>;

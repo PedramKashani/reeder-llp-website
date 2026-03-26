@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { practiceAreas } from "@/data/practiceAreas";
-import { PracticeHeroImage } from "@/component/practice/PracticeHeroImage";
+import { PracticeHeroImage } from "@/src/components/practice/PracticeHeroImage";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -61,10 +61,7 @@ export default async function PracticeAreaPage({ params }: Props) {
     <div className="main min-h-screen bg-neutral-950 text-white">
       {/* Hero - full height */}
       <div className="hero relative min-h-[100svh] w-full overflow-hidden">
-        <PracticeHeroImage
-          src={area.heroImage}
-          alt={area.heroImageAlt ?? ""}
-        />
+        <PracticeHeroImage src={area.heroImage} alt={area.heroImageAlt ?? ""} />
         <div className="absolute inset-0 bg-black/40" />
 
         <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl items-end px-6">

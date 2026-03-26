@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
-import { HeroRotatingWords } from "@/component/HeroRotatingWords";
-import { SectionHeading } from "@/component/SectionHeading";
-import { ImageContentSection } from "@/component/ImageContentSection";
-import { CTASection } from "@/component/CTASection";
+import { HeroRotatingWords } from "@/src/components/HeroRotatingWords";
+import { SectionHeading } from "@/src/components/SectionHeading";
+import { ImageContentSection } from "@/src/components/ImageContentSection";
+import { CTASection } from "@/src/components/CTASection";
 
 export const metadata: Metadata = {
   title:

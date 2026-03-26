@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { AnimatedSection } from "@/component/AnimatedSection";
+import { AnimatedSection } from "@/src/components/AnimatedSection";
 
 type CTASectionProps = {
   title: string;

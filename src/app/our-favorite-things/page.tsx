@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { OurFavoriteThingsGrid } from "@/component/OurFavoriteThingsGrid";
+import { OurFavoriteThingsGrid } from "@/src/components/OurFavoriteThingsGrid";
 
 export const metadata: Metadata = {
   title: "Our Favorite Things | Reeder McCreary, LLP",
@@ -33,9 +33,9 @@ export default function OurFavoriteThingsPage() {
               Our Favorite Things
             </h1>
             <p className="mt-6 text-base font-normal leading-relaxed text-white/70 md:mt-8 md:text-lg md:leading-relaxed">
-              A shortlist of restaurants, makers, venues, and professionals we rely
-              on and recommend—places and people we&apos;d send a client or a friend
-              without hesitation.
+              A shortlist of restaurants, makers, venues, and professionals we
+              rely on and recommend—places and people we&apos;d send a client or
+              a friend without hesitation.
             </p>
           </div>
         </div>

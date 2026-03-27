@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { professionals } from "@/data/professionals";
-import { TeamHero } from "@/src/components/team/TeamHero";
-import { SectionHeading } from "@/src/components/SectionHeading";
-import { MembersGrid } from "@/src/components/team/MembersGrid";
-import { TeamCTA } from "@/src/components/team/TeamCTA";
+import { TeamHero } from "@/components/team/TeamHero";
+import { SectionHeading } from "@/components/SectionHeading";
+import { MembersGrid } from "@/components/team/MembersGrid";
+import { CTABand } from "@/components/CTABand";
 
 export const metadata: Metadata = {
   title: "Attorneys & Professionals | Reeder McCreary, LLP",
@@ -28,8 +28,10 @@ export default function ProfessionalsPage() {
 
       <MembersGrid professionals={professionals} />
 
-      <TeamCTA
+      <CTABand
+        variant="light"
         title="Need Counsel?"
+        subtitle="Get in touch with our team to discuss your matter."
         buttonLabel="Request a Consultation"
         buttonHref="/contact"
       />

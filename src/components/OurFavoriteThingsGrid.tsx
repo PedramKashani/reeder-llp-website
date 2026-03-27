@@ -1,4 +1,4 @@
-import { OurFavoriteThingsCategorySection } from "@/src/components/OurFavoriteThingsCategoryCarousel";
+import { OurFavoriteThingsCategorySection } from "@/components/OurFavoriteThingsCategoryCarousel";
 import { CATEGORY_ORDER, CATEGORY_INTRO, favorites } from "@/data/favorites";
 
 export function OurFavoriteThingsGrid() {

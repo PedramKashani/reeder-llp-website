@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/src/components/PageHero";
+import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "About the Firm | Reeder McCreary, LLP",

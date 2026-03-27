@@ -1,4 +1,4 @@
-import { AnimatedSection } from "@/src/components/AnimatedSection";
+import { AnimatedSection } from "@/components/AnimatedSection";
 import type { CaseResult } from "@/types/caseResult";
 
 export function CaseResultsList({ results }: { results: CaseResult[] }) {

@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import { PHONE, PHONE_HREF } from "@/data/firm";
-import { ContactForm } from "@/src/components/contact/ContactForm";
-import { InfoCard } from "@/src/components/contact/InfoCard";
+import { ContactForm } from "@/components/contact/ContactForm";
+import { InfoCard } from "@/components/contact/InfoCard";
+import { ScrollDownButton } from "@/components/ScrollDownButton";
 
 const HOURS = [
   { day: "Monday", hours: "9am – 5pm" },
@@ -53,14 +54,7 @@ export default function ContactPage() {
             </a>
           </div>
 
-          <button
-            type="button"
-            onClick={() => scrollToId("section-heading")}
-            className="absolute bottom-8 left-1/2 -translate-x-1/2 rounded-full border border-white/25 bg-white/10 px-5 py-3 text-xs tracking-[0.3em] text-white backdrop-blur hover:bg-white/15"
-            aria-label="Scroll to next section"
-          >
-            ↓
-          </button>
+          <ScrollDownButton scrollToId="section-heading" />
         </div>
       </section>
 

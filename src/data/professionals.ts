@@ -1,7 +1,5 @@
 import type { Professional } from "@/types/professional";
 
-export type { Professional, ProfessionalLink } from "@/types/professional";
-
 export const professionals: Professional[] = [
   // -------------------------
   // CHRIS REEDER

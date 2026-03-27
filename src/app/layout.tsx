@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Manrope } from "next/font/google";
-import { Header } from "@/src/components/layout/Header";
-import { Footer } from "@/src/components/layout/Footer";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 import { SITE_URL as SITE_URL_STRING, PHONE_E164, ADDRESS } from "@/data/firm";
 
 /** Production site origin — canonical URLs use paths relative to this base in each route’s `alternates.canonical`. */

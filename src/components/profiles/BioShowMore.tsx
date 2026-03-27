@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type { Professional } from "@/data/professionals";
+import type { Professional } from "@/types/professional";
 
 export function BioShowMore({ profile }: { profile: Professional }) {
   const [expanded, setExpanded] = useState(true);

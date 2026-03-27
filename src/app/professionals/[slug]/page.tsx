@@ -3,12 +3,12 @@ import { notFound } from "next/navigation";
 import { professionals } from "@/data/professionals";
 import { practiceAreas } from "@/data/practiceAreas";
 
-import { ProfileHero } from "@/src/components/profiles/ProfileHero";
-import { BioShowMore } from "@/src/components/profiles/BioShowMore";
-import { CredentialsAccordion } from "@/src/components/profiles/CredentialsAccordion";
-import { MeetOthers } from "@/src/components/profiles/MeetOthers";
-import { ProfileCTA } from "@/src/components/profiles/ProfileCTA";
-import { RelatedPracticeAreas } from "@/src/components/profiles/RelatedPracticeAreas";
+import { ProfileHero } from "@/components/profiles/ProfileHero";
+import { BioShowMore } from "@/components/profiles/BioShowMore";
+import { CredentialsAccordion } from "@/components/profiles/CredentialsAccordion";
+import { MeetOthers } from "@/components/profiles/MeetOthers";
+import { CTABand } from "@/components/CTABand";
+import { RelatedPracticeAreas } from "@/components/profiles/RelatedPracticeAreas";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -57,7 +57,12 @@ export default async function ProfilePage({ params }: Props) {
 
       <MeetOthers current={profile} others={others} />
 
-      <ProfileCTA />
+      <CTABand
+        variant="dark"
+        title="Need Legal Advice?"
+        buttonLabel="Contact Us"
+        buttonHref="/contact"
+      />
     </main>
   );
 }

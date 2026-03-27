@@ -1,5 +1,6 @@
 import Image from "next/image";
-import type { Professional } from "@/data/professionals";
+import type { Professional } from "@/types/professional";
+import { ScrollDownButton } from "@/components/ScrollDownButton";
 
 export function ProfileHero({ profile }: { profile: Professional }) {
   const photoUrl =
@@ -84,13 +85,7 @@ export function ProfileHero({ profile }: { profile: Professional }) {
         </div>
       </div>
 
-      <a
-        href="#profile-content"
-        className="absolute bottom-5 left-1/2 z-10 -translate-x-1/2 rounded-full border border-white/40 bg-white/10 px-3 py-2 text-sm text-white backdrop-blur-sm transition hover:bg-white/15 lg:bottom-8"
-        aria-label="Scroll to profile content"
-      >
-        ↓
-      </a>
+      <ScrollDownButton scrollToId="profile-content" />
     </section>
   );
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { OurFavoriteThingsGrid } from "@/src/components/OurFavoriteThingsGrid";
+import { OurFavoriteThingsGrid } from "@/components/OurFavoriteThingsGrid";
 
 export const metadata: Metadata = {
   title: "Our Favorite Things | Reeder McCreary, LLP",

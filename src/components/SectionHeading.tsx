@@ -1,4 +1,4 @@
-import { AnimatedSection } from "@/src/components/AnimatedSection";
+import { AnimatedSection } from "@/components/AnimatedSection";
 
 type SectionHeadingProps = {
   kicker: string;

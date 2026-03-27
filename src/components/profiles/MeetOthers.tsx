@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { Professional } from "@/data/professionals";
+import type { Professional } from "@/types/professional";
 
 export function MeetOthers({
   others,

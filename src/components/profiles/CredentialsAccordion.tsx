@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type { Professional } from "@/data/professionals";
+import type { Professional } from "@/types/professional";
 
 type Item = { title: string; lines: string[] };
 

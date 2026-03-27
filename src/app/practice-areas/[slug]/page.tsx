@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import { practiceAreas } from "@/data/practiceAreas";
-import { PracticeHeroImage } from "@/src/components/practice/PracticeHeroImage";
+import { CTABand } from "@/components/CTABand";
+import { PracticeHeroImage } from "@/components/practice/PracticeHeroImage";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -118,24 +118,12 @@ export default async function PracticeAreaPage({ params }: Props) {
         </div>
       </section>
 
-      {/* CTA section */}
-      <section className="section-cta border-t border-white/10 bg-neutral-950 py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="section__inner flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
-            <h4 className="text-2xl font-semibold tracking-tight text-white md:text-3xl lg:text-4xl">
-              Need a Lawyer?
-            </h4>
-            <div className="section__actions">
-              <Link
-                href="/contact"
-                className="btn inline-flex items-center justify-center rounded-full bg-white px-10 py-4 text-base font-semibold uppercase tracking-[0.2em] text-neutral-900 transition hover:bg-white/90"
-              >
-                Request Consultation
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CTABand
+        variant="dark"
+        title="Need a Lawyer?"
+        buttonLabel="Request Consultation"
+        buttonHref="/contact"
+      />
     </div>
   );
 }

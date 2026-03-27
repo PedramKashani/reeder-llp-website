@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { ScrollDownButton } from "@/components/ScrollDownButton";
 
 type Props = {
   backgroundImageUrl: string;
@@ -43,13 +43,7 @@ export function TeamHero({
         </div>
       </div>
 
-      <Link
-        href={`#${scrollToId}`}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 rounded-full border border-white/30 bg-white/10 p-3 text-white backdrop-blur hover:bg-white/15"
-        aria-label="Scroll to next section"
-      >
-        <span className="block text-xl leading-none">↓</span>
-      </Link>
+      <ScrollDownButton scrollToId={scrollToId} />
     </section>
   );
 }

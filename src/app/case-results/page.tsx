@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/src/components/PageHero";
-import { CaseResultsList } from "@/src/components/case-results/CaseResultsList";
+import { PageHero } from "@/components/PageHero";
+import { CaseResultsList } from "@/components/case-results/CaseResultsList";
 import { CASE_RESULTS } from "@/data/caseResults";
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function CaseResultsPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white text-neutral-900">
       <PageHero
         imageSrc="/images/logos/RMC-Logo-White-Bkgd.webp"
         imageClassName="object-contain object-center"

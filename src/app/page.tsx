@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import type { CSSProperties } from "react";
-import { HeroRotatingWords } from "@/src/components/HeroRotatingWords";
-import { SectionHeading } from "@/src/components/SectionHeading";
-import { ImageContentSection } from "@/src/components/ImageContentSection";
-import { CTASection } from "@/src/components/CTASection";
+import { HeroRotatingWords } from "@/components/HeroRotatingWords";
+import { SectionHeading } from "@/components/SectionHeading";
+import { ImageContentSection } from "@/components/ImageContentSection";
+import { CTABand } from "@/components/CTABand";
 
 export const metadata: Metadata = {
   title:
@@ -88,7 +88,8 @@ export default function HomePage() {
         </div>
 
         <div className="snap-section flex flex-col">
-          <CTASection
+          <CTABand
+            variant="animated"
             title="Need Counsel?"
             buttonLabel="Request a Consultation"
             buttonHref="/contact"

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { AnimatedSection } from "@/src/components/AnimatedSection";
+import { AnimatedSection } from "@/components/AnimatedSection";
 
 type ImageContentSectionProps = {
   title: string;

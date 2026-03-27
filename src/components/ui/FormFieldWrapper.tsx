@@ -1,0 +1,36 @@
+export const fieldBorderClass = (error?: string) =>
+  "mt-2 w-full rounded-xl border bg-white px-4 py-3 text-sm outline-none transition focus:border-neutral-400 " +
+  (error ? "border-red-400" : "border-neutral-200");
+
+export function FormFieldWrapper({
+  label,
+  name,
+  required,
+  error,
+  children,
+}: {
+  label: string;
+  name: string;
+  required?: boolean;
+  error?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <label className="block">
+      <span className="block text-xs uppercase tracking-[0.35em] text-neutral-500">
+        {label}{" "}
+        {required ? <span className="text-neutral-400">*</span> : null}
+      </span>
+      {children}
+      {error ? (
+        <p
+          id={`${name}-error`}
+          className="mt-1.5 text-sm text-red-700"
+          role="alert"
+        >
+          {error}
+        </p>
+      ) : null}
+    </label>
+  );
+}

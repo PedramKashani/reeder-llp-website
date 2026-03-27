@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { PHONE } from "@/data/firm";
 import { LIMITS, isValidEmail } from "@/lib/validation";
-import { Field } from "@/src/components/ui/Field";
-import { TextArea } from "@/src/components/ui/TextArea";
+import { Field } from "@/components/ui/Field";
+import { TextArea } from "@/components/ui/TextArea";
 import type { ContactFieldErrors, ContactApiResponse } from "@/types/contact";
 
 export function ContactForm() {

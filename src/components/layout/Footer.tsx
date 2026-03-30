@@ -1,38 +1,7 @@
 import Link from "next/link";
+import { FOOTER_COLUMNS, FOOTER_LEGAL_LINKS } from "@/data/navigation";
 
-type FooterLink = { label: string; href: string };
-type FooterColumn = { title: string; links: FooterLink[] };
-
-const FOOTER_COLUMNS: FooterColumn[] = [
-  {
-    title: "Navigation",
-    links: [
-      { label: "Home", href: "/" },
-      { label: "Professionals", href: "/professionals" },
-      { label: "Practice Areas", href: "/practice-areas" },
-      { label: "Case Results", href: "/case-results" },
-      { label: "Our Favorite Things", href: "/our-favorite-things" },
-      { label: "About Us", href: "/about" },
-      { label: "Contact", href: "/contact" },
-    ],
-  },
-  {
-    title: "Connect",
-    links: [
-      { label: "X", href: "https://x.com/ReederMcCreary" },
-      {
-        label: "LinkedIn",
-        href: "https://www.linkedin.com/company/reeder-mccreary-llp-/",
-      },
-    ],
-  },
-];
-
-const LEGAL_LINKS: FooterLink[] = [
-  { label: "Terms of Use", href: "/terms" },
-  { label: "Privacy Policy", href: "/privacy-policy" },
-  { label: "Anti-spam", href: "/anti-spam" },
-];
+const LEGAL_LINKS = FOOTER_LEGAL_LINKS;
 
 export function Footer() {
   return (

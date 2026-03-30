@@ -34,6 +34,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+export function generateStaticParams() {
+  return professionals.map((p) => ({ slug: p.slug }));
+}
+
 export default async function ProfilePage({ params }: Props) {
   const { slug } = await params;
 

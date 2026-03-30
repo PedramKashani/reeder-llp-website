@@ -21,6 +21,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+export function generateStaticParams() {
+  return practiceAreas.map((a) => ({ slug: a.slug }));
+}
+
 function ArrowDownIcon() {
   return (
     <svg

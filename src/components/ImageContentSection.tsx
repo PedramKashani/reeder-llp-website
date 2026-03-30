@@ -6,6 +6,7 @@ type ImageContentSectionProps = {
   title: string;
   body: string;
   imageUrl: string;
+  alt: string;
   ctaLabel: string;
   ctaHref: string;
   reverse?: boolean;
@@ -15,6 +16,7 @@ export function ImageContentSection({
   title,
   body,
   imageUrl,
+  alt,
   ctaLabel,
   ctaHref,
   reverse = false,
@@ -40,7 +42,7 @@ export function ImageContentSection({
             <div className="relative z-10 aspect-[4/5] w-full overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-100">
               <Image
                 src={imageUrl}
-                alt=""
+                alt={alt}
                 fill
                 sizes="(max-width: 1024px) min(100vw - 3rem, 540px), min(540px, calc(50vw - 4rem))"
                 className="object-cover object-center"

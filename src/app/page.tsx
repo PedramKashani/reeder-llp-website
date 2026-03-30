@@ -13,28 +13,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  openGraph: {
-    title:
-      "Business Litigation, Trials & Corporate Counsel | Reeder McCreary, LLP",
-    description:
-      "Los Angeles trial lawyers and strategic business counsel for complex litigation, high-stakes trials, and transactions. Reeder McCreary, LLP serves companies, investors, and individuals with a focused, results-driven approach.",
-  },
-  twitter: {
-    title:
-      "Business Litigation, Trials & Corporate Counsel | Reeder McCreary, LLP",
-    description:
-      "Los Angeles trial lawyers and strategic business counsel for complex litigation, high-stakes trials, and transactions. Reeder McCreary, LLP serves companies, investors, and individuals with a focused, results-driven approach.",
-  },
 };
 
 export default function HomePage() {
-  const homeAnimStyle = {
-    ["--sectionFadeUpDuration" as unknown as keyof CSSProperties]: "1.1s",
-    ["--sectionContentRevealDuration" as unknown as keyof CSSProperties]:
-      "1.3s",
-    ["--sectionPictureInDuration" as unknown as keyof CSSProperties]: "2s",
-    ["--sectionTextInDuration" as unknown as keyof CSSProperties]: "2s",
-  } as unknown as CSSProperties;
+  const homeAnimStyle: CSSProperties & Record<string, string> = {
+    "--sectionFadeUpDuration": "1.1s",
+    "--sectionContentRevealDuration": "1.3s",
+    "--sectionPictureInDuration": "2s",
+    "--sectionTextInDuration": "2s",
+  };
 
   return (
     <main className="homepage-no-scroll-effects" style={homeAnimStyle}>
@@ -61,6 +48,7 @@ export default function HomePage() {
             title="Litigation"
             body="Successful litigation requires focus, strategy, direction, and knowledge. With a wealth of legal knowledge, tight team, and a unique litigation strategy, we charge hard, don’t pull punches, and are goal oriented. We don’t need to turn over every stone because we know what we are doing and what it takes to succeed. The results speak for themselves."
             imageUrl="/images/chris-duncan/chris-duncan-1.webp"
+            alt="Attorneys discussing litigation strategy"
             ctaLabel="Learn More"
             ctaHref="/practice-areas/trials-commercial-litigation"
           />
@@ -72,6 +60,7 @@ export default function HomePage() {
             title="Corporate"
             body="We make deals – we don’t break them. We solve problems – we don’t create them. From company sales and real estate transactions, to regulatory, corporate, and intellectual property compliance, to consulting on a business/legal issue, we are your go-to in-house counsel."
             imageUrl="/images/chris/chris-reeder-Corporate.webp"
+            alt="Chris Reeder, corporate and business counsel"
             ctaLabel="Learn More"
             ctaHref="/practice-areas/corporate"
           />
@@ -81,7 +70,8 @@ export default function HomePage() {
           <ImageContentSection
             title="Trials"
             body="At trial, winning is everything and losing is not an option. Whether it is a bet-the-company or any other case, we try every case like it is our own. With our unique trial preparation method, creativity, and human touch, we deliver."
-            imageUrl="/images/duncan/Ducan.webp"
+            imageUrl="/images/duncan/Duncan.webp"
+            alt="Trial attorney preparing for court"
             ctaLabel="Learn More"
             ctaHref="/practice-areas/trials-commercial-litigation"
           />

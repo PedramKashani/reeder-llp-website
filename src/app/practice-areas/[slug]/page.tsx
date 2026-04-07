@@ -64,11 +64,11 @@ export default async function PracticeAreaPage({ params }: Props) {
   return (
     <div className="main min-h-screen bg-neutral-950 text-white">
       {/* Hero - full height */}
-      <div className="hero relative min-h-[100svh] w-full overflow-hidden">
+      <div className="hero relative min-h-[60vh] w-full overflow-hidden md:min-h-[100svh]">
         <PracticeHeroImage src={area.heroImage} alt={area.heroImageAlt ?? ""} />
         <div className="absolute inset-0 bg-black/40" />
 
-        <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl items-end px-6">
+        <div className="relative z-10 mx-auto flex min-h-[60vh] max-w-6xl items-end px-6 md:min-h-[100svh]">
           <div className="hero__content w-full max-w-4xl pb-20 md:pb-24">
             <div className="hero__subtitle">
               <h6 className="text-sm font-medium uppercase tracking-[0.28em] text-white/90 md:text-base">

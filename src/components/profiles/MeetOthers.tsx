@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Professional } from "@/types/professional";
 
@@ -24,12 +25,13 @@ export function MeetOthers({
               key={p.slug}
               className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm"
             >
-              <div className="aspect-[4/5] w-full overflow-hidden bg-black/5">
-                <img
+              <div className="relative aspect-[4/5] w-full overflow-hidden bg-black/5">
+                <Image
                   src={p.photoSmall || p.photoLarge || ""}
                   alt={p.name}
-                  className="h-full w-full object-cover"
-                  loading="lazy"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover"
                 />
               </div>
 

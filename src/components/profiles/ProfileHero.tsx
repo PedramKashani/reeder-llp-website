@@ -20,6 +20,7 @@ export function ProfileHero({ profile }: { profile: Professional }) {
               src={photoUrl}
               alt=""
               fill
+              priority
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover object-[center_28%] sm:object-[center_26%]"
             />

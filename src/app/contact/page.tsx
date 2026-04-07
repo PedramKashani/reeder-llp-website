@@ -33,6 +33,7 @@ export default function ContactPage() {
           alt="Law office interior"
           fill
           priority
+          sizes="100vw"
           className="object-cover"
         />
         <div className="absolute inset-0 bg-black/55" />

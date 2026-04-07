@@ -48,7 +48,7 @@ function MemberCard({
             alt={name}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover transition duration-500 group-hover:scale-[1.03]"
+            className="object-cover object-top transition duration-500 group-hover:scale-[1.03]"
           />
         ) : null}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-neutral-950/70 via-neutral-950/10 to-transparent opacity-95" />

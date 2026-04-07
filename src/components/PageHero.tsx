@@ -13,7 +13,7 @@ interface PageHeroProps {
 
 export function PageHero({
   imageSrc,
-  imageClassName = "object-cover object-center",
+  imageClassName = "object-cover object-top sm:object-center",
   className,
   contentClassName = "mx-auto w-full max-w-6xl px-8 pb-14 pt-20 md:px-12 md:pb-20 lg:px-16 lg:pb-24",
   subtitle,
@@ -24,7 +24,7 @@ export function PageHero({
   return (
     <div
       className={[
-        "relative min-h-[85vh] w-full overflow-hidden sm:min-h-[90vh]",
+        "relative min-h-[60vh] w-full overflow-hidden sm:min-h-[85vh] md:min-h-[90vh]",
         className,
       ]
         .filter(Boolean)
@@ -47,7 +47,7 @@ export function PageHero({
         className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"
         aria-hidden
       />
-      <div className="relative z-10 flex min-h-[85vh] flex-col justify-end sm:min-h-[90vh]">
+      <div className="relative z-10 flex min-h-[60vh] flex-col justify-end sm:min-h-[85vh] md:min-h-[90vh]">
         <div className={contentClassName}>
           <div className="mb-5 h-px w-14 bg-white/70" />
           <h6 className={subtitleClassName}>{subtitle}</h6>

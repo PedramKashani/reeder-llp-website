@@ -1,22 +1,46 @@
-# Site: Reeder McCreary, LLP
+# Reeder McCreary, LLP
 
-# Description: Los Angeles business litigation firm providing trial and commercial litigation counsel, corporate and transactional advice, and related services for companies, investors, and individuals. The site describes a results-driven, team-based approach led by trial lawyer Chris Reeder, with a nationwide complex commercial trial and litigation practice as stated in practice area content.
+> Los Angeles business litigation firm: trial and commercial litigation, corporate and transactional counsel, and related services for companies, investors, and individuals. The site describes a team-based, results-oriented practice led by trial lawyer Chris Reeder; practice-area pages describe a nationwide complex commercial trial and litigation practice.
 
-User-agent: *
-Allow: /
+- **Location (site):** 11766 Wilshire Blvd, Suite 1470, Los Angeles, CA 90025
+- **Phone (site):** 310-861-2470
 
-# AI Usage Policy
+**Practice areas named on this site:** Trials and Commercial Litigation; Real Estate; Corporate; Franchise and Dealership; Entertainment; Sports; Employment; Intellectual Property; White Collar Crime / Investigations. The About page also describes general counsel–style work (e.g. M&A, financings, investigations, franchising, real estate, trademarks, compliance).
 
-AI-Training: Disallow
-AI-Summary: Allow
-AI-Citation: Required
+## Firm overview
 
-# Preferred Summary
+- [About the firm](https://www.reedermccreary.com/about): Firm overview, counsel model, and commitment language.
 
-Summary: Reeder McCreary, LLP is a full service business litigation firm based in Los Angeles, California (11766 Wilshire Blvd, Suite 1470, Los Angeles, CA 90025). The firm emphasizes trials and commercial litigation, corporate counsel, and strategic business legal services for clients from entrepreneurs to large international corporations. Published practice areas on this site are: Trials and Commercial Litigation; Real Estate; Corporate; Franchise and Dealership; Entertainment; Sports; Employment; Intellectual Property; White Collar Crime / Investigations. The firm also highlights general counsel work including M&A, financings, investigations, franchising, real estate transactions, trademarks, compliance, and related matters as described on the About page.
+## Attorneys
 
-# Contact
+- [Attorneys and professionals](https://www.reedermccreary.com/professionals): Directory of attorneys and professionals.
+- [Chris Reeder](https://www.reedermccreary.com/professionals/chris-reeder)
+- [Duncan J. McCreary](https://www.reedermccreary.com/professionals/duncan-j-mccreary)
+- [Ben Tragish](https://www.reedermccreary.com/professionals/ben-tragish)
+- [Mark Passin](https://www.reedermccreary.com/professionals/mark-passin)
+- [Marcus L. Tippens](https://www.reedermccreary.com/professionals/marcus-l-tippens)
+- [John Meadows](https://www.reedermccreary.com/professionals/john-meadows)
 
-Contact: https://www.reedermccreary.com/contact
+## Practice areas
 
-Phone: 310-861-2470
+- [Practice areas](https://www.reedermccreary.com/practice-areas): Index of all practice areas.
+- [Trials and Commercial Litigation](https://www.reedermccreary.com/practice-areas/trials-commercial-litigation)
+- [Real Estate](https://www.reedermccreary.com/practice-areas/real-estate)
+- [Corporate](https://www.reedermccreary.com/practice-areas/corporate)
+- [Franchise and Dealership](https://www.reedermccreary.com/practice-areas/franchise-dealership)
+- [Entertainment](https://www.reedermccreary.com/practice-areas/entertainment)
+- [Sports](https://www.reedermccreary.com/practice-areas/sports)
+- [Employment](https://www.reedermccreary.com/practice-areas/employment)
+- [Intellectual Property](https://www.reedermccreary.com/practice-areas/intellectual-property)
+- [White Collar Crime / Investigations](https://www.reedermccreary.com/practice-areas/white-collar-investigations)
+
+## Representative matters and intake
+
+- [Case results](https://www.reedermccreary.com/case-results): Representative matters; site includes standard disclaimer that past results do not guarantee a similar outcome.
+- [Contact](https://www.reedermccreary.com/contact): Request a consultation or reach the firm.
+
+## Optional
+
+- [Our favorite things](https://www.reedermccreary.com/our-favorite-things): Non-legal editorial section.
+- [Privacy policy](https://www.reedermccreary.com/privacy-policy)
+- [Terms](https://www.reedermccreary.com/terms)

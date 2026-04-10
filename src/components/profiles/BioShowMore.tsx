@@ -15,17 +15,17 @@ export function BioShowMore({ profile }: { profile: Professional }) {
   const rest = paragraphs.slice(1);
 
   return (
-    <section className="border-b border-neutral-200">
+    <section className="border-b border-white/10 bg-neutral-950">
       <div className="mx-auto w-full max-w-7xl px-8 py-20 md:px-12 md:py-24 lg:px-16">
-        <div className="text-sm font-semibold uppercase tracking-[0.22em] text-neutral-500">
+        <div className="text-sm font-semibold uppercase tracking-[0.22em] text-white/55">
           Bio
         </div>
 
-        <div className="mt-8 w-full max-w-none space-y-6 text-lg leading-[1.75] text-neutral-800 md:text-xl md:leading-[1.7]">
+        <div className="mt-8 w-full max-w-none space-y-6 text-lg leading-[1.75] text-white/[0.82] md:text-xl md:leading-[1.7]">
           <p>{paragraphs[0]}</p>
           {expanded &&
             rest.map((p, idx) => (
-              <p key={idx} className="text-neutral-700">
+              <p key={idx} className="text-white/70">
                 {p}
               </p>
             ))}
@@ -36,7 +36,7 @@ export function BioShowMore({ profile }: { profile: Professional }) {
             <button
               type="button"
               onClick={() => setExpanded((v) => !v)}
-              className="inline-flex items-center rounded-xl border border-neutral-200 bg-white px-5 py-3 text-base font-medium text-neutral-900 hover:bg-neutral-50"
+              className="inline-flex items-center rounded-xl border border-white/20 bg-transparent px-5 py-3 text-base font-medium text-white transition hover:bg-white/10"
             >
               {expanded ? "Show Less" : "Show More"}
             </button>

@@ -47,7 +47,7 @@ export default async function ProfilePage({ params }: Props) {
   const others = professionals.filter((p) => p.slug !== profile.slug);
 
   return (
-    <main className="min-h-screen bg-white text-black">
+    <main className="min-h-screen bg-neutral-950 text-white">
       <ProfileHero profile={profile} />
 
       {/* The “scroll target” (the arrow scrolls here) */}

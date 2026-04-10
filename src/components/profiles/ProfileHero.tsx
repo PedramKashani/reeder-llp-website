@@ -8,12 +8,12 @@ export function ProfileHero({ profile }: { profile: Professional }) {
 
   return (
     <section
-      className="profile-hero relative w-full overflow-hidden border-b border-neutral-200 bg-neutral-950"
+      className="profile-hero relative w-full overflow-hidden border-b border-white/10 bg-neutral-950"
       aria-label={`Profile: ${profile.name}`}
     >
       {/* Split layout: text left, portrait right — desktop; image top, text below — mobile */}
       <div className="relative mx-auto grid min-h-[min(88vh,880px)] max-w-[1600px] lg:grid-cols-2 lg:items-stretch">
-        {/* Portrait — shows more upper body / shoulders; not full-bleed face crop */}
+        {/* Portrait — object-position biased toward top so heads are not clipped by object-cover */}
         <div className="relative order-1 min-h-[42vh] sm:min-h-[48vh] lg:order-2 lg:min-h-[min(88vh,880px)]">
           {photoUrl ? (
             <Image
@@ -22,7 +22,7 @@ export function ProfileHero({ profile }: { profile: Professional }) {
               fill
               priority
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover object-[center_28%] sm:object-[center_26%]"
+              className="object-cover object-[center_12%] sm:object-[center_10%] lg:object-[center_18%]"
             />
           ) : null}
           {/* Mobile: subtle overlay so scroll cue / balance */}

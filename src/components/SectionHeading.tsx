@@ -15,7 +15,10 @@ type SectionHeadingProps = {
   scrollReveal?: boolean;
 };
 
-function splitFirmTitle(title: string): { primary: string; secondary: string | null } {
+function splitFirmTitle(title: string): {
+  primary: string;
+  secondary: string | null;
+} {
   const trimmed = title.trim();
   const match = trimmed.match(/^(.+?),\s*(LLP)\s*$/i);
   if (match) {
@@ -37,7 +40,9 @@ export function SectionHeading({
   scrollReveal = false,
 }: SectionHeadingProps) {
   const isFirmMark = variant === "firmMark";
-  const { primary, secondary } = isFirmMark ? splitFirmTitle(title) : { primary: title, secondary: null };
+  const { primary, secondary } = isFirmMark
+    ? splitFirmTitle(title)
+    : { primary: title, secondary: null };
 
   const shell =
     shellClassName ??
@@ -84,7 +89,9 @@ export function SectionHeading({
               </span>
               {secondary ? (
                 <>
-                  <span className="inline font-light text-[#c9b896]/65">, </span>
+                  <span className="inline font-light text-[#c9b896]/65">
+                    ,{" "}
+                  </span>
                   <span className="inline align-baseline text-lg font-medium tracking-[0.48em] text-[#d4c4a8]/90 sm:text-xl md:text-2xl lg:text-[1.65rem]">
                     {secondary}
                   </span>
@@ -136,7 +143,7 @@ export function SectionHeading({
     return (
       <div
         id={id}
-        className="flex min-h-0 flex-1 flex-col justify-center"
+        className="flex min-h-0 flex-1 flex-col justify-start md:justify-center"
       >
         {inner}
       </div>

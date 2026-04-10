@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function CaseResultsPage() {
   return (
-    <main className="min-h-screen bg-white text-neutral-900">
+    <main className="min-h-screen bg-neutral-950 text-white">
       <PageHero
         imageSrc="/images/logos/RMC-Logo-White-Bkgd.webp"
         imageClassName="object-contain object-center"
@@ -27,9 +27,9 @@ export default function CaseResultsPage() {
         titleClassName="mt-3 text-4xl font-semibold tracking-tight text-white drop-shadow-[0_2px_24px_rgba(0,0,0,0.6)] md:text-5xl lg:text-6xl xl:text-7xl"
       />
 
-      <section className="border-b border-neutral-200 bg-white py-16 md:py-24 text-neutral-900">
-        <div className="mx-auto max-w-6xl px-6 md:max-w-7xl md:px-10 lg:px-12 [&_h3]:text-neutral-900 [&_p]:text-neutral-700">
-          <p className="mb-12 text-lg leading-relaxed md:text-xl lg:text-2xl">
+      <section className="border-b border-white/10 bg-neutral-950 py-16 md:py-24">
+        <div className="mx-auto max-w-6xl px-6 md:max-w-7xl md:px-10 lg:px-12">
+          <p className="mb-12 text-lg leading-relaxed text-white/[0.82] md:text-xl lg:text-2xl">
             Past results do not guarantee a similar outcome. Every case is
             different and results depend on a number of factors unique to each
             matter.
@@ -37,10 +37,10 @@ export default function CaseResultsPage() {
 
           <CaseResultsList results={CASE_RESULTS} />
 
-          <div className="mt-16 border-t border-neutral-200 pt-10">
+          <div className="mt-16 border-t border-white/10 pt-10">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-full border border-neutral-900 bg-neutral-900 px-8 py-3 text-sm font-semibold text-white transition hover:bg-neutral-800"
+              className="inline-flex items-center justify-center rounded-full border border-white/20 bg-transparent px-8 py-3 text-sm font-semibold text-white/90 transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/40"
             >
               Request a Consultation
             </Link>

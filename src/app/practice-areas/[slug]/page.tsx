@@ -3,11 +3,7 @@ import { notFound } from "next/navigation";
 import { practiceAreas } from "@/data/practiceAreas";
 import { CTABand } from "@/components/CTABand";
 import { PracticeHeroImage } from "@/components/practice/PracticeHeroImage";
-import {
-  LUXURY_PROSE_CENTERED,
-  SECTION_PAD_MAJOR,
-  STACK_SECTION,
-} from "@/lib/luxuryLayout";
+import { SECTION_PAD_MAJOR, STACK_SECTION } from "@/lib/luxuryLayout";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -104,7 +100,7 @@ export default async function PracticeAreaPage({ params }: Props) {
       >
         <div className="mx-auto w-full px-8 md:px-16 lg:px-24">
           <div
-            className={`section__inner wysiwyg ${LUXURY_PROSE_CENTERED} ${STACK_SECTION} text-white`}
+            className={`section__inner wysiwyg mx-auto w-full max-w-[50rem] lg:max-w-[54rem] ${STACK_SECTION} text-white`}
           >
             {contentBlocks.map((block, i) => (
               <div key={i}>

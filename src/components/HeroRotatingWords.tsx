@@ -34,7 +34,7 @@ export function HeroRotatingWords({
   }, [safeWords.length]);
 
   return (
-    <section className="snap-section relative min-h-[min(100svh,52rem)] overflow-hidden md:min-h-[min(100svh,56rem)]">
+    <section className="snap-section relative min-h-[min(70svh,52rem)] overflow-hidden md:min-h-[min(100svh,56rem)]">
       {/* Fixed hero image layer */}
       <div className="fixed inset-0 z-0 bg-neutral-900">
         <div className="absolute inset-0">
@@ -70,18 +70,18 @@ export function HeroRotatingWords({
       <h1 className="sr-only">Reeder McCreary, LLP</h1>
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl px-6 sm:px-10 lg:px-14 xl:max-w-7xl">
-        <div className="flex min-h-[min(100svh,52rem)] w-full items-end pb-20 pt-28 md:min-h-[min(100svh,56rem)] md:pb-28 md:pt-32">
-          <div className="max-w-5xl">
-            <div className="flex flex-col gap-0">
-              <p className="text-[11px] font-medium uppercase tracking-[0.24em] text-[#e8e2d6]/80 md:text-[11px]">
+        <div className="flex min-h-[min(70svh,52rem)] w-full flex-col justify-start items-center pb-20 pt-24 text-center md:min-h-[min(100svh,56rem)] md:items-start md:justify-end md:pb-28 md:pt-32 md:text-left">
+          <div className="mx-auto w-full max-w-[22rem] md:mx-0 md:max-w-5xl">
+            <div className="flex flex-col items-center gap-0 md:items-start">
+              <p className="text-center text-xs font-medium uppercase tracking-[0.22em] text-[#e8e2d6]/85 sm:text-[13px] md:text-left md:text-sm md:tracking-[0.24em]">
                 {kicker}
               </p>
               <div
-                className="mt-3 h-px w-14 bg-gradient-to-r from-white/55 to-transparent md:mt-3 md:w-20"
+                className="mx-auto mt-3 h-px w-16 bg-gradient-to-r from-white/55 to-transparent sm:w-18 md:mx-0 md:mt-3.5 md:w-24"
                 aria-hidden
               />
               <p
-                className="mt-3 text-[clamp(2.35rem,5.5vw+0.75rem,3.35rem)] font-medium leading-[0.95] tracking-[-0.025em] text-[#faf8f4] antialiased sm:mt-3.5 sm:text-[clamp(2.65rem,4.5vw+0.85rem,3.65rem)] sm:leading-[0.94] md:mt-4 md:text-[clamp(2.85rem,3.8vw+0.9rem,3.95rem)] lg:text-[clamp(3rem,3.2vw+1rem,4.25rem)] lg:leading-[0.92] xl:text-[clamp(3.15rem,2.5vw+1.1rem,4.75rem)]"
+                className="mt-3 text-center text-[clamp(2.85rem,6.2vw+0.85rem,4.1rem)] font-medium leading-[0.95] tracking-[-0.025em] text-[#faf8f4] antialiased sm:mt-3.5 sm:text-[clamp(3.15rem,5.4vw+1rem,4.5rem)] sm:leading-[0.94] md:mt-4 md:text-left md:text-[clamp(3.45rem,4.6vw+1.05rem,4.85rem)] lg:text-[clamp(3.75rem,3.8vw+1.1rem,5.35rem)] lg:leading-[0.92] xl:text-[clamp(4rem,3.1vw+1.2rem,5.85rem)]"
                 style={{
                   fontFamily: DISPLAY_SERIF,
                   textShadow:

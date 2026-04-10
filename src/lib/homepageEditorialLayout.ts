@@ -11,5 +11,5 @@ export const EDITORIAL_BLOCK_Y_FOLLOWING =
   "border-t border-white/[0.045] pt-28 pb-24 md:pt-32 md:pb-28 lg:pt-40 lg:pb-32";
 
 export function editorialWelcomeShell(): string {
-  return `section-content-in mx-auto w-full ${EDITORIAL_MAX} ${EDITORIAL_GUTTER} py-20 md:py-24 lg:py-28`;
+  return `section-content-in mx-auto w-full ${EDITORIAL_MAX} ${EDITORIAL_GUTTER} pt-10 pb-20 md:py-24 lg:py-28`;
 }

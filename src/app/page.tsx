@@ -27,7 +27,7 @@ export default function HomePage() {
       />
 
       <div className="relative z-20 flex flex-col gap-0 bg-[#0a0a0a] pb-20 md:pb-24 lg:pb-28">
-        <div className="snap-section flex min-h-[min(100svh,52rem)] flex-col justify-center md:min-h-[min(100svh,56rem)]">
+        <div className="snap-section flex flex-col justify-start md:min-h-[min(100svh,56rem)] md:justify-center">
           <SectionHeading
             id="welcome"
             kicker="Welcome to"

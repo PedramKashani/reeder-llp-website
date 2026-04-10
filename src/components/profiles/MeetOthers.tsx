@@ -31,7 +31,7 @@ export function MeetOthers({
                   alt={p.name}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover"
+                  className="object-cover object-[center_30%] sm:object-[center_28%] lg:object-[center_26%]"
                 />
               </div>
 

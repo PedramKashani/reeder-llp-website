@@ -9,11 +9,10 @@ type Props = {
   onClose: () => void;
 };
 
+const MOBILE_SECTION_LABELS = ["Who We Are", "What We Do"] as const;
+
 export function MobileMenu({ sectionByLabel, onClose }: Props) {
-  const [mobileExpanded, setMobileExpanded] = useState<Record<string, boolean>>({
-    "Who We Are": false,
-    "What We Do": false,
-  });
+  const [openSection, setOpenSection] = useState<string | null>(null);
 
   return (
     <div className="border-t border-white/20 bg-neutral-950/75 shadow-[0_24px_48px_rgba(0,0,0,0.35)] backdrop-blur-xl">
@@ -42,9 +41,9 @@ export function MobileMenu({ sectionByLabel, onClose }: Props) {
         </div>
 
         <div className="mt-6 space-y-3">
-          {Object.keys(mobileExpanded).map((label) => {
+          {MOBILE_SECTION_LABELS.map((label) => {
             const s = sectionByLabel[label];
-            const expanded = mobileExpanded[label];
+            const expanded = openSection === label;
             return (
               <div
                 key={label}
@@ -54,7 +53,7 @@ export function MobileMenu({ sectionByLabel, onClose }: Props) {
                   type="button"
                   className="flex w-full items-center justify-between px-4 py-3.5 text-left text-sm font-medium text-white/90"
                   onClick={() =>
-                    setMobileExpanded((prev) => ({ ...prev, [label]: !prev[label] }))
+                    setOpenSection((prev) => (prev === label ? null : label))
                   }
                 >
                   <span>{label}</span>

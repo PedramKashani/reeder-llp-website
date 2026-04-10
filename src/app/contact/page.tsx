@@ -27,10 +27,10 @@ function scrollToId(id: string) {
 export default function ContactPage() {
   return (
     <main className="bg-white text-neutral-950">
-      <section className="contact-hero relative min-h-[85vh] w-full overflow-hidden">
+      <section className="contact-hero relative min-h-[min(78svh,40rem)] w-full overflow-hidden md:min-h-[min(82svh,44rem)]">
         <Image
           src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=2400&q=80"
-          alt="Law office interior"
+          alt="Law office"
           fill
           priority
           sizes="100vw"
@@ -38,12 +38,12 @@ export default function ContactPage() {
         />
         <div className="absolute inset-0 bg-black/55" />
 
-        <div className="relative mx-auto flex min-h-[85vh] max-w-6xl items-end px-6 pb-16">
+        <div className="relative mx-auto flex min-h-[min(78svh,40rem)] max-w-6xl items-end px-6 pb-16 md:min-h-[min(82svh,44rem)]">
           <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-[0.25em] text-white/80">
+            <p className="text-[11px] font-medium uppercase tracking-[0.24em] text-white/75 md:text-[11px]">
               How to
             </p>
-            <h1 className="mt-3 text-4xl font-semibold leading-tight text-white md:text-6xl">
+            <h1 className="mt-3 text-[clamp(2rem,3.5vw+0.85rem,2.85rem)] font-semibold leading-tight text-white md:text-[clamp(2.35rem,2.8vw+0.95rem,3.5rem)] lg:text-[clamp(2.5rem,2.2vw+1rem,3.85rem)]">
               Contact Us
             </h1>
             <a
@@ -61,7 +61,7 @@ export default function ContactPage() {
 
       <section id="section-heading" className="border-b border-neutral-200">
         <div className="mx-auto max-w-6xl px-6 py-16">
-          <h5 className="text-xs font-medium uppercase tracking-[0.35em] text-neutral-500">
+          <h5 className="text-[11px] font-medium uppercase tracking-[0.24em] text-neutral-500 md:text-[11px]">
             Need Help?
           </h5>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">

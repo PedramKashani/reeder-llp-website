@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import type { CSSProperties } from "react";
 import { HeroRotatingWords } from "@/components/HeroRotatingWords";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ImageContentSection } from "@/components/ImageContentSection";
 import { CTABand } from "@/components/CTABand";
+import { editorialWelcomeShell } from "@/lib/homepageEditorialLayout";
 
 export const metadata: Metadata = {
   title:
@@ -16,15 +16,8 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  const homeAnimStyle: CSSProperties & Record<string, string> = {
-    "--sectionFadeUpDuration": "1.1s",
-    "--sectionContentRevealDuration": "1.3s",
-    "--sectionPictureInDuration": "2s",
-    "--sectionTextInDuration": "2s",
-  };
-
   return (
-    <main className="homepage-no-scroll-effects" style={homeAnimStyle}>
+    <main className="homepage-scroll-reveal">
       <HeroRotatingWords
         // Use a Reeder image if you want; keeping placeholder for now
         backgroundImageUrl="/images/team/team-outdoor.webp"
@@ -33,13 +26,16 @@ export default function HomePage() {
         scrollToId="welcome"
       />
 
-      <div className="relative z-20 flex flex-col gap-16 bg-[#0a0a0a] pb-16 md:gap-24 md:pb-20 lg:gap-28 lg:pb-24">
-        <div className="snap-section flex min-h-screen flex-col justify-center">
+      <div className="relative z-20 flex flex-col gap-0 bg-[#0a0a0a] pb-20 md:pb-24 lg:pb-28">
+        <div className="snap-section flex min-h-[min(100svh,52rem)] flex-col justify-center md:min-h-[min(100svh,56rem)]">
           <SectionHeading
             id="welcome"
             kicker="Welcome to"
             title="Reeder McCreary, LLP"
             center
+            variant="firmMark"
+            shellClassName={editorialWelcomeShell()}
+            scrollReveal
           />
         </div>
 
@@ -56,6 +52,7 @@ export default function HomePage() {
 
         <div className="homepage-practice-row">
           <ImageContentSection
+            withTopRule
             reverse
             title="Corporate"
             body="We make deals – we don’t break them. We solve problems – we don’t create them. From company sales and real estate transactions, to regulatory, corporate, and intellectual property compliance, to consulting on a business/legal issue, we are your go-to in-house counsel."
@@ -68,6 +65,7 @@ export default function HomePage() {
 
         <div className="homepage-practice-row">
           <ImageContentSection
+            withTopRule
             title="Trials"
             body="At trial, winning is everything and losing is not an option. Whether it is a bet-the-company or any other case, we try every case like it is our own. With our unique trial preparation method, creativity, and human touch, we deliver."
             imageUrl="/images/duncan/Duncan.webp"
@@ -77,12 +75,13 @@ export default function HomePage() {
           />
         </div>
 
-        <div className="snap-section flex flex-col">
+        <div className="snap-section mt-20 flex flex-col md:mt-28 lg:mt-32">
           <CTABand
             variant="animated"
             title="Need Counsel?"
             buttonLabel="Request a Consultation"
             buttonHref="/contact"
+            scrollReveal
           />
         </div>
       </div>

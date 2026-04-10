@@ -14,14 +14,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* :where() keeps specificity 0 so Tailwind utilities (e.g. font-light) always win */
+:where(h1, h2, h3, h4, h5, h6) {
   font-family: var(--font-manrope), Georgia, serif;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.02em;
 }
 
@@ -36,6 +32,21 @@ h6 {
 
 .animate-fade-in {
   animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes heroRotatingWord {
+  from {
+    opacity: 0;
+    transform: translateY(0.35em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-rotating-word {
+  animation: heroRotatingWord 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 @keyframes logoIn {
@@ -156,44 +167,28 @@ html {
   width: 100%;
 }
 
-.homepage-practice-row + .homepage-practice-row {
-  position: relative;
-}
-
-.homepage-practice-row + .homepage-practice-row::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: calc(100% - 2rem);
-  transform: translateX(-50%);
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.homepage-practice-panel .section-content-in {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.02) 0%,
-    rgba(255, 255, 255, 0.01) 100%
-  );
-}
-
-/* Homepage only: disable scroll/reveal effects */
-.homepage-no-scroll-effects {
+/* Homepage: restrained scroll reveal (editorial, not “template” motion) */
+.homepage-scroll-reveal {
   scroll-snap-type: none;
 }
 
-.homepage-no-scroll-effects .animate-section-hidden,
-.homepage-no-scroll-effects .animate-section-visible {
-  opacity: 1;
-  transform: none;
-  animation: none;
+.homepage-scroll-reveal .home-reveal {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+  transition:
+    opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.homepage-no-scroll-effects .animate-section-visible .section-content-in,
-.homepage-no-scroll-effects .animate-section-visible .section-picture-in,
-.homepage-no-scroll-effects .animate-section-visible .section-text-in {
+.homepage-scroll-reveal .home-reveal.home-reveal--visible {
   opacity: 1;
-  transform: none;
-  animation: none;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homepage-scroll-reveal .home-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

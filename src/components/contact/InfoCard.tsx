@@ -19,7 +19,7 @@ export function InfoCard({
   return (
     <div
       className={[
-        "rounded-2xl border border-neutral-200 bg-white p-7 shadow-[0_12px_40px_rgba(0,0,0,0.06)]",
+        "rounded-3xl border border-neutral-200/90 bg-white p-7 shadow-[0_12px_40px_rgba(0,0,0,0.05)] transition duration-300 hover:border-neutral-300/90",
         className,
       ].join(" ")}
     >

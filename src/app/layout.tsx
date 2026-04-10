@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Manrope } from "next/font/google";
+import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SITE_URL as SITE_URL_STRING, PHONE_E164, ADDRESS } from "@/data/firm";
@@ -39,8 +39,16 @@ export const metadata: Metadata = {
 
 const manrope = Manrope({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-manrope",
+  display: "swap",
+});
+
+/** Refined serif for firm wordmark in header / brand moments */
+const firmSerif = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-firm-serif",
   display: "swap",
 });
 
@@ -67,7 +75,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={manrope.variable}>
+    <html lang="en" className={`${manrope.variable} ${firmSerif.variable}`}>
       <body className={manrope.className}>
         <script
           type="application/ld+json"

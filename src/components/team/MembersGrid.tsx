@@ -1,12 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Professional } from "@/types/professional";
+import { GRID_GAP_CARDS } from "@/lib/luxuryLayout";
 
 export function MembersGrid({ professionals }: { professionals: Professional[] }) {
   return (
     <section className="border-b border-neutral-200">
-      <div className="mx-auto max-w-6xl px-6 pb-16 md:pb-24">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto max-w-6xl px-8 pb-16 sm:px-6 md:pb-24">
+        <div
+          className={`grid grid-cols-1 justify-items-center sm:grid-cols-2 sm:justify-items-stretch lg:grid-cols-3 ${GRID_GAP_CARDS}`}
+        >
           {professionals.map((p) => (
             <MemberCard
               key={p.slug}
@@ -34,7 +37,7 @@ function MemberCard({
   imageUrl: string;
 }) {
   return (
-    <div className="group relative overflow-hidden rounded-3xl border border-neutral-200 bg-white">
+    <div className="group relative w-full max-w-[min(100%,19.5rem)] overflow-hidden rounded-3xl border border-neutral-200 bg-white sm:max-w-none">
       <Link
         href={`/professionals/${slug}`}
         className="absolute inset-0 z-10"
@@ -47,7 +50,7 @@ function MemberCard({
             src={imageUrl}
             alt={name}
             fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            sizes="(max-width: 639px) 312px, (max-width: 1024px) 50vw, 33vw"
             className="object-cover object-top transition duration-500 group-hover:scale-[1.03]"
           />
         ) : null}

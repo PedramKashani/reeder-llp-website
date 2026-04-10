@@ -3,6 +3,11 @@ import { notFound } from "next/navigation";
 import { practiceAreas } from "@/data/practiceAreas";
 import { CTABand } from "@/components/CTABand";
 import { PracticeHeroImage } from "@/components/practice/PracticeHeroImage";
+import {
+  LUXURY_PROSE_CENTERED,
+  SECTION_PAD_MAJOR,
+  STACK_SECTION,
+} from "@/lib/luxuryLayout";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -64,19 +69,19 @@ export default async function PracticeAreaPage({ params }: Props) {
   return (
     <div className="main min-h-screen bg-neutral-950 text-white">
       {/* Hero - full height */}
-      <div className="hero relative min-h-[60vh] w-full overflow-hidden md:min-h-[100svh]">
+      <div className="hero relative min-h-[56vh] w-full overflow-hidden md:min-h-[min(88svh,48rem)] lg:min-h-[min(92svh,52rem)] xl:min-h-[100svh]">
         <PracticeHeroImage src={area.heroImage} alt={area.heroImageAlt ?? ""} />
         <div className="absolute inset-0 bg-black/40" />
 
-        <div className="relative z-10 mx-auto flex min-h-[60vh] max-w-6xl items-end px-6 md:min-h-[100svh]">
-          <div className="hero__content w-full max-w-4xl pb-20 md:pb-24">
+        <div className="relative z-10 mx-auto flex min-h-[56vh] max-w-6xl items-end px-6 md:min-h-[min(88svh,48rem)] lg:min-h-[min(92svh,52rem)] xl:min-h-[100svh]">
+          <div className="hero__content w-full max-w-4xl pb-16 md:pb-20">
             <div className="hero__subtitle">
-              <h6 className="text-sm font-medium uppercase tracking-[0.28em] text-white/90 md:text-base">
+              <h6 className="text-[11px] font-medium uppercase tracking-[0.24em] text-white/85 md:text-[11px]">
                 {area.heroSubtitle ?? "Practice Areas"}
               </h6>
             </div>
-            <div className="hero__title mt-4">
-              <h1 className="text-5xl font-semibold tracking-tight md:text-6xl lg:text-7xl xl:text-8xl">
+            <div className="hero__title mt-3 md:mt-4">
+              <h1 className="text-[clamp(2.15rem,4vw+1rem,3.25rem)] font-semibold tracking-tight text-white md:text-[clamp(2.35rem,3.2vw+1.1rem,3.65rem)] lg:text-[clamp(2.5rem,2.6vw+1.2rem,4rem)] xl:text-[clamp(2.65rem,2.2vw+1.25rem,4.5rem)]">
                 {area.title}
               </h1>
             </div>
@@ -95,22 +100,24 @@ export default async function PracticeAreaPage({ params }: Props) {
       {/* Content section */}
       <section
         id="content"
-        className="section-base border-b border-white/10 bg-neutral-950 py-24 md:py-32"
+        className={`section-base border-b border-white/10 bg-neutral-950 ${SECTION_PAD_MAJOR}`}
       >
         <div className="mx-auto w-full px-8 md:px-16 lg:px-24">
-          <div className="section__inner wysiwyg w-full space-y-16 text-white">
+          <div
+            className={`section__inner wysiwyg ${LUXURY_PROSE_CENTERED} ${STACK_SECTION} text-white`}
+          >
             {contentBlocks.map((block, i) => (
               <div key={i}>
                 {block.heading && (
-                  <h2 className="mb-6 text-lg font-semibold uppercase tracking-[0.18em] text-white md:text-xl">
+                  <h2 className="mb-5 text-[11px] font-semibold uppercase tracking-[0.24em] text-white/55 md:mb-6 md:text-xs">
                     {block.heading}
                   </h2>
                 )}
-                <div className="space-y-8">
+                <div className="space-y-6 md:space-y-7">
                   {block.paragraphs.map((p, j) => (
                     <p
                       key={j}
-                      className="text-xl leading-[1.85] text-white md:text-2xl md:leading-[1.8]"
+                      className="text-lg leading-[1.82] text-white/[0.82] md:text-xl md:leading-[1.8]"
                     >
                       {p}
                     </p>

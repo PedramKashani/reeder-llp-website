@@ -15,7 +15,7 @@ export function PracticeHeroImage({ src, alt = "" }: { src: string; alt?: string
       fill
       priority
       sizes="100vw"
-      className="object-cover object-top sm:object-center"
+      className="object-cover object-[50%_28%] sm:object-[50%_32%] md:object-center"
       onError={() => setImgSrc(FALLBACK_HERO_IMAGE)}
     />
   );

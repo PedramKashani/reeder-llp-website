@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
+import { CursorBadgeTrail } from "@/components/CursorBadgeTrail";
 import { ScrollDownButton } from "@/components/ScrollDownButton";
 
 const DISPLAY_SERIF =
@@ -25,6 +26,7 @@ export function HeroRotatingWords({
     [words],
   );
   const [idx, setIdx] = useState(0);
+  const heroSectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const t = window.setInterval(() => {
@@ -34,7 +36,10 @@ export function HeroRotatingWords({
   }, [safeWords.length]);
 
   return (
-    <section className="snap-section relative min-h-[min(70svh,52rem)] overflow-hidden md:min-h-[min(100svh,56rem)]">
+    <section
+      ref={heroSectionRef}
+      className="snap-section relative min-h-[min(70svh,52rem)] overflow-hidden md:min-h-[min(100svh,56rem)]"
+    >
       {/* Fixed hero image layer */}
       <div className="fixed inset-0 z-0 bg-neutral-900">
         <div className="absolute inset-0">
@@ -68,6 +73,8 @@ export function HeroRotatingWords({
       </div>
 
       <h1 className="sr-only">Reeder McCreary, LLP</h1>
+
+      <CursorBadgeTrail rootRef={heroSectionRef} />
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl px-6 sm:px-10 lg:px-14 xl:max-w-7xl">
         <div className="flex min-h-[min(70svh,52rem)] w-full flex-col justify-start items-center pb-20 pt-24 text-center md:min-h-[min(100svh,56rem)] md:items-start md:justify-end md:pb-28 md:pt-32 md:text-left">

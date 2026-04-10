@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { professionals } from "@/data/professionals";
 import { TeamHero } from "@/components/team/TeamHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { MembersGrid } from "@/components/team/MembersGrid";
 import { CTABand } from "@/components/CTABand";
+import { getProfessionals } from "@/lib/sanity/professionals";
 
 export const metadata: Metadata = {
   title: "Attorneys & Professionals | Reeder McCreary, LLP",
@@ -14,7 +14,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ProfessionalsPage() {
+export default async function ProfessionalsPage() {
+  const professionals = await getProfessionals();
+
   return (
     <main>
       <TeamHero

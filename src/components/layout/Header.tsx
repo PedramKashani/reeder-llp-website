@@ -53,6 +53,9 @@ export function Header() {
     };
   }, [mobileOpen]);
 
+  const hideLogoWordmark =
+    pathname === "/contact" || pathname === "/case-results";
+
   return (
     <header
       key={pathname}
@@ -79,6 +82,7 @@ export function Header() {
           <Logo
             heroMode
             subtleShrink={isScrolled}
+            hideWordmark={hideLogoWordmark}
             onHomeClick={(e) => {
               setDesktopOpen(null);
               setMobileOpen(false);

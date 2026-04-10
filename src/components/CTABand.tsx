@@ -8,6 +8,8 @@ type CTABandProps = {
   subtitle?: string;
   buttonLabel: string;
   buttonHref: string;
+  secondaryButtonLabel?: string;
+  secondaryButtonHref?: string;
   /** Homepage animated band: scroll reveal instead of legacy section animation */
   scrollReveal?: boolean;
 };
@@ -18,6 +20,8 @@ export function CTABand({
   subtitle,
   buttonLabel,
   buttonHref,
+  secondaryButtonLabel,
+  secondaryButtonHref,
   scrollReveal = false,
 }: CTABandProps) {
   if (variant === "animated") {
@@ -38,12 +42,22 @@ export function CTABand({
                 delayMs={200}
                 className="flex w-full shrink-0 justify-center md:block md:w-auto"
               >
-                <Link
-                  href={buttonHref}
-                  className="inline-flex items-center justify-center rounded-full border border-white/30 bg-transparent px-10 py-3.5 text-xs font-medium uppercase tracking-[0.22em] text-white/90 transition-colors duration-300 hover:border-white/50 hover:bg-white/[0.04] md:w-auto"
-                >
-                  {buttonLabel}
-                </Link>
+                <div className="flex w-full flex-col items-center gap-3 sm:flex-row sm:justify-center md:w-auto">
+                  <Link
+                    href={buttonHref}
+                    className="inline-flex items-center justify-center rounded-full border border-white/30 bg-transparent px-10 py-3.5 text-xs font-medium uppercase tracking-[0.22em] text-white/90 transition-colors duration-300 hover:border-white/50 hover:bg-white/[0.04] md:w-auto"
+                  >
+                    {buttonLabel}
+                  </Link>
+                  {secondaryButtonLabel && secondaryButtonHref ? (
+                    <Link
+                      href={secondaryButtonHref}
+                      className="inline-flex items-center justify-center rounded-full border border-white/20 bg-transparent px-8 py-3.5 text-xs font-medium uppercase tracking-[0.2em] text-white/80 transition-colors duration-300 hover:border-white/40 hover:bg-white/[0.03] hover:text-white/90 md:w-auto"
+                    >
+                      {secondaryButtonLabel}
+                    </Link>
+                  ) : null}
+                </div>
               </HomeReveal>
             </>
           ) : (
@@ -54,12 +68,22 @@ export function CTABand({
                 </h4>
               </div>
               <div className="flex w-full shrink-0 justify-center md:contents">
-                <Link
-                  href={buttonHref}
-                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-white/30 bg-transparent px-10 py-3.5 text-xs font-medium uppercase tracking-[0.22em] text-white/90 transition-colors duration-300 hover:border-white/50 hover:bg-white/[0.04] md:w-auto"
-                >
-                {buttonLabel}
-              </Link>
+                <div className="flex w-full flex-col items-center gap-3 sm:flex-row sm:justify-center md:w-auto">
+                  <Link
+                    href={buttonHref}
+                    className="inline-flex shrink-0 items-center justify-center rounded-full border border-white/30 bg-transparent px-10 py-3.5 text-xs font-medium uppercase tracking-[0.22em] text-white/90 transition-colors duration-300 hover:border-white/50 hover:bg-white/[0.04] md:w-auto"
+                  >
+                    {buttonLabel}
+                  </Link>
+                  {secondaryButtonLabel && secondaryButtonHref ? (
+                    <Link
+                      href={secondaryButtonHref}
+                      className="inline-flex items-center justify-center rounded-full border border-white/20 bg-transparent px-8 py-3.5 text-xs font-medium uppercase tracking-[0.2em] text-white/80 transition-colors duration-300 hover:border-white/40 hover:bg-white/[0.03] hover:text-white/90 md:w-auto"
+                    >
+                      {secondaryButtonLabel}
+                    </Link>
+                  ) : null}
+                </div>
               </div>
             </>
           )}

@@ -14,10 +14,12 @@ const LIGHT_STAMP_SHADOW =
 export function Logo({
   heroMode,
   subtleShrink,
+  hideWordmark = false,
   onHomeClick,
 }: {
   heroMode: boolean;
   subtleShrink: boolean;
+  hideWordmark?: boolean;
   onHomeClick?: (e: MouseEvent<HTMLAnchorElement>) => void;
 }) {
   const heroNameSize = subtleShrink
@@ -66,6 +68,7 @@ export function Logo({
       <div
         className={
           "hidden min-w-0 flex-col justify-center leading-none transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] sm:flex " +
+          (hideWordmark ? "sm:hidden " : "") +
           (heroMode && subtleShrink
             ? "pointer-events-none translate-x-2 opacity-0 blur-[2px]"
             : "")

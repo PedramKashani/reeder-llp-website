@@ -16,6 +16,29 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Environment variables (`.env.local`)
+
+Create `.env.local` at the project root with:
+
+- Server-only (never expose to client):
+  - `RESEND_API_KEY`
+  - `CONTACT_TO_EMAIL`
+  - `CONTACT_FROM_EMAIL`
+  - `SANITY_API_VERSION` (optional)
+- Public (safe for client exposure; project metadata only):
+  - `NEXT_PUBLIC_SANITY_PROJECT_ID` (`88xnx54a`)
+  - `NEXT_PUBLIC_SANITY_DATASET` (`production`)
+
+Notes:
+- The professionals pages fall back to `src/data/professionals.ts` when Sanity env is missing or Sanity fetch fails.
+- No Sanity token is required for published content reads in the current implementation.
+
+## Sanity Studio
+
+- Studio route is mounted at `/studio`.
+- Start app with `npm run dev`, then open [http://localhost:3000/studio](http://localhost:3000/studio).
+- Professionals schema is defined in `sanity/schemaTypes/professional.ts`.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

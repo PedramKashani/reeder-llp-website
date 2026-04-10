@@ -38,7 +38,7 @@ export function HeroRotatingWords({
   return (
     <section
       ref={heroSectionRef}
-      className="snap-section relative min-h-[min(70svh,52rem)] overflow-hidden md:min-h-[min(100svh,56rem)]"
+      className="snap-section relative min-h-[min(68svh,52rem)] overflow-hidden md:min-h-[min(100svh,56rem)]"
     >
       {/* Fixed hero image layer */}
       <div className="fixed inset-0 z-0 bg-neutral-900">
@@ -49,7 +49,7 @@ export function HeroRotatingWords({
             fill
             priority
             sizes="100vw"
-            className="object-contain"
+            className="h-full w-full scale-[1.625] object-contain object-center md:scale-100 md:object-cover md:object-center"
           />
         </div>
         {/* Top-weighted scrim: nav legibility */}
@@ -77,7 +77,7 @@ export function HeroRotatingWords({
       <CursorBadgeTrail rootRef={heroSectionRef} />
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl px-6 sm:px-10 lg:px-14 xl:max-w-7xl">
-        <div className="flex min-h-[min(70svh,52rem)] w-full flex-col justify-start items-center pb-20 pt-24 text-center md:min-h-[min(100svh,56rem)] md:items-start md:justify-end md:pb-28 md:pt-32 md:text-left">
+        <div className="flex min-h-[min(68svh,52rem)] w-full flex-col items-center justify-start pb-14 pt-[4.25rem] text-center md:min-h-[min(100svh,56rem)] md:items-start md:justify-end md:pb-28 md:pt-32 md:text-left">
           <div className="mx-auto w-full max-w-[22rem] md:mx-0 md:max-w-5xl">
             <div className="flex flex-col items-center gap-0 md:items-start">
               <p className="text-center text-xs font-medium uppercase tracking-[0.22em] text-[#e8e2d6]/85 sm:text-[13px] md:text-left md:text-sm md:tracking-[0.24em]">

@@ -70,7 +70,7 @@ export const NAV_SECTIONS: NavSection[] = [
     rows: [
       [
         {
-          title: "Core",
+          title: "Practice Areas",
           twoCols: true,
           links: practiceAreaNavLinks,
         },

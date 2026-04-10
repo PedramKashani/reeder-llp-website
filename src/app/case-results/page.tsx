@@ -17,8 +17,8 @@ export default function CaseResultsPage() {
   return (
     <main className="min-h-screen bg-neutral-950 text-white">
       <PageHero
-        imageSrc="/images/logos/RMC-Logo-White-Bkgd.webp"
-        imageClassName="object-contain object-center"
+        imageSrc="/images/logos/rmc-logo-light.webp"
+        imageClassName="scale-75 object-contain object-center"
         className="case-results-hero"
         contentClassName="w-full px-6 pb-14 pt-20 md:px-12 md:pb-20 lg:px-16 lg:pb-24"
         subtitle="Highlighted"

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { professionals } from "@/data/professionals";
 import { practiceAreas } from "@/data/practiceAreas";
 
 import { ProfileHero } from "@/components/profiles/ProfileHero";
@@ -9,6 +8,7 @@ import { CredentialsAccordion } from "@/components/profiles/CredentialsAccordion
 import { MeetOthers } from "@/components/profiles/MeetOthers";
 import { CTABand } from "@/components/CTABand";
 import { RelatedPracticeAreas } from "@/components/profiles/RelatedPracticeAreas";
+import { getProfessionalBySlug, getProfessionals } from "@/lib/sanity/professionals";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -16,7 +16,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const profile = professionals.find((p) => p.slug === slug);
+  const profile = await getProfessionalBySlug(slug);
   if (!profile) return {};
 
   const firstBioParagraph = profile.sections.background?.[0]?.trim() ?? "";
@@ -34,16 +34,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
+  const professionals = await getProfessionals();
   return professionals.map((p) => ({ slug: p.slug }));
 }
 
 export default async function ProfilePage({ params }: Props) {
   const { slug } = await params;
 
-  const profile = professionals.find((p) => p.slug === slug);
+  const profile = await getProfessionalBySlug(slug);
   if (!profile) return notFound();
 
+  const professionals = await getProfessionals();
   const others = professionals.filter((p) => p.slug !== profile.slug);
 
   return (

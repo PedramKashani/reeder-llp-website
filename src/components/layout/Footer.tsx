@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FOOTER_COLUMNS, FOOTER_LEGAL_LINKS } from "@/data/navigation";
 
 const LEGAL_LINKS = FOOTER_LEGAL_LINKS;
@@ -6,7 +7,20 @@ const LEGAL_LINKS = FOOTER_LEGAL_LINKS;
 export function Footer() {
   return (
     <footer className="relative z-20 border-t border-neutral-200 bg-white">
-      <div className="mx-auto max-w-6xl px-6 py-14 md:py-20">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
+        <div className="absolute inset-0 flex items-center justify-center opacity-[0.06] md:inset-auto md:bottom-10 md:left-1/2 md:-translate-x-1/2 md:opacity-[0.07]">
+          <Image
+            src="/images/logos/rmc-logo-light.webp"
+            alt=""
+            width={540}
+            height={168}
+            sizes="(max-width: 768px) 320px, 540px"
+            className="h-auto w-[140%] max-w-none md:w-[540px]"
+          />
+        </div>
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-6xl px-6 py-14 md:py-20">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <div className="grid gap-10 sm:grid-cols-2">
@@ -58,7 +72,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-neutral-200">
+      <div className="relative z-10 border-t border-neutral-200">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-6 text-xs text-neutral-600 sm:flex-row sm:items-center sm:justify-between">
           <div>© {new Date().getFullYear()} Reeder McCreary, LLP</div>
 

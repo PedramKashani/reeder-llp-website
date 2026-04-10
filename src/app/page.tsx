@@ -81,6 +81,8 @@ export default function HomePage() {
             title="Need Counsel?"
             buttonLabel="Request a Consultation"
             buttonHref="/contact"
+            secondaryButtonLabel="Meet the Team"
+            secondaryButtonHref="/professionals"
             scrollReveal
           />
         </div>

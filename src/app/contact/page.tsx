@@ -29,12 +29,12 @@ export default function ContactPage() {
     <main className="bg-white text-neutral-950">
       <section className="contact-hero relative min-h-[min(78svh,40rem)] w-full overflow-hidden md:min-h-[min(82svh,44rem)]">
         <Image
-          src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=2400&q=80"
-          alt="Law office"
+          src="/images/logos/rmc-logo-light.webp"
+          alt="Reeder McCreary logo"
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="scale-[0.5202] object-contain object-center"
         />
         <div className="absolute inset-0 bg-black/55" />
 

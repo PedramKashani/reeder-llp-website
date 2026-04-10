@@ -48,18 +48,6 @@ export function DesktopMegaMenu({
           </div>
         ) : (
           <>
-            {sectionByLabel[openSection].mainHref ? (
-              <div className="mb-6">
-                <Link
-                  href={sectionByLabel[openSection].mainHref}
-                  className="group inline-block text-[1.05rem] text-white/84 transition duration-300 ease-out hover:text-white"
-                  onClick={onClose}
-                >
-                  View All Practice Areas
-                  <span className="mt-0.5 block h-px w-0 bg-white/40 transition-all duration-300 ease-out group-hover:w-48" />
-                </Link>
-              </div>
-            ) : null}
             {sectionByLabel[openSection].rows.flat().map((group) => (
               <div key={group.title} className="mb-6 last:mb-0">
                 <div className="text-[11px] font-medium uppercase tracking-[0.24em] text-white/55">

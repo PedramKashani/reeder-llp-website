@@ -69,9 +69,11 @@ export function MobileMenu({ sectionByLabel, onClose }: Props) {
                     <div className="mt-4 space-y-5">
                       {s.rows.flat().map((g) => (
                         <div key={g.title}>
-                          <div className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/70">
-                            {g.title}
-                          </div>
+                          {g.title !== s.leftBlurb ? (
+                            <div className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/70">
+                              {g.title}
+                            </div>
+                          ) : null}
                           <div className="mt-2.5 space-y-1.5">
                             {g.links.map((l) => (
                               <Link

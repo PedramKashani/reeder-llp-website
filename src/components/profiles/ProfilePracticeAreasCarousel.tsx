@@ -105,7 +105,7 @@ export function ProfilePracticeAreasCarousel({
                     {a.excerpt ?? DEFAULT_EXCERPT}
                   </p>
                 </div>
-                <div className="shrink-0">
+                <div className="hidden shrink-0 md:block">
                   <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/12 bg-black/25 text-sm text-white/80 transition duration-500 ease-out group-hover:border-[#c8a24a]/55 group-hover:bg-black/35 group-hover:text-white md:h-10 md:w-10">
                     ↗
                   </span>

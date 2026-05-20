@@ -70,8 +70,8 @@ export function Header() {
           (isScrolled ? "py-1 lg:py-1.5" : "py-1.5 lg:py-2")
         }
       >
-        {/* Left-aligned logo; padding matches page content (px-6 / md:px-10 / lg:px-12) */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 flex items-center md:static md:inset-auto md:z-auto md:flex md:items-center">
+        {/* Centered on mobile; left-aligned on desktop with bar padding (px-6 / md:px-10 / lg:px-12) */}
+        <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center md:static md:inset-auto md:z-auto md:w-auto md:justify-start">
           <div className="pointer-events-auto min-w-0">
             <Logo
               heroMode

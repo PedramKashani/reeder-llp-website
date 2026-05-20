@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { HeroRotatingWords } from "@/components/HeroRotatingWords";
-import { SectionHeading } from "@/components/SectionHeading";
+import { HomeWelcomeLogo } from "@/components/home/HomeWelcomeLogo";
 import { ImageContentSection } from "@/components/ImageContentSection";
 import { CTABand } from "@/components/CTABand";
-import { editorialWelcomeShell } from "@/lib/homepageEditorialLayout";
 
 export const metadata: Metadata = {
   title:
@@ -28,15 +27,7 @@ export default function HomePage() {
 
       <div className="relative z-20 flex flex-col gap-0 bg-[#0a0a0a] pb-20 md:pb-24 lg:pb-28">
         <div className="snap-section flex flex-col justify-start md:min-h-[min(100svh,56rem)] md:justify-center">
-          <SectionHeading
-            id="welcome"
-            kicker="Welcome to"
-            title="Reeder McCreary, LLP"
-            center
-            variant="firmMark"
-            shellClassName={editorialWelcomeShell()}
-            scrollReveal
-          />
+          <HomeWelcomeLogo id="welcome" />
         </div>
 
         <div className="homepage-practice-row">

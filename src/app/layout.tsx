@@ -4,40 +4,40 @@ import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import {
+  FIRM_NAME,
   SITE_URL as SITE_URL_STRING,
   PHONE_E164,
   ADDRESS,
   LOGO_SRC,
 } from "@/data/firm";
 
+const SITE_DESCRIPTION = `${FIRM_NAME} provides litigation, trial, and business counsel for companies, investors, and individuals.`;
+
 /** Production site origin — canonical URLs use paths relative to this base in each route’s `alternates.canonical`. */
 export const siteUrl = new URL(SITE_URL_STRING);
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,
-  title: "Reeder McCreary, LLP",
-  description:
-    "Reeder McCreary, LLP provides litigation, trial, and business counsel for companies, investors, and individuals.",
+  title: FIRM_NAME,
+  description: SITE_DESCRIPTION,
   openGraph: {
-    title: "Reeder McCreary, LLP",
-    description:
-      "Reeder McCreary, LLP provides litigation, trial, and business counsel for companies, investors, and individuals.",
-    siteName: "Reeder McCreary, LLP",
+    title: FIRM_NAME,
+    description: SITE_DESCRIPTION,
+    siteName: FIRM_NAME,
     type: "website",
     images: [
       {
         url: new URL("/images/team/reeder-banner.webp", siteUrl).toString(),
         width: 1200,
         height: 630,
-        alt: "Reeder McCreary, LLP",
+        alt: FIRM_NAME,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Reeder McCreary, LLP",
-    description:
-      "Reeder McCreary, LLP provides litigation, trial, and business counsel for companies, investors, and individuals.",
+    title: FIRM_NAME,
+    description: SITE_DESCRIPTION,
     images: [new URL("/images/team/reeder-banner.webp", siteUrl).toString()],
   },
 };
@@ -60,7 +60,7 @@ const firmSerif = Cormorant_Garamond({
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "LegalService",
-  name: "Reeder McCreary, LLP",
+  name: FIRM_NAME,
   url: siteUrl.toString(),
   logo: new URL(LOGO_SRC, siteUrl).toString(),
   telephone: PHONE_E164,

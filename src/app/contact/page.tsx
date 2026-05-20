@@ -30,7 +30,7 @@ export default function ContactPage() {
       <section className="contact-hero relative min-h-[min(78svh,40rem)] w-full overflow-hidden md:min-h-[min(82svh,44rem)]">
         <Image
           src={LOGO_SRC}
-          alt="Reeder McCreary logo"
+          alt="Reeder LLP logo"
           fill
           priority
           unoptimized
@@ -86,7 +86,7 @@ export default function ContactPage() {
               body={
                 <>
                   <div className="space-y-1">
-                    <p className="text-neutral-700">Reeder McCreary, LLP</p>
+                    <p className="text-neutral-700">Reeder LLP</p>
                     <p className="text-neutral-700">Los Angeles, CA</p>
                   </div>
                 </>
@@ -181,7 +181,7 @@ export default function ContactPage() {
 
               <div className="mt-8 overflow-hidden rounded-2xl border border-neutral-200">
                 <iframe
-                  title="Reeder McCreary Map"
+                  title="Reeder LLP Map"
                   className="h-[360px] w-full"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"

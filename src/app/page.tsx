@@ -6,9 +6,9 @@ import { CTABand } from "@/components/CTABand";
 
 export const metadata: Metadata = {
   title:
-    "Business Litigation, Trials & Corporate Counsel | Reeder McCreary, LLP",
+    "Business Litigation, Trials & Corporate Counsel | Reeder LLP",
   description:
-    "Los Angeles trial lawyers and strategic business counsel for complex litigation, high-stakes trials, and transactions. Reeder McCreary, LLP serves companies, investors, and individuals with a focused, results-driven approach.",
+    "Los Angeles trial lawyers and strategic business counsel for complex litigation, high-stakes trials, and transactions. Reeder LLP serves companies, investors, and individuals with a focused, results-driven approach.",
   alternates: {
     canonical: "/",
   },
@@ -34,7 +34,7 @@ export default function HomePage() {
           <ImageContentSection
             title="Litigation"
             body="Successful litigation requires focus, strategy, direction, and knowledge. With a wealth of legal knowledge, tight team, and a unique litigation strategy, we charge hard, don’t pull punches, and are goal oriented. We don’t need to turn over every stone because we know what we are doing and what it takes to succeed. The results speak for themselves."
-            imageUrl="/images/chris-duncan/chris-duncan-1.webp"
+            imageUrl="/images/team/team-in-office-1.webp"
             alt="Attorneys discussing litigation strategy"
             ctaLabel="Learn More"
             ctaHref="/practice-areas/trials-commercial-litigation"
@@ -59,7 +59,7 @@ export default function HomePage() {
             withTopRule
             title="Trials"
             body="At trial, winning is everything and losing is not an option. Whether it is a bet-the-company or any other case, we try every case like it is our own. With our unique trial preparation method, creativity, and human touch, we deliver."
-            imageUrl="/images/duncan/Duncan.webp"
+            imageUrl="/images/chris/chris-reeder-3.webp"
             alt="Trial attorney preparing for court"
             ctaLabel="Learn More"
             ctaHref="/practice-areas/trials-commercial-litigation"

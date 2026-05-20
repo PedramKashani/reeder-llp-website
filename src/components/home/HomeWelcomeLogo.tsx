@@ -1,5 +1,5 @@
 import { HomeReveal } from "@/components/HomeReveal";
-import { LOGO_DIMENSIONS, LOGO_SRC } from "@/data/firm";
+import { FIRM_NAME, LOGO_DIMENSIONS, LOGO_SRC } from "@/data/firm";
 import { editorialWelcomeShell } from "@/lib/homepageEditorialLayout";
 
 export function HomeWelcomeLogo({ id = "welcome" }: { id?: string }) {
@@ -25,7 +25,7 @@ export function HomeWelcomeLogo({ id = "welcome" }: { id?: string }) {
               src={LOGO_SRC}
               width={width}
               height={height}
-              alt="Reeder McCreary, LLP"
+              alt={FIRM_NAME}
               decoding="async"
               className="h-auto w-full max-w-[min(88vw,20rem)] brightness-[1.12] contrast-[1.14] saturate-[1.05] sm:max-w-md md:max-w-lg lg:max-w-xl"
             />

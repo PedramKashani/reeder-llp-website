@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { MouseEvent } from "react";
 import {
+  FIRM_NAME,
   LOGO_MARK_COMPACT_DIMENSIONS,
   LOGO_MARK_COMPACT_SRC,
   LOGO_MARK_DIMENSIONS,
@@ -40,7 +41,7 @@ export function Logo({
           src={LOGO_MARK_SRC}
           width={lockup.width}
           height={lockup.height}
-          alt="Reeder McCreary, LLP"
+          alt={FIRM_NAME}
           decoding="async"
           fetchPriority="high"
           className={

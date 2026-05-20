@@ -5,9 +5,9 @@ import { practiceAreas } from "@/data/practiceAreas";
 import { GRID_GAP_CARDS, SECTION_PAD_MAJOR } from "@/lib/luxuryLayout";
 
 export const metadata: Metadata = {
-  title: "Practice Areas | Reeder McCreary, LLP",
+  title: "Practice Areas | Reeder LLP",
   description:
-    "Explore Reeder McCreary, LLP’s practice areas—from commercial litigation and trials to corporate, real estate, franchise, entertainment, employment, and white collar matters.",
+    "Explore Reeder LLP’s practice areas—from commercial litigation and trials to corporate, real estate, franchise, entertainment, employment, and white collar matters.",
   alternates: {
     canonical: "/practice-areas",
   },
@@ -20,7 +20,7 @@ export default function PracticeAreasIndex() {
         <div className="relative h-[min(68svh,36rem)] min-h-[480px] w-full overflow-hidden md:h-[min(72svh,40rem)] lg:h-[min(76svh,44rem)]">
           <Image
             src="/images/team/team-in-office-2.webp"
-            alt="Reeder McCreary attorneys and professionals together in the firm’s office."
+            alt="Reeder LLP attorneys and professionals together in the firm’s office."
             fill
             priority
             sizes="100vw"
@@ -40,7 +40,7 @@ export default function PracticeAreasIndex() {
                 <div className="mt-5 flex items-center gap-6 md:mt-6">
                   <div className="h-px w-24 bg-[#c8a24a]" />
                   <span className="text-[11px] font-medium uppercase tracking-[0.24em] text-white/65 md:text-[11px]">
-                    Reeder McCreary, LLP
+                    Reeder LLP
                   </span>
                 </div>
               </div>

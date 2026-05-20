@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { LegalPageLayout } from "@/components/LegalPageLayout";
 
 export const metadata: Metadata = {
-  title: "Anti-Spam Policy | Reeder McCreary, LLP",
+  title: "Anti-Spam Policy | Reeder LLP",
   description:
-    "Reeder McCreary, LLP's policy on unsolicited commercial email and communications, including how we handle marketing messages and respect your inbox.",
+    "Reeder LLP's policy on unsolicited commercial email and communications, including how we handle marketing messages and respect your inbox.",
   alternates: {
     canonical: "/anti-spam",
   },

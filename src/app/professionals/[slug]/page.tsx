@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     : firstBioParagraph;
 
   return {
-    title: `${profile.name} | Reeder McCreary, LLP`,
+    title: `${profile.name} | Reeder LLP`,
     description: [profile.title, firstSentence].filter(Boolean).join(" — "),
     alternates: {
       canonical: `/professionals/${slug}`,

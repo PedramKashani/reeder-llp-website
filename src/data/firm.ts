@@ -1,4 +1,4 @@
-export const FIRM_NAME = "Reeder McCreary, LLP";
+export const FIRM_NAME = "Reeder LLP";
 
 export const PHONE = "310-861-2470";
 export const PHONE_E164 = "+1-310-861-2470";

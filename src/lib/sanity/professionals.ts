@@ -88,9 +88,18 @@ async function fetchSanityProfessionals(): Promise<Professional[] | null> {
   }
 }
 
+const EXCLUDED_PROFESSIONAL_SLUGS = new Set([
+  "duncan-j-mccreary",
+  "john-meadows",
+]);
+
+function withoutExcluded(profiles: Professional[]): Professional[] {
+  return profiles.filter((p) => !EXCLUDED_PROFESSIONAL_SLUGS.has(p.slug));
+}
+
 export async function getProfessionals(): Promise<Professional[]> {
   const fromSanity = await fetchSanityProfessionals();
-  return fromSanity ?? professionalsFallback;
+  return withoutExcluded(fromSanity ?? professionalsFallback);
 }
 
 export async function getProfessionalBySlug(

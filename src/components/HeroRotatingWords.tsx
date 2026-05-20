@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import { CursorBadgeTrail } from "@/components/CursorBadgeTrail";
 import { ScrollDownButton } from "@/components/ScrollDownButton";
+import { FIRM_NAME } from "@/data/firm";
 
 const DISPLAY_SERIF =
   "var(--font-firm-serif), 'Cormorant Garamond', Georgia, 'Times New Roman', serif";
@@ -72,7 +73,7 @@ export function HeroRotatingWords({
         />
       </div>
 
-      <h1 className="sr-only">Reeder McCreary, LLP</h1>
+      <h1 className="sr-only">{FIRM_NAME}</h1>
 
       <CursorBadgeTrail rootRef={heroSectionRef} />
 

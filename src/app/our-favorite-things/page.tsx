@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { OurFavoriteThingsGrid } from "@/components/OurFavoriteThingsGrid";
 
 export const metadata: Metadata = {
-  title: "Our Favorite Things | Reeder McCreary, LLP",
+  title: "Our Favorite Things | Reeder LLP",
   description:
-    "A curated list of restaurants, makers, venues, and professionals the team at Reeder McCreary, LLP recommends—places and people we trust enough to share with clients and friends.",
+    "A curated list of restaurants, makers, venues, and professionals the team at Reeder LLP recommends—places and people we trust enough to share with clients and friends.",
   alternates: {
     canonical: "/our-favorite-things",
   },

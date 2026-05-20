@@ -1,3 +1,4 @@
+import { FIRM_NAME } from "@/data/firm";
 import { practiceAreaNavLinks } from "@/data/practiceAreas";
 
 export type NavLink = { label: string; href: string };
@@ -42,7 +43,7 @@ export const FOOTER_LEGAL_LINKS: NavLink[] = [
 export const NAV_SECTIONS: NavSection[] = [
   {
     label: "Who We Are",
-    leftBlurb: "Reeder McCreary, LLP",
+    leftBlurb: FIRM_NAME,
     rows: [
       [
         {

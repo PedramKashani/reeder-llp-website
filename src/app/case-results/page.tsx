@@ -6,9 +6,9 @@ import { CASE_RESULTS } from "@/data/caseResults";
 import { LOGO_SRC } from "@/data/firm";
 
 export const metadata: Metadata = {
-  title: "Case Results | Reeder McCreary, LLP",
+  title: "Case Results | Reeder LLP",
   description:
-    "Representative matters and outcomes from Reeder McCreary, LLP in complex commercial litigation, trials, and high-stakes disputes. Past results do not guarantee a similar outcome.",
+    "Representative matters and outcomes from Reeder LLP in complex commercial litigation, trials, and high-stakes disputes. Past results do not guarantee a similar outcome.",
   alternates: {
     canonical: "/case-results",
   },

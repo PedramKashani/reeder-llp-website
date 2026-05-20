@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
+import { FIRM_NAME } from "@/data/firm";
 import {
   KICKER_LUXURY,
   SECTION_PAD_MAJOR,
@@ -12,9 +13,8 @@ const aboutBlockGap = "space-y-4 md:space-y-5";
 const aboutRhythm = "space-y-14 md:space-y-16";
 
 export const metadata: Metadata = {
-  title: "About the Firm | Reeder McCreary, LLP",
-  description:
-    "Learn about Reeder McCreary, LLP—a Los Angeles business litigation firm led by trial lawyer Chris Reeder, focused on results-driven counsel for companies, investors, and individuals.",
+  title: `About the Firm | ${FIRM_NAME}`,
+  description: `Learn about ${FIRM_NAME}—a Los Angeles business litigation firm led by trial lawyer Chris Reeder, focused on results-driven counsel for companies, investors, and individuals.`,
   alternates: {
     canonical: "/about",
   },
@@ -26,7 +26,7 @@ export default function AboutPage() {
       <PageHero
         imageSrc="/images/team/team-in-office-1.webp"
         subtitle="About the Firm"
-        title="Reeder McCreary"
+        title={FIRM_NAME}
       />
 
       <section
@@ -40,16 +40,16 @@ export default function AboutPage() {
               <h2 className={`${KICKER_LUXURY} text-balance`}>Overview</h2>
               <div className={`${aboutBlockGap} pt-1`}>
                 <p className={`${aboutBody} text-balance`}>
-                  With Chris Reeder as its lead trial lawyer, Reeder McCreary,
-                  LLP is a full service business litigation firm.
+                  With Chris Reeder as its lead trial lawyer, {FIRM_NAME} is a
+                  full service business litigation firm.
                 </p>
                 <p className={`${aboutBody} text-balance`}>
-                  Reeder McCreary professionals are focused, driven, and results
+                  {FIRM_NAME} professionals are focused, driven, and results
                   oriented. Utilizing tight team-based litigation approach, trial
-                  preparation model, and strategy unique to each client, Reeder
-                  McCreary professionals represent a wide variety of clients
-                  from entrepreneurs to large international corporations in an
-                  infinite number of industries.
+                  preparation model, and strategy unique to each client, {FIRM_NAME}{" "}
+                  professionals represent a wide variety of clients from
+                  entrepreneurs to large international corporations in an infinite
+                  number of industries.
                 </p>
               </div>
             </div>
@@ -67,10 +67,10 @@ export default function AboutPage() {
                   franchising issues, and real estate transactions.
                 </p>
                 <p className={`${aboutBody} text-balance`}>
-                  Reeder McCreary professionals also provide day to day general
-                  counsel services to clients such as trademark registration,
-                  corporate compliance, real estate tax assessments, franchise
-                  transactions, and contractors licensing.
+                  {FIRM_NAME} professionals also provide day to day general counsel
+                  services to clients such as trademark registration, corporate
+                  compliance, real estate tax assessments, franchise transactions,
+                  and contractors licensing.
                 </p>
               </div>
             </div>
@@ -82,9 +82,8 @@ export default function AboutPage() {
               <p
                 className={`pt-1 text-lg font-medium leading-[1.82] text-white md:text-xl md:leading-[1.78] text-balance`}
               >
-                Reeder McCreary professionals have one goal: winning for the
-                client. It is as simple as that and the results speak for
-                themselves.
+                {FIRM_NAME} professionals have one goal: winning for the client.
+                It is as simple as that and the results speak for themselves.
               </p>
             </div>
 

@@ -145,73 +145,6 @@ export const professionals: Professional[] = [
   },
 
   // -------------------------
-  // DUNCAN J. MCCREARY
-  // -------------------------
-  {
-    slug: "duncan-j-mccreary",
-    name: "Duncan J. McCreary",
-    title: "Partner",
-    officePhone: "(310) 861-2470",
-    email: "duncan@reedermccreary.com",
-    photoSmall: "/images/attorneys/duncan-headshot.webp",
-    photoLarge: "/images/attorneys/duncan-headshot.webp",
-    links: [
-      {
-        label: "Super Lawyers® Profile",
-        href: "https://profiles.superlawyers.com/california/los-angeles/lawyer/duncan-j-mccreary/b5a4a8e2-4202-4e25-9f68-201392117bae.html",
-      },
-    ],
-    badgeImages: [
-      "/images/badges/super-lawyers-10yr-duncan-mccreary-2025.webp",
-      "/images/badges/super-lawyers-selected-duncan-mccreary-2026.webp",
-    ],
-    relatedPracticeSlugs: [
-      "trials-commercial-litigation",
-      "franchise-dealership",
-      "real-estate",
-      "employment",
-      "sports",
-      "white-collar-investigations",
-    ],
-    sections: {
-      background: [
-        "Duncan is a trial lawyer and problem solver.",
-        "Immediately prior to forming Reeder McCreary, LLP, Duncan served as outside counsel for multiple new car dealerships and high net worth individuals for whom he provided aggressive courtroom representation as well as advice and counsel. Throughout the years, Duncan has consistently solved complex problems with creative solutions.",
-        "Duncan has significant courtroom experience including both jury and court trials, administrative hearings, as well as arbitrations. Duncan's areas of practice include a variety of industries including new car dealerships, real estate, franchises, entertainment, sports, and finance. The types of cases Duncan has litigated include partnership disputes, franchise litigation, employment matters, PAGA matters, consumer disputes, corporate governance, and white-collar crime.",
-        "Duncan was raised in Orange County, California and is a huge Dallas Cowboys, Los Angeles Angels, and Lakers fan.",
-      ],
-      winningTrialLitigation: [
-        "Successfully defended top NASCAR driver in partnership dispute ultimately forcing the adverse partner to dismiss the lawsuit in its entirety.",
-        "Obtained defense jury verdict in a Consumer Legal Remedies Act matter wherein the plaintiff alleged that the car dealership had violated the Vehicle Code.",
-        "Successfully defended nine (9) car dealerships in PAGA matter which included corporate successor-in-interest allegations.",
-        "Successfully defended new car dealership in easement dispute against major healthcare provider in Southern California.",
-        "Successfully represented real estate development company in parking rights dispute.",
-        "Successfully defended healthcare corporation and its members against breach of fiduciary allegations.",
-        "Successfully represented car dealership against Department of Motor Vehicles in administrative hearing relating to various vehicle code violations.",
-        "Prosecuted security technology company for breach of contract and fraud allegations due a malfunctioning technology which resulted in a loss of dealer inventory.",
-        "Obtained summary judgment in favor of large public entity in a sexual harassment and national origin lawsuit.",
-        "Successfully enforced judgment for real estate developer against organization who had improperly impinged on client's property rights.",
-      ],
-      winningTransaction: [
-        "Provided advice and counsel for five (5) car dealerships on myriad of issues ranging from employment investigations, consumer disputes, employee counseling, document retention protocols and vendor negotiations.",
-        "Reviewed and advised top Orange County car dealer on employment issues during acquisition of new dealership.",
-      ],
-      education: [
-        "Santa Clara University School of Law, J.D.",
-        "University of California at Santa Barbara, B.A., Classics, cum laude",
-      ],
-      admissions: [
-        "California",
-        "U.S. Court of Appeals, Ninth Circuit",
-        "U.S. District Court, Central District of California",
-      ],
-      awards: [
-        "Named a Southern California “Super Lawyer,” Super Lawyers (2015-2026)*",
-      ],
-    },
-  },
-
-  // -------------------------
   // BEN TRAGISH
   // -------------------------
   {
@@ -352,36 +285,6 @@ export const professionals: Professional[] = [
       admissions: ["California"],
       awards: [
         "Named a “Southern California Rising Star,” Super Lawyers (2025)",
-      ],
-    },
-  },
-
-  // -------------------------
-  // JOHN MEADOWS
-  // -------------------------
-  {
-    slug: "john-meadows",
-    name: "John Meadows",
-    title: "Attorney",
-    directDial: "(310) 861-2473",
-    email: "john@reedermccreary.com",
-    photoSmall: "/images/attorneys/john-headshot.webp",
-    photoLarge: "/images/attorneys/john-headshot.webp",
-    relatedPracticeSlugs: ["corporate"],
-    sections: {
-      background: [
-        "John represents clients in a wide range of corporate transactional and advisory matters, including mergers and acquisitions, corporate governance, capital investments, private dispositions, carve-outs, and other direct investment matters.",
-        "He has extensive experience representing early-stage and mid-market companies, later-stage sponsors, and institutional investors. John possesses an in-depth understanding of the entire deal lifecycle, enabling him to lead transactions from inception to completion.",
-        "John grew up in Melbourne, Australia, before moving to the United States to attend the University of Southern California, where he played Division 1 varsity tennis and majored in Philosophy, Politics and Law, with a minor in Psychology.",
-        "Subsequently, John received his Juris Doctorate from the University of Melbourne. Outside of his legal work, John enjoys tennis, golf, surfing, skiing and cooking.",
-      ],
-      education: [
-        "University of Southern California (2011-2015)",
-        "University of Melbourne – Juris Doctor (2016-2018)",
-      ],
-      admissions: [
-        "Supreme Court of Victoria – Lawyer (December 10, 2019)",
-        "High Court of Australia – Practitioner (January 16, 2020)",
       ],
     },
   },

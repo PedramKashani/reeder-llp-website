@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { LOGO_DIMENSIONS, LOGO_SRC } from "@/data/firm";
+import { FIRM_NAME, LOGO_DIMENSIONS, LOGO_SRC } from "@/data/firm";
 import { FOOTER_COLUMNS, FOOTER_LEGAL_LINKS } from "@/data/navigation";
 
 function SocialIcon({ href, sizeClass = "h-4 w-4" }: { href: string; sizeClass?: string }) {
@@ -111,7 +111,7 @@ export function Footer() {
 
       <div className="relative z-10 border-t border-neutral-200">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-6 text-xs text-neutral-600 sm:flex-row sm:items-center sm:justify-between">
-          <div>© {new Date().getFullYear()} Reeder McCreary, LLP</div>
+          <div>© {new Date().getFullYear()} {FIRM_NAME}</div>
 
           <div className="hidden sm:flex items-center gap-4">
             {LEGAL_LINKS.map((l) => (

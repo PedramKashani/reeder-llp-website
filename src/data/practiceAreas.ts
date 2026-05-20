@@ -11,8 +11,8 @@ export const practiceAreas: PracticeArea[] = [
       "Complex commercial trial and litigation for plaintiffs and defendants—disputes across real estate, franchise, hospitality, construction, entertainment, sports, energy, and finance.",
     heroImage: "/images/team/team-outdoor.webp",
     heroImageAlt:
-      "Reeder McCreary attorneys and professionals standing together outdoors in business attire.",
-    metaTitle: "Commercial Litigation & Trial Counsel | Reeder McCreary, LLP",
+      "Reeder LLP attorneys and professionals standing together outdoors in business attire.",
+    metaTitle: "Commercial Litigation & Trial Counsel | Reeder LLP",
     metaDescription:
       "Commercial trial and litigation counsel for companies, investors, and individuals in contract, partnership, lender, and high-value business disputes nationwide.",
     sections: [
@@ -24,13 +24,13 @@ export const practiceAreas: PracticeArea[] = [
       {
         heading: "Practice Scope and Approach",
         paragraphs: [
-          "Reeder McCreary professionals represent clients in complex trial and litigation matters across a wide variety of industries including real estate, franchise, hospitality, construction, entertainment, sports, energy, and finance.",
+          "Reeder LLP professionals represent clients in complex trial and litigation matters across a wide variety of industries including real estate, franchise, hospitality, construction, entertainment, sports, energy, and finance.",
 
           "Chris has obtained dismissal of putative class action brought against large home improvement contractor and national franchisor alleging claims of false advertising and unfair business practices.",
 
-          "Always focused on winning results, Reeder McCreary, LLP has a nationwide complex commercial trial and litigation practice. In an aggressive yet strategic manner, Reeder McCreary successfully represent clients in a vast array of industries including real estate, hospitality, franchising, sports, health care, entertainment, construction, and other investments.",
+          "Always focused on winning results, Reeder LLP has a nationwide complex commercial trial and litigation practice. In an aggressive yet strategic manner, Reeder LLP successfully represent clients in a vast array of industries including real estate, hospitality, franchising, sports, health care, entertainment, construction, and other investments.",
 
-          "Reeder McCreary utilize a focused team methodology to trials and commercial litigation. This method, as opposed to spreading out a case among multiple lawyers with a discrete knowledge base, assures that every lawyer on the case, knows the case. This approach can and has accommodated any size trial or litigation and leads to the best results. It is also far more efficient than the normal approach to large litigation utilizing multiple lawyers.",
+          "Reeder LLP utilize a focused team methodology to trials and commercial litigation. This method, as opposed to spreading out a case among multiple lawyers with a discrete knowledge base, assures that every lawyer on the case, knows the case. This approach can and has accommodated any size trial or litigation and leads to the best results. It is also far more efficient than the normal approach to large litigation utilizing multiple lawyers.",
         ],
       },
       {
@@ -62,8 +62,8 @@ export const practiceAreas: PracticeArea[] = [
       "Acquisition, development, financing, leasing, and disputes across complex real estate projects, including mixed-use developments and sports-adjacent properties.",
     heroImage: "/images/team/team-outdoor.webp",
     heroImageAlt:
-      "Reeder McCreary attorneys and professionals standing together outdoors in business attire.",
-    metaTitle: "Real Estate Law & Litigation | Reeder McCreary, LLP",
+      "Reeder LLP attorneys and professionals standing together outdoors in business attire.",
+    metaTitle: "Real Estate Law & Litigation | Reeder LLP",
     metaDescription:
       "Real estate counsel in disputes and transactions, including development, financing, leasing, and complex litigation for developers, investors, and lenders.",
     sections: [
@@ -74,7 +74,7 @@ export const practiceAreas: PracticeArea[] = [
       },
       {
         paragraphs: [
-          "Chris has represented some of the West Coast’s premier real estate developers, building owners, and construction companies, with projects ranging from office and medical buildings massive mixed-use developments and sports complexes. Chris and other Reeder McCreary professionals have successfully handled matters involving acquisition and disposition disputes, partnership and investment conflicts, development and due diligence, financing, contracting, public improvements, quality assurance, mechanics’ liens, licensing, insurance, landlord-tenant issues, and construction disputes.",
+          "Chris has represented some of the West Coast’s premier real estate developers, building owners, and construction companies, with projects ranging from office and medical buildings massive mixed-use developments and sports complexes. Chris and other Reeder LLP professionals have successfully handled matters involving acquisition and disposition disputes, partnership and investment conflicts, development and due diligence, financing, contracting, public improvements, quality assurance, mechanics’ liens, licensing, insurance, landlord-tenant issues, and construction disputes.",
         ],
       },
       {
@@ -92,7 +92,7 @@ export const practiceAreas: PracticeArea[] = [
       {
         heading: "Transactions and Leasing",
         paragraphs: [
-          "Chris also has extensive experience in closing real estate acquisitions and dispositions, as well as structuring and negotiating associated financing for projects involving major sports facilities, mixed-use developments, a world-renowned nightclub, industrial properties, office buildings, restaurants, and bars. Reeder McCreary, LLP also provides day-to-day real estate counsel, resolves complex issues efficiently, and handles commercial office and medical lease transactions.",
+          "Chris also has extensive experience in closing real estate acquisitions and dispositions, as well as structuring and negotiating associated financing for projects involving major sports facilities, mixed-use developments, a world-renowned nightclub, industrial properties, office buildings, restaurants, and bars. Reeder LLP also provides day-to-day real estate counsel, resolves complex issues efficiently, and handles commercial office and medical lease transactions.",
 
           "Notably, Chris obtained a settlement that substantially reduced triple net lease charges for multiple groups of medical professionals, arising from fraud claims in the procurement of leases and lease extensions following the acquisition of several Class A medical buildings.",
         ],
@@ -106,10 +106,10 @@ export const practiceAreas: PracticeArea[] = [
       "Outside general counsel and transactional counsel for select companies—governance, compliance, and complex deals across acquisitions, financings, and operations.",
     heroImage: "/images/team/team-outdoor.webp",
     heroImageAlt:
-      "Reeder McCreary attorneys and professionals standing together outdoors in business attire.",
-    metaTitle: "Corporate Law & Outside General Counsel | Reeder McCreary, LLP",
+      "Reeder LLP attorneys and professionals standing together outdoors in business attire.",
+    metaTitle: "Corporate Law & Outside General Counsel | Reeder LLP",
     metaDescription:
-      "Reeder McCreary serves as strategic outside general counsel on governance, compliance, and high-stakes corporate transactions for growth-oriented and multi-jurisdictional clients.",
+      "Reeder LLP serves as strategic outside general counsel on governance, compliance, and high-stakes corporate transactions for growth-oriented and multi-jurisdictional clients.",
     sections: [
       {
         paragraphs: [
@@ -119,7 +119,7 @@ export const practiceAreas: PracticeArea[] = [
       {
         heading: "Outside General Counsel",
         paragraphs: [
-          "Chris serves as general counsel to a select group of clients, including one of the nation’s largest home improvement contracting companies with an international franchise network, as well as a hospitality company that owns a world-renowned nightclub and other investments and properties. Reeder McCreary, LLP functions as an extension of in-house legal departments, managing entity compliance, human resource matters, and ongoing operational needs.",
+          "Chris serves as general counsel to a select group of clients, including one of the nation’s largest home improvement contracting companies with an international franchise network, as well as a hospitality company that owns a world-renowned nightclub and other investments and properties. Reeder LLP functions as an extension of in-house legal departments, managing entity compliance, human resource matters, and ongoing operational needs.",
         ],
       },
       {
@@ -144,8 +144,8 @@ export const practiceAreas: PracticeArea[] = [
       "Franchise and dealership disputes, system-wide negotiations, agreement drafting, and transactions for franchisors, franchisees, manufacturers, and dealers.",
     heroImage: "/images/team/team-outdoor.webp",
     heroImageAlt:
-      "Reeder McCreary attorneys and professionals standing together outdoors in business attire.",
-    metaTitle: "Franchise & Dealership Law | Reeder McCreary, LLP",
+      "Reeder LLP attorneys and professionals standing together outdoors in business attire.",
+    metaTitle: "Franchise & Dealership Law | Reeder LLP",
     metaDescription:
       "Litigation and transactional work for franchise and dealership systems—agreements, network charges, association disputes, trademark enforcement, and national counsel roles.",
     sections: [
@@ -157,11 +157,11 @@ export const practiceAreas: PracticeArea[] = [
       {
         heading: "Scope of Representation",
         paragraphs: [
-          "Reeder McCreary professionals successfully represent clients in a wide range of national and international dealerships, franchise litigation, and transactional matters. They understand the importance and system-wide implications of franchise and dealership issues that often make these “must win” situations.",
+          "Reeder LLP professionals successfully represent clients in a wide range of national and international dealerships, franchise litigation, and transactional matters. They understand the importance and system-wide implications of franchise and dealership issues that often make these “must win” situations.",
 
-          "Reeder McCreary professionals provide general counsel and transactional services in this complex field. They have represented clients in system-wide negotiations with franchisee associations, resulting in the successful establishment of uniform, system-wide franchise agreements.",
+          "Reeder LLP professionals provide general counsel and transactional services in this complex field. They have represented clients in system-wide negotiations with franchisee associations, resulting in the successful establishment of uniform, system-wide franchise agreements.",
 
-          "The firm prepares franchise agreements and related documents, advises on both system-wide and individual franchise matters, and develops tailored workout solutions for troubled franchises. Reeder McCreary professionals also manage and enforce trademark portfolios for franchise clients.",
+          "The firm prepares franchise agreements and related documents, advises on both system-wide and individual franchise matters, and develops tailored workout solutions for troubled franchises. Reeder LLP professionals also manage and enforce trademark portfolios for franchise clients.",
         ],
       },
       {
@@ -169,9 +169,9 @@ export const practiceAreas: PracticeArea[] = [
         paragraphs: [
           "Chris serves as national counsel to an international franchisor and has successfully established its rights under the Franchise Agreements against franchisees attempting to depart the system, resulting in injunctions and monetary judgments across multiple jurisdictions.",
 
-          "In representing another national franchisor/distributor, Chris and Reeder McCreary professionals defeated an association of franchisees/distributors, enforced the client’s rights to impose various network charges, and secured a complete dismissal of the association’s claims.",
+          "In representing another national franchisor/distributor, Chris and Reeder LLP professionals defeated an association of franchisees/distributors, enforced the client’s rights to impose various network charges, and secured a complete dismissal of the association’s claims.",
 
-          "Chris and Reeder McCreary professionals also successfully represented an automobile dealership in litigation involving the sale of a $30 million dealership.",
+          "Chris and Reeder LLP professionals also successfully represented an automobile dealership in litigation involving the sale of a $30 million dealership.",
         ],
       },
       {
@@ -189,20 +189,20 @@ export const practiceAreas: PracticeArea[] = [
       "Film, music, and media clients—contracts, licensing, employment, publicity and privacy issues, and dispute resolution for production companies, artists, and executives.",
     heroImage: "/images/team/team-outdoor.webp",
     heroImageAlt:
-      "Reeder McCreary attorneys and professionals standing together outdoors in business attire.",
-    metaTitle: "Entertainment Law | Reeder McCreary, LLP",
+      "Reeder LLP attorneys and professionals standing together outdoors in business attire.",
+    metaTitle: "Entertainment Law | Reeder LLP",
     metaDescription:
       "Entertainment industry counsel covering agreements, copyright and trademark questions, employment and severance, and litigation for production, editorial, and management clients.",
     sections: [
       {
         paragraphs: [
-          "The entertainment industry operates within a distinct set of customs, expectations, and business practices. Whether the matter involves contracts, copyright or trademark issues, licensing, employment, publicity, privacy, media, internet, or trade secrets, Reeder McCreary delivers strategic, creative solutions tailored to each client’s needs.",
+          "The entertainment industry operates within a distinct set of customs, expectations, and business practices. Whether the matter involves contracts, copyright or trademark issues, licensing, employment, publicity, privacy, media, internet, or trade secrets, Reeder LLP delivers strategic, creative solutions tailored to each client’s needs.",
         ],
       },
       {
         heading: "Clients",
         paragraphs: [
-          "Chris and Reeder McCreary professionals have successfully represented a wide range of entertainment industry clients, including major film production companies, business managers, film and magazine editors, producers, recording artists, and sporting event promoters.",
+          "Chris and Reeder LLP professionals have successfully represented a wide range of entertainment industry clients, including major film production companies, business managers, film and magazine editors, producers, recording artists, and sporting event promoters.",
         ],
       },
       {
@@ -220,8 +220,8 @@ export const practiceAreas: PracticeArea[] = [
       "Sports-related litigation and deals for promoters, executives, agents, developers, and investors—league and event economics, employment, and venue-linked real estate.",
     heroImage: "/images/team/team-outdoor.webp",
     heroImageAlt:
-      "Reeder McCreary attorneys and professionals standing together outdoors in business attire.",
-    metaTitle: "Sports Law | Reeder McCreary, LLP",
+      "Reeder LLP attorneys and professionals standing together outdoors in business attire.",
+    metaTitle: "Sports Law | Reeder LLP",
     metaDescription:
       "Counsel in sports industry disputes and transactions, including profits litigation, employment matters, and development work tied to teams, events, and related investments.",
     sections: [
@@ -253,20 +253,20 @@ export const practiceAreas: PracticeArea[] = [
       "Wage-and-hour class actions, discrimination and executive disputes, trade secrets, policies, investigations, and agreements for employers and senior individuals.",
     heroImage: "/images/team/team-outdoor.webp",
     heroImageAlt:
-      "Reeder McCreary attorneys and professionals standing together outdoors in business attire.",
-    metaTitle: "Employment Law | Reeder McCreary, LLP",
+      "Reeder LLP attorneys and professionals standing together outdoors in business attire.",
+    metaTitle: "Employment Law | Reeder LLP",
     metaDescription:
       "Employment and labor counsel: class and collective actions, discrimination and compensation disputes, trade secret litigation, executive agreements, and internal and regulatory investigations.",
     sections: [
       {
         paragraphs: [
-          "In employment and labor matters, issues of exposure, collateral consequences, and cost-effectiveness often intersect. Reeder McCreary approaches these matters strategically from the outset, developing solutions that account for each of these competing considerations.",
+          "In employment and labor matters, issues of exposure, collateral consequences, and cost-effectiveness often intersect. Reeder LLP approaches these matters strategically from the outset, developing solutions that account for each of these competing considerations.",
         ],
       },
       {
         heading: "Litigation and Class Actions",
         paragraphs: [
-          "Chris and the professionals at Reeder McCreary have achieved successful outcomes for clients in matters involving wage and hour class actions, discrimination claims, executive compensation disputes, labor issues, fiduciary duty claims, trade secret litigation, and administrative proceedings.",
+          "Chris and the professionals at Reeder LLP have achieved successful outcomes for clients in matters involving wage and hour class actions, discrimination claims, executive compensation disputes, labor issues, fiduciary duty claims, trade secret litigation, and administrative proceedings.",
 
           "Chris has significantly mitigated wage and hour exposure to several large home improvement companies in multiple class actions. He has also successfully prosecuted claims against aircraft industry executives for breach of fiduciary duty and usurpation of corporate opportunities and protected the trade secrets of an international food distributor in litigation against former employees seeking to establish a competing business.",
         ],
@@ -274,7 +274,7 @@ export const practiceAreas: PracticeArea[] = [
       {
         heading: "Counseling and Investigations",
         paragraphs: [
-          "Beyond litigation, Reeder McCreary professionals advise companies on the development of employment policies and procedures, handle day-to-day employment issues, and negotiate executive and artist employment agreements. Chris has also managed high-risk employment situations, including internal investigations, independent investigations, regulatory inquiries, and reduction-in-force events.",
+          "Beyond litigation, Reeder LLP professionals advise companies on the development of employment policies and procedures, handle day-to-day employment issues, and negotiate executive and artist employment agreements. Chris has also managed high-risk employment situations, including internal investigations, independent investigations, regulatory inquiries, and reduction-in-force events.",
         ],
       },
       {
@@ -292,8 +292,8 @@ export const practiceAreas: PracticeArea[] = [
       "Trademarks, copyrights, trade secrets, and design patents—enforcement, defense, portfolio management, and licensing for operating companies across several industries.",
     heroImage: "/images/team/team-outdoor.webp",
     heroImageAlt:
-      "Reeder McCreary attorneys and professionals standing together outdoors in business attire.",
-    metaTitle: "Intellectual Property Law | Reeder McCreary, LLP",
+      "Reeder LLP attorneys and professionals standing together outdoors in business attire.",
+    metaTitle: "Intellectual Property Law | Reeder LLP",
     metaDescription:
       "Intellectual property litigation and counseling: trade secrets, trademarks, copyrights, and design patents, plus portfolio stewardship and licensing for franchise, hospitality, and distribution clients.",
     sections: [
@@ -305,19 +305,19 @@ export const practiceAreas: PracticeArea[] = [
       {
         heading: "Industries Served",
         paragraphs: [
-          "Reeder McCreary represents clients across a range of industries, including franchise, hospitality, home improvement, entertainment, and food distribution.",
+          "Reeder LLP represents clients across a range of industries, including franchise, hospitality, home improvement, entertainment, and food distribution.",
         ],
       },
       {
         heading: "Enforcement and Litigation",
         paragraphs: [
-          "Chris and Reeder McCreary professionals have successfully prosecuted and defended claims involving trade secrets, trademarks, design patents, and copyrights, representing clients such as an international food distributor, one of the nation’s largest home improvement contractors, and a national bottling company.",
+          "Chris and Reeder LLP professionals have successfully prosecuted and defended claims involving trade secrets, trademarks, design patents, and copyrights, representing clients such as an international food distributor, one of the nation’s largest home improvement contractors, and a national bottling company.",
         ],
       },
       {
         heading: "Portfolios and Licensing",
         paragraphs: [
-          "With a clear understanding of the value of creative works, branding, and trade names, Reeder McCreary manages trademark and service mark portfolios for multiple clients and advises them on the strategic licensing of intellectual property.",
+          "With a clear understanding of the value of creative works, branding, and trade names, Reeder LLP manages trademark and service mark portfolios for multiple clients and advises them on the strategic licensing of intellectual property.",
         ],
       },
     ],
@@ -330,14 +330,14 @@ export const practiceAreas: PracticeArea[] = [
       "Government and internal investigations, regulatory proceedings, and defense-oriented strategy in fraud, fiduciary, securities, and related white collar matters.",
     heroImage: "/images/team/team-outdoor.webp",
     heroImageAlt:
-      "Reeder McCreary attorneys and professionals standing together outdoors in business attire.",
-    metaTitle: "White Collar Defense & Investigations | Reeder McCreary, LLP",
+      "Reeder LLP attorneys and professionals standing together outdoors in business attire.",
+    metaTitle: "White Collar Defense & Investigations | Reeder LLP",
     metaDescription:
       "White collar and investigations practice: internal and independent investigations, regulatory and enforcement matters, and early-stage strategy for individuals and businesses.",
     sections: [
       {
         paragraphs: [
-          "White collar crime and investigations involve high-stakes, non-violent matters such as fraud, bribery, and breaches of fiduciary duty. These matters present significant risks for both individuals and businesses. Reeder McCreary approaches these cases with efficiency, discretion, and a clear focus on achieving the best possible outcome in the shortest amount of time.",
+          "White collar crime and investigations involve high-stakes, non-violent matters such as fraud, bribery, and breaches of fiduciary duty. These matters present significant risks for both individuals and businesses. Reeder LLP approaches these cases with efficiency, discretion, and a clear focus on achieving the best possible outcome in the shortest amount of time.",
         ],
       },
       {

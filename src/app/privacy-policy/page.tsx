@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { LegalPageLayout } from "@/components/LegalPageLayout";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Reeder McCreary, LLP",
+  title: "Privacy Policy | Reeder LLP",
   description:
-    "How Reeder McCreary, LLP collects, uses, and protects information when you visit our website or contact the firm, and your choices regarding personal data.",
+    "How Reeder LLP collects, uses, and protects information when you visit our website or contact the firm, and your choices regarding personal data.",
   alternates: {
     canonical: "/privacy-policy",
   },

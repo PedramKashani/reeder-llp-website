@@ -6,14 +6,27 @@ export const PHONE_HREF = "tel:310-861-2470";
 
 export const SITE_URL = "https://www.reedermccreary.com";
 
-export const LOGO_SRC = "/images/logos/ReederLLPVector.svg";
+export const LOGO_SRC = "/images/logos/RreederLLP.svg";
 
-/** Logo lockup for header / navbar (SVG — use intrinsic dimensions for crisp rendering) */
-export const LOGO_MARK_SRC = "/images/logos/ReederLLP.svg";
+export const LOGO_DIMENSIONS = {
+  width: 1357,
+  height: 734,
+} as const;
+
+/** Full wordmark for header at top of page */
+export const LOGO_MARK_SRC = "/images/logos/REEDERLLP1.svg";
 
 export const LOGO_MARK_DIMENSIONS = {
-  width: 493,
-  height: 103,
+  width: 485,
+  height: 112,
+} as const;
+
+/** Compact “R” mark shown in header after scroll */
+export const LOGO_MARK_COMPACT_SRC = "/images/logos/R.svg";
+
+export const LOGO_MARK_COMPACT_DIMENSIONS = {
+  width: 398,
+  height: 371,
 } as const;
 
 export const ADDRESS = {

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { LOGO_SRC } from "@/data/firm";
+import { LOGO_DIMENSIONS, LOGO_SRC } from "@/data/firm";
 import { FOOTER_COLUMNS, FOOTER_LEGAL_LINKS } from "@/data/navigation";
 
 function SocialIcon({ href, sizeClass = "h-4 w-4" }: { href: string; sizeClass?: string }) {
@@ -31,8 +31,8 @@ export function Footer() {
           <Image
             src={LOGO_SRC}
             alt=""
-            width={493}
-            height={304}
+            width={LOGO_DIMENSIONS.width}
+            height={LOGO_DIMENSIONS.height}
             unoptimized
             sizes="(max-width: 768px) 320px, 540px"
             className="h-auto w-[140%] max-w-none md:w-[540px]"

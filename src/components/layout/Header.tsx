@@ -66,12 +66,12 @@ export function Header() {
       <div
         className={
           "relative mx-auto flex min-h-[3.625rem] max-w-none items-center transition-all duration-500 " +
-          "md:min-h-0 md:justify-between md:px-7 lg:px-12 " +
+          "px-6 md:min-h-0 md:justify-between md:px-10 lg:px-12 " +
           (isScrolled ? "py-1 lg:py-1.5" : "py-1.5 lg:py-2")
         }
       >
-        {/* Full-height overlay on mobile so the logo stays centered when nav is hidden */}
-        <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center px-14 md:static md:inset-auto md:z-auto md:block md:px-0">
+        {/* Left-aligned logo; padding matches page content (px-6 / md:px-10 / lg:px-12) */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 flex items-center md:static md:inset-auto md:z-auto md:flex md:items-center">
           <div className="pointer-events-auto min-w-0">
             <Logo
               heroMode
@@ -124,7 +124,7 @@ export function Header() {
         <button
           type="button"
           className={
-            "absolute right-6 top-1/2 z-20 inline-flex h-7 -translate-y-1/2 items-center gap-1.5 " +
+            "absolute right-6 top-1/2 z-20 inline-flex h-7 -translate-y-1/2 items-center gap-1.5 sm:right-7 " +
             "rounded-full border border-white/[0.14] bg-white/[0.03] px-2.5 text-sm text-white/68 transition " +
             "hover:border-white/22 hover:bg-white/[0.05] hover:text-white/85 md:hidden"
           }

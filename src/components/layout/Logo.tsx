@@ -26,10 +26,7 @@ export function Logo({
     <Link
       href="/"
       onClick={onHomeClick}
-      className={
-        "inline-flex shrink-0 items-center transition-[filter] duration-500 " +
-        (heroMode ? "md:-ml-3" : "-ml-3 sm:-ml-4")
-      }
+      className="inline-flex shrink-0 items-center transition-[filter] duration-500"
     >
       <div
         className={

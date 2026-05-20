@@ -6,11 +6,11 @@ export const PHONE_HREF = "tel:310-861-2470";
 
 export const SITE_URL = "https://www.reedermccreary.com";
 
-export const LOGO_SRC = "/images/logos/RreederLLP.svg";
+export const LOGO_SRC = "/images/logos/RreederLLP1.svg";
 
 export const LOGO_DIMENSIONS = {
-  width: 1357,
-  height: 734,
+  width: 967,
+  height: 628,
 } as const;
 
 /** Full wordmark for header at top of page */

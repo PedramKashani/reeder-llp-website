@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { PHONE, PHONE_HREF } from "@/data/firm";
+import { LOGO_SRC, PHONE, PHONE_HREF } from "@/data/firm";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { InfoCard } from "@/components/contact/InfoCard";
 import { ScrollDownButton } from "@/components/ScrollDownButton";
@@ -29,12 +29,13 @@ export default function ContactPage() {
     <main className="bg-white text-neutral-950">
       <section className="contact-hero relative min-h-[min(78svh,40rem)] w-full overflow-hidden md:min-h-[min(82svh,44rem)]">
         <Image
-          src="/images/logos/rmc-logo-light.webp"
+          src={LOGO_SRC}
           alt="Reeder McCreary logo"
           fill
           priority
+          unoptimized
           sizes="100vw"
-          className="scale-[0.5202] object-contain object-center"
+          className="scale-[0.38] object-contain object-center"
         />
         <div className="absolute inset-0 bg-black/55" />
 

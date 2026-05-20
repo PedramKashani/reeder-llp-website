@@ -52,18 +52,25 @@ body {
 @keyframes logoIn {
   from {
     opacity: 0;
-    transform: translateY(-10px) scale(0.88);
+    transform: translateY(-6px);
   }
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 }
 
 .logo-animate-in {
   animation: logoIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   opacity: 0;
-  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-animate-in {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .scrollbar-hide {

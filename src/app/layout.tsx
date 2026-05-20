@@ -3,7 +3,12 @@ import "./globals.css";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { SITE_URL as SITE_URL_STRING, PHONE_E164, ADDRESS } from "@/data/firm";
+import {
+  SITE_URL as SITE_URL_STRING,
+  PHONE_E164,
+  ADDRESS,
+  LOGO_SRC,
+} from "@/data/firm";
 
 /** Production site origin — canonical URLs use paths relative to this base in each route’s `alternates.canonical`. */
 export const siteUrl = new URL(SITE_URL_STRING);
@@ -57,7 +62,7 @@ const organizationJsonLd = {
   "@type": "LegalService",
   name: "Reeder McCreary, LLP",
   url: siteUrl.toString(),
-  logo: new URL("/images/logos/rmc-gold-logo.webp", siteUrl).toString(),
+  logo: new URL(LOGO_SRC, siteUrl).toString(),
   telephone: PHONE_E164,
   address: {
     "@type": "PostalAddress",

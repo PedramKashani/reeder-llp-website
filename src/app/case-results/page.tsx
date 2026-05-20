@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { CaseResultsList } from "@/components/case-results/CaseResultsList";
 import { CASE_RESULTS } from "@/data/caseResults";
+import { LOGO_SRC } from "@/data/firm";
 
 export const metadata: Metadata = {
   title: "Case Results | Reeder McCreary, LLP",
@@ -17,8 +18,8 @@ export default function CaseResultsPage() {
   return (
     <main className="min-h-screen bg-neutral-950 text-white">
       <PageHero
-        imageSrc="/images/logos/rmc-logo-light.webp"
-        imageClassName="scale-75 object-contain object-center"
+        imageSrc={LOGO_SRC}
+        imageClassName="scale-[0.55] object-contain object-center"
         className="case-results-hero"
         contentClassName="w-full px-6 pb-14 pt-20 md:px-12 md:pb-20 lg:px-16 lg:pb-24"
         subtitle="Highlighted"

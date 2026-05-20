@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { LOGO_SRC } from "@/data/firm";
 import { FOOTER_COLUMNS, FOOTER_LEGAL_LINKS } from "@/data/navigation";
 
 function SocialIcon({ href, sizeClass = "h-4 w-4" }: { href: string; sizeClass?: string }) {
@@ -28,10 +29,11 @@ export function Footer() {
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
         <div className="absolute inset-0 flex items-center justify-center opacity-[0.06] md:inset-auto md:bottom-10 md:left-1/2 md:-translate-x-1/2 md:opacity-[0.07]">
           <Image
-            src="/images/logos/rmc-logo-light.webp"
+            src={LOGO_SRC}
             alt=""
-            width={540}
-            height={168}
+            width={493}
+            height={304}
+            unoptimized
             sizes="(max-width: 768px) 320px, 540px"
             className="h-auto w-[140%] max-w-none md:w-[540px]"
           />

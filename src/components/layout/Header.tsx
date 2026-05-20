@@ -53,9 +53,6 @@ export function Header() {
     };
   }, [mobileOpen]);
 
-  const hideLogoWordmark =
-    pathname === "/contact" || pathname === "/case-results";
-
   return (
     <header
       key={pathname}
@@ -73,25 +70,22 @@ export function Header() {
           (isScrolled ? "py-1 lg:py-1.5" : "py-1.5 lg:py-2")
         }
       >
-        <div
-          className={
-            "absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 " +
-            "md:static md:left-auto md:top-auto md:z-auto md:translate-none"
-          }
-        >
-          <Logo
-            heroMode
-            subtleShrink={isScrolled}
-            hideWordmark={hideLogoWordmark}
-            onHomeClick={(e) => {
-              setDesktopOpen(null);
-              setMobileOpen(false);
-              if (pathname === "/") {
-                e.preventDefault();
-                window.scrollTo(0, 0);
-              }
-            }}
-          />
+        {/* Full-height overlay on mobile so the logo stays centered when nav is hidden */}
+        <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center px-14 md:static md:inset-auto md:z-auto md:block md:px-0">
+          <div className="pointer-events-auto min-w-0">
+            <Logo
+              heroMode
+              subtleShrink={isScrolled}
+              onHomeClick={(e) => {
+                setDesktopOpen(null);
+                setMobileOpen(false);
+                if (pathname === "/") {
+                  e.preventDefault();
+                  window.scrollTo(0, 0);
+                }
+              }}
+            />
+          </div>
         </div>
 
         <nav className="hidden items-center gap-10 md:flex lg:gap-12">

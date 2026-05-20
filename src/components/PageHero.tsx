@@ -35,6 +35,7 @@ export function PageHero({
         alt=""
         fill
         priority
+        unoptimized={imageSrc.endsWith(".svg")}
         sizes="100vw"
         className={imageClassName}
       />

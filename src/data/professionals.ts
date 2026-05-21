@@ -288,4 +288,54 @@ export const professionals: Professional[] = [
       ],
     },
   },
+  // -------------------------
+  // -------------------------
+  // ZACHARY WARD
+  // -------------------------
+  {
+    slug: "zachary-ward",
+    name: "Zachary Ward",
+    title: "Attorney",
+    officePhone: "(310) 861-2470",
+    directDial: "(310) 861-2474",
+    email: "zach@reedermccreary.com",
+    photoSmall: "/images/attorneys/zach-headshot.webp",
+    photoLarge: "/images/attorneys/zach-headshot.webp",
+    links: [
+      {
+        label: "Super Lawyers® Profile",
+        href: "https://profiles.superlawyers.com/california/los-angeles/lawyer/zachary-ward/b11008e9-bbc3-486a-b1c3-2f0ce6a6f5c5.html",
+      },
+    ],
+    badgeImages: [
+      "/images/badges/super-lawyers-rising-stars-zachary-ward-2025.webp",
+    ],
+    relatedPracticeSlugs: [
+      "corporate",
+      "intellectual-property",
+      "entertainment",
+      "real-estate",
+      "trials-commercial-litigation",
+      "employment",
+    ],
+    sections: {
+      background: [
+        "Zachary represents clients in a wide array of practice areas ranging from corporate governance, intellectual property matters, entertainment, business and real estate transactions, and business litigation.",
+        "On the corporate front, Zachary advises clients on various corporate governance issues, including drafting articles of incorporation, corporate bylaws and board resolutions. Zachary also assists in day to day corporate due diligence including filing statements of information and name changes with the state of California.",
+        "Regarding intellectual property matters, Zachary has successfully filed and registered dozens of trademarks with the USPTO. Zachary has also maintained and protected his clients' trademarks, prevented said trademarks from being lost or abandoned, and regularly negotiates with the USPTO to resolve any outstanding issue regarding clients' trademarks. Furthermore, Zachary advises clients regarding, and drafts, trademark license agreements and software license agreements.",
+        "Zachary additionally represents clients through various business transactions. Zachary has aided clients in the preparation of entertainment employment contracts, franchise agreements, distribution agreements, non-disclosure agreements, independent contractor agreements, intercompany agreements, online terms and conditions, loan agreements, customer contracts and non-compete agreements. Zachary has participated in numerous residential and commercial real estate transactions.",
+        "In addition to Zachary's corporate work, he advises clients through various business litigation matters including defamation cases. Zachary has also represented clients for tenant-landlord and employer-employee disputes.",
+        "Zachary was born and raised in Los Angeles and attended the University of Southern California and subsequently received his J.D. from Loyola Law School, Los Angeles. While in law school, Zachary participated in a pro-bono program where he got the invaluable opportunity to teach philosophy to at-risk middle school students.",
+        "Being a Los Angeles native, and an avid sports fan, Zachary takes every opportunity he can to go to a Lakers, Dodgers or USC Trojans game.",
+      ],
+      education: [
+        "Loyola Law School, J.D. (2019)",
+        "University of Southern California, B.A. (2016)",
+      ],
+      admissions: ["California"],
+      awards: [
+        "Named a “Southern California Rising Star,” Super Lawyers (2024-2025)*",
+      ],
+    },
+  },
 ];

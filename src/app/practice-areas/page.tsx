@@ -19,7 +19,7 @@ export default function PracticeAreasIndex() {
       <section className="relative">
         <div className="relative h-[min(68svh,36rem)] min-h-[480px] w-full overflow-hidden md:h-[min(72svh,40rem)] lg:h-[min(76svh,44rem)]">
           <Image
-            src="/images/team/team-in-office-2.webp"
+            src="/images/team/team-in-office-2-reederllp.webp"
             alt="Reeder LLP attorneys and professionals together in the firm’s office."
             fill
             priority

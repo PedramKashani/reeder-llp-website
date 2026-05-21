@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-const FALLBACK_HERO_IMAGE = "/images/team/team-outdoor.webp";
+const FALLBACK_HERO_IMAGE = "/images/chris/chris-studio-portrait.webp";
 
 export function PracticeHeroImage({ src, alt = "" }: { src: string; alt?: string }) {
   const [imgSrc, setImgSrc] = useState(src);

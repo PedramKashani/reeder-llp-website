@@ -20,7 +20,7 @@ export default async function ProfessionalsPage() {
   return (
     <main>
       <TeamHero
-        backgroundImageUrl="/images/team/team-in-office-2.webp"
+        backgroundImageUrl="/images/team/team-in-office-2-reederllp.webp"
         subtitle="Los Angeles"
         title="Professionals"
         scrollToId="team"

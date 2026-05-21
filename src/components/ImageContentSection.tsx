@@ -17,6 +17,10 @@ type ImageContentSectionProps = {
   ctaHref: string;
   reverse?: boolean;
   withTopRule?: boolean;
+  /** Tailwind aspect class for the image frame (default portrait editorial crop). */
+  imageAspect?: string;
+  /** Extra classes on the image (e.g. object position for full-length portraits). */
+  imageClassName?: string;
 };
 
 export function ImageContentSection({
@@ -28,6 +32,8 @@ export function ImageContentSection({
   ctaHref,
   reverse = false,
   withTopRule = false,
+  imageAspect = "aspect-[4/5]",
+  imageClassName = "object-cover object-center brightness-[0.9] contrast-[1.04] saturate-[0.85]",
 }: ImageContentSectionProps) {
   const blockY = withTopRule ? EDITORIAL_BLOCK_Y_FOLLOWING : EDITORIAL_BLOCK_Y_FIRST;
 
@@ -50,7 +56,9 @@ export function ImageContentSection({
             (reverse ? "lg:order-2 lg:items-center" : "items-start lg:items-center")
           }
         >
-          <div className="relative aspect-[4/5] w-full max-w-[min(100%,24rem)] pr-2.5 pb-2.5 sm:max-w-[26rem] md:max-w-[27rem] lg:max-w-[min(100%,28rem)] xl:max-w-[min(100%,30rem)]">
+          <div
+            className={`relative ${imageAspect} w-full max-w-[min(100%,24rem)] pr-2.5 pb-2.5 sm:max-w-[26rem] md:max-w-[27rem] lg:max-w-[min(100%,28rem)] xl:max-w-[min(100%,30rem)]`}
+          >
             {/* Gutter shadow: soft fill between photo edge and L-line (under the lines, z-2) */}
             <div
               className="pointer-events-none absolute top-5 right-0 bottom-0 z-[2] w-[clamp(2.25rem,18%,4rem)] bg-gradient-to-l from-[#040405]/[0.82] via-[#0a0a0c]/[0.38] to-transparent"
@@ -74,13 +82,15 @@ export function ImageContentSection({
               aria-hidden
             />
 
-            <div className="relative z-10 aspect-[4/5] w-full overflow-hidden bg-[#080808] ring-1 ring-inset ring-white/[0.06]">
+            <div
+              className={`relative z-10 ${imageAspect} w-full overflow-hidden bg-[#080808] ring-1 ring-inset ring-white/[0.06]`}
+            >
               <Image
                 src={imageUrl}
                 alt={alt}
                 fill
                 sizes="(max-width: 1024px) min(100vw - 3rem, 432px), min(480px, calc(50vw - 5rem))"
-                className="object-cover object-center brightness-[0.9] contrast-[1.04] saturate-[0.85]"
+                className={imageClassName}
               />
               <div
                 className="pointer-events-none absolute inset-0"

@@ -19,7 +19,7 @@ export default function HomePage() {
     <main className="homepage-scroll-reveal">
       <HeroRotatingWords
         // Use a Reeder image if you want; keeping placeholder for now
-        backgroundImageUrl="/images/team/team-outdoor.webp"
+        backgroundImageUrl="/images/team/outdoor_professional_portrait_3_people.webp"
         kicker="We were born to be"
         words={["Litigators", "Deal Makers", "Trial Lawyers"]}
         scrollToId="welcome"
@@ -34,8 +34,10 @@ export default function HomePage() {
           <ImageContentSection
             title="Litigation"
             body="Successful litigation requires focus, strategy, direction, and knowledge. With a wealth of legal knowledge, tight team, and a unique litigation strategy, we charge hard, don’t pull punches, and are goal oriented. We don’t need to turn over every stone because we know what we are doing and what it takes to succeed. The results speak for themselves."
-            imageUrl="/images/team/team-in-office-1.webp"
-            alt="Attorneys discussing litigation strategy"
+            imageUrl="/images/chris/chrisOutside.webp"
+            alt="Chris Reeder, trial and litigation counsel"
+            imageAspect="aspect-[3/4]"
+            imageClassName="object-cover object-[center_88%] brightness-[0.9] contrast-[1.04] saturate-[0.85]"
             ctaLabel="Learn More"
             ctaHref="/practice-areas/trials-commercial-litigation"
           />
@@ -59,8 +61,10 @@ export default function HomePage() {
             withTopRule
             title="Trials"
             body="At trial, winning is everything and losing is not an option. Whether it is a bet-the-company or any other case, we try every case like it is our own. With our unique trial preparation method, creativity, and human touch, we deliver."
-            imageUrl="/images/chris/chris-reeder-3.webp"
-            alt="Trial attorney preparing for court"
+            imageUrl="/images/chris/chris-studio-portrait.webp"
+            alt="Chris Reeder, trial attorney"
+            imageAspect="aspect-[3/4]"
+            imageClassName="object-cover object-[center_88%] brightness-[0.9] contrast-[1.04] saturate-[0.85]"
             ctaLabel="Learn More"
             ctaHref="/practice-areas/trials-commercial-litigation"
           />

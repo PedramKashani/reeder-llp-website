@@ -9,7 +9,7 @@ export const practiceAreas: PracticeArea[] = [
     navLabel: "Trials & Commercial Litigation",
     excerpt:
       "Complex commercial trial and litigation for plaintiffs and defendants—disputes across real estate, franchise, hospitality, construction, entertainment, sports, energy, and finance.",
-    heroImage: "/images/team/team-outdoor.webp",
+    heroImage: "/images/team/outdoor_professional_portrait_3_people.webp",
     heroImageAlt:
       "Reeder LLP attorneys and professionals standing together outdoors in business attire.",
     metaTitle: "Commercial Litigation & Trial Counsel | Reeder LLP",
@@ -60,7 +60,7 @@ export const practiceAreas: PracticeArea[] = [
     title: "Real Estate",
     excerpt:
       "Acquisition, development, financing, leasing, and disputes across complex real estate projects, including mixed-use developments and sports-adjacent properties.",
-    heroImage: "/images/team/team-outdoor.webp",
+    heroImage: "/images/team/outdoor_professional_portrait_3_people.webp",
     heroImageAlt:
       "Reeder LLP attorneys and professionals standing together outdoors in business attire.",
     metaTitle: "Real Estate Law & Litigation | Reeder LLP",
@@ -104,7 +104,7 @@ export const practiceAreas: PracticeArea[] = [
     title: "Corporate",
     excerpt:
       "Outside general counsel and transactional counsel for select companies—governance, compliance, and complex deals across acquisitions, financings, and operations.",
-    heroImage: "/images/team/team-outdoor.webp",
+    heroImage: "/images/team/outdoor_professional_portrait_3_people.webp",
     heroImageAlt:
       "Reeder LLP attorneys and professionals standing together outdoors in business attire.",
     metaTitle: "Corporate Law & Outside General Counsel | Reeder LLP",
@@ -142,7 +142,7 @@ export const practiceAreas: PracticeArea[] = [
     navLabel: "Franchise & Dealership",
     excerpt:
       "Franchise and dealership disputes, system-wide negotiations, agreement drafting, and transactions for franchisors, franchisees, manufacturers, and dealers.",
-    heroImage: "/images/team/team-outdoor.webp",
+    heroImage: "/images/team/outdoor_professional_portrait_3_people.webp",
     heroImageAlt:
       "Reeder LLP attorneys and professionals standing together outdoors in business attire.",
     metaTitle: "Franchise & Dealership Law | Reeder LLP",
@@ -187,7 +187,7 @@ export const practiceAreas: PracticeArea[] = [
     title: "Entertainment",
     excerpt:
       "Film, music, and media clients—contracts, licensing, employment, publicity and privacy issues, and dispute resolution for production companies, artists, and executives.",
-    heroImage: "/images/team/team-outdoor.webp",
+    heroImage: "/images/team/outdoor_professional_portrait_3_people.webp",
     heroImageAlt:
       "Reeder LLP attorneys and professionals standing together outdoors in business attire.",
     metaTitle: "Entertainment Law | Reeder LLP",
@@ -218,7 +218,7 @@ export const practiceAreas: PracticeArea[] = [
     title: "Sports",
     excerpt:
       "Sports-related litigation and deals for promoters, executives, agents, developers, and investors—league and event economics, employment, and venue-linked real estate.",
-    heroImage: "/images/team/team-outdoor.webp",
+    heroImage: "/images/team/outdoor_professional_portrait_3_people.webp",
     heroImageAlt:
       "Reeder LLP attorneys and professionals standing together outdoors in business attire.",
     metaTitle: "Sports Law | Reeder LLP",
@@ -251,7 +251,7 @@ export const practiceAreas: PracticeArea[] = [
     title: "Employment",
     excerpt:
       "Wage-and-hour class actions, discrimination and executive disputes, trade secrets, policies, investigations, and agreements for employers and senior individuals.",
-    heroImage: "/images/team/team-outdoor.webp",
+    heroImage: "/images/team/outdoor_professional_portrait_3_people.webp",
     heroImageAlt:
       "Reeder LLP attorneys and professionals standing together outdoors in business attire.",
     metaTitle: "Employment Law | Reeder LLP",
@@ -290,7 +290,7 @@ export const practiceAreas: PracticeArea[] = [
     title: "Intellectual Property",
     excerpt:
       "Trademarks, copyrights, trade secrets, and design patents—enforcement, defense, portfolio management, and licensing for operating companies across several industries.",
-    heroImage: "/images/team/team-outdoor.webp",
+    heroImage: "/images/team/outdoor_professional_portrait_3_people.webp",
     heroImageAlt:
       "Reeder LLP attorneys and professionals standing together outdoors in business attire.",
     metaTitle: "Intellectual Property Law | Reeder LLP",
@@ -328,7 +328,7 @@ export const practiceAreas: PracticeArea[] = [
     navLabel: "White Collar / Investigations",
     excerpt:
       "Government and internal investigations, regulatory proceedings, and defense-oriented strategy in fraud, fiduciary, securities, and related white collar matters.",
-    heroImage: "/images/team/team-outdoor.webp",
+    heroImage: "/images/team/outdoor_professional_portrait_3_people.webp",
     heroImageAlt:
       "Reeder LLP attorneys and professionals standing together outdoors in business attire.",
     metaTitle: "White Collar Defense & Investigations | Reeder LLP",

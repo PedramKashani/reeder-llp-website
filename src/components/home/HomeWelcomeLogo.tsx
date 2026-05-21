@@ -27,7 +27,7 @@ export function HomeWelcomeLogo({ id = "welcome" }: { id?: string }) {
               height={height}
               alt={FIRM_NAME}
               decoding="async"
-              className="h-auto w-full max-w-[min(88vw,20rem)] brightness-[1.12] contrast-[1.14] saturate-[1.05] sm:max-w-md md:max-w-lg lg:max-w-xl"
+              className="h-auto w-full max-w-[min(94vw,28rem)] brightness-[1.12] contrast-[1.14] saturate-[1.05] sm:max-w-xl md:max-w-2xl lg:max-w-3xl"
             />
           </div>
         </HomeReveal>

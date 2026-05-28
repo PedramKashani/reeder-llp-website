@@ -10,7 +10,7 @@ export function OurFavoriteThingsGrid() {
 
   return (
     <section className="bg-black text-white">
-      <div className="mx-auto max-w-[1200px] px-6 py-24 md:px-12 md:py-32 lg:px-16">
+      <div className="mx-auto max-w-[1200px] px-6 py-16 md:px-12 md:py-20 lg:px-16 lg:py-24">
         {byCategory.map((group) => (
           <OurFavoriteThingsCategorySection
             key={group.title}

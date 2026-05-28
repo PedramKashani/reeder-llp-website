@@ -23,7 +23,7 @@ export default function OurFavoriteThingsPage() {
           className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/[0.04] via-transparent to-transparent"
           aria-hidden
         />
-        <div className="relative mx-auto max-w-[1200px] px-6 py-16 md:px-12 md:py-20 lg:py-24">
+        <div className="relative mx-auto max-w-[1200px] px-6 py-14 md:px-12 md:py-16 lg:py-20">
           <div className="max-w-2xl">
             <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-white/50 md:text-xs">
               Recommendations

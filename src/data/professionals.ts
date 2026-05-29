@@ -137,7 +137,7 @@ export const professionals: Professional[] = [
       awards: [
         "Named Southern California “Super Lawyer,” Super Lawyers (2015-2026)*",
         "Named Top 100: Southern California Super Lawyers (2019 – 2026)*",
-        "Best Lawyers (2021-2025)*",
+        "Best Lawyers (2021-2026)*",
       ],
       speakingEngagements: [
         "“Fund Exits 2018: What are notable exit trends from the past year?” Information Management Network, Laguna Beach, California (January 18, 2018)",

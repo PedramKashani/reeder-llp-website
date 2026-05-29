@@ -42,11 +42,15 @@ export const professionals: Professional[] = [
     ],
     sections: {
       background: [
-        "Chris is a trial lawyer, General Counsel, and deal maker.",
-        "Prior to his law career, Chris served in The United States Navy from 1989-1994 as an Operations Specialist Second Class (Surface Warfare) and Anti-Submarine Air Controller, during which time he received three letters of commendation and five medals serving in Operation Desert Storm, counter-narcotics operations, and other missions. Chris was raised in Cleveland, Ohio and is a huge Cleveland Browns, Cleveland Indians, Cleveland Cavaliers, Ohio State Buckeyes, Dayton Flyers, and Bowling Green Falcons fan.",
-        "Chris has won every case he has tried to a jury verdict. He represents clients in complex trial and litigation matters in a wide variety of industries including real estate, franchise, hospitality, construction, entertainment, sports, energy, and finance. The types of cases Chris has tried and litigated are as far reaching as the industries he has represented, including profits litigation, partnership disputes, franchise litigation, employment matters (representing both executives and companies), trade secret, trademark, corporate governance, white collar crime, and securities matters.",
-        "Having previously delivered successful results in “bet the company” disputes, Chris has also been asked to serve as General Counsel to clients in the construction and hospitality industries, managing transactional counsel, negotiating business terms, and establishing company policy and procedures.",
+        "Chris is a trial lawyer, General Counsel, and dealmaker with a broad background in litigation, business strategy, and complex dispute resolution.",
+
+        "Before beginning his legal career, Chris served in the United States Navy from 1989 to 1994 as an Operations Specialist Second Class (Surface Warfare) and Anti-Submarine Air Controller. During his service, he received three letters of commendation and five medals for his work in Operation Desert Storm, counter-narcotics operations, and other missions. Raised in Cleveland, Ohio, Chris remains a loyal fan of the Cleveland Browns, Cleveland Guardians, Cleveland Cavaliers, Ohio State Buckeyes, Dayton Flyers, and Bowling Green Falcons.",
+
+        "Chris has tried—and won—every case he has taken to a jury verdict. He represents clients in complex trial and litigation matters across a wide range of industries, including real estate, franchise, hospitality, construction, entertainment, sports, energy, and finance. His experience spans the full spectrum of high-stakes disputes, including profits litigation, partnership disputes, franchise litigation, employment matters on behalf of both executives and companies, trade secret claims, trademark disputes, corporate governance issues, white collar matters, and securities cases.",
+
+        "After successfully handling “bet the company” disputes, Chris has been asked to serve as General Counsel for clients in the construction and hospitality industries, managing transactional counsel, negotiating business terms, and establishing company policy and procedures.",
       ],
+
       winningTrialLitigation: [
         "Successfully defended nationwide franchisor in a putative false advertising class action resulting in a dismissal of individual claims with no class certification.",
         "Obtained a judgment, injunctive relief, and contempt finding in favor of a national franchisor against a former franchisee and its principals arising out of the breach of a non-competition covenant.",
@@ -131,8 +135,8 @@ export const professionals: Professional[] = [
         "“Riverisland Ruling Gives Calif. Fraud Victims Fairer Shake,” Law360 (January 23, 2013)",
       ],
       awards: [
-        "Named Southern California “Super Lawyer,” Super Lawyers (2015-2025)*",
-        "Named Top 100: Southern California Super Lawyers (2019 – 2025)*",
+        "Named Southern California “Super Lawyer,” Super Lawyers (2015-2026)*",
+        "Named Top 100: Southern California Super Lawyers (2019 – 2026)*",
         "Best Lawyers (2021-2025)*",
       ],
       speakingEngagements: [

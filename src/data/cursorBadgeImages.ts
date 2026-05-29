@@ -10,6 +10,7 @@ export const CURSOR_BADGE_IMAGES: readonly string[] = [
   "/images/badges/super-lawyers-15yr-mark.webp",
   "/images/badges/super-lawyers-rising-stars-benjamin-tragish-2025.webp",
   "/images/badges/super-lawyers-rising-stars-marcus-tippens-2025.webp",
+  "/images/badges/super-lawyers-rising-stars-zachary-ward-2025.webp",
   "/images/badges/super-lawyers-selected-chris-reeder-2026.webp",
   "/images/badges/super-lawyers-selected-mark-passin-2026.webp",
   "/images/badges/super-lawyers-top-100-southern-california-2025.webp",

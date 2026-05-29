@@ -267,7 +267,6 @@ export const practiceAreas: PracticeArea[] = [
       {
         heading: "Litigation and Class Actions",
         paragraphs: [
-          "Chris and the professionals at Reeder LLP have achieved successful outcomes for clients in matters involving wage and hour class actions, discrimination claims, executive compensation disputes, labor issues, fiduciary duty claims, trade secret litigation, and administrative proceedings.",
           "Chris has significantly mitigated wage and hour exposure to several large home improvement companies in multiple class actions. He has also successfully prosecuted claims against aircraft industry executives for breach of fiduciary duty and usurpation of corporate opportunities and protected the trade secrets of an international food distributor in litigation against former employees seeking to establish a competing business.",
         ],
       },

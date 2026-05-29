@@ -260,14 +260,14 @@ export const practiceAreas: PracticeArea[] = [
     sections: [
       {
         paragraphs: [
-          "In employment and labor matters, issues of exposure, collateral consequences, and cost-effectiveness often intersect. Reeder LLP approaches these matters strategically from the outset, developing solutions that account for each of these competing considerations.",
+          "Employment law affects some of the most critical aspects of a business—its people, leadership, and reputation. Matters such as workplace disputes, wage and hour class actions, discrimination claims, executive compensation disputes, labor issues, fiduciary duty claims, trade secret litigation, administrative proceedings, and employee transitions require both legal precision and sound business judgment. Reeder LLP helps clients address these issues strategically, with an emphasis on reducing risk, protecting business interests, and identifying the most effective path forward.",
+          "Employment and labor matters often require balancing risk exposure, collateral consequences, and cost. Reeder LLP addresses these issues strategically from the outset, developing solutions that reflect each of these competing considerations.",
         ],
       },
       {
         heading: "Litigation and Class Actions",
         paragraphs: [
           "Chris and the professionals at Reeder LLP have achieved successful outcomes for clients in matters involving wage and hour class actions, discrimination claims, executive compensation disputes, labor issues, fiduciary duty claims, trade secret litigation, and administrative proceedings.",
-
           "Chris has significantly mitigated wage and hour exposure to several large home improvement companies in multiple class actions. He has also successfully prosecuted claims against aircraft industry executives for breach of fiduciary duty and usurpation of corporate opportunities and protected the trade secrets of an international food distributor in litigation against former employees seeking to establish a competing business.",
         ],
       },

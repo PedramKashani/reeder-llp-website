@@ -2,10 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { FIRM_NAME } from "@/data/firm";
-import {
-  KICKER_LUXURY,
-  SECTION_PAD_MAJOR,
-} from "@/lib/luxuryLayout";
+import { KICKER_LUXURY, SECTION_PAD_MAJOR } from "@/lib/luxuryLayout";
 
 const aboutBody =
   "text-lg leading-[1.82] text-white/[0.82] md:text-xl md:leading-[1.78]";
@@ -14,7 +11,7 @@ const aboutRhythm = "space-y-14 md:space-y-16";
 
 export const metadata: Metadata = {
   title: `About the Firm | ${FIRM_NAME}`,
-  description: `Learn about ${FIRM_NAME}—a Los Angeles business litigation firm led by trial lawyer Chris Reeder, focused on results-driven counsel for companies, investors, and individuals.`,
+  description: `Learn about ${FIRM_NAME}—a Los Angeles business litigation firm led by trial lawyer Chris Reeder, focused on strategic, results-driven representation for companies, entrepreneurs, and individuals.`,
   alternates: {
     canonical: "/about",
   },
@@ -40,16 +37,17 @@ export default function AboutPage() {
               <h2 className={`${KICKER_LUXURY} text-balance`}>Overview</h2>
               <div className={`${aboutBlockGap} pt-1`}>
                 <p className={`${aboutBody} text-balance`}>
-                  With Chris Reeder as its lead trial lawyer, {FIRM_NAME} is a
-                  full service business litigation firm.
+                  With Chris Reeder serving as lead trial lawyer, {FIRM_NAME} is
+                  a full-service business litigation firm dedicated to
+                  delivering strategic, results-driven representation.
                 </p>
                 <p className={`${aboutBody} text-balance`}>
-                  {FIRM_NAME} professionals are focused, driven, and results
-                  oriented. Utilizing tight team-based litigation approach, trial
-                  preparation model, and strategy unique to each client, {FIRM_NAME}{" "}
-                  professionals represent a wide variety of clients from
-                  entrepreneurs to large international corporations in an infinite
-                  number of industries.
+                  The firm’s professionals are focused, disciplined, and
+                  client-oriented, utilizing a highly collaborative, team-based
+                  approach to litigation, trial preparation, and tailored legal
+                  strategy. {FIRM_NAME} represents a broad range of clients,
+                  from entrepreneurs and emerging businesses to large
+                  international corporations across numerous industries.
                 </p>
               </div>
             </div>
@@ -60,17 +58,18 @@ export default function AboutPage() {
               <h2 className={`${KICKER_LUXURY} text-balance`}>Counsel</h2>
               <div className={`${aboutBlockGap} pt-1`}>
                 <p className={`${aboutBody} text-balance`}>
-                  Chris Reeder also acts as general counsel to several companies
-                  and high net worth individuals. Chris has navigated clients
-                  through a large assortment of mergers, acquisitions,
-                  dispositions, financings, government investigations,
-                  franchising issues, and real estate transactions.
+                  Chris Reeder also serves as general counsel to several
+                  companies and high-net-worth individuals, advising clients on
+                  a wide range of business and legal matters. His experience
+                  includes mergers and acquisitions, dispositions, financing,
+                  government investigations, franchising matters, and real
+                  estate transactions.
                 </p>
                 <p className={`${aboutBody} text-balance`}>
-                  {FIRM_NAME} professionals also provide day to day general counsel
-                  services to clients such as trademark registration, corporate
-                  compliance, real estate tax assessments, franchise transactions,
-                  and contractors licensing.
+                  {FIRM_NAME} also provides day-to-day general counsel services,
+                  including trademark registration, corporate compliance, real
+                  estate tax assessments, franchise transactions, and contractor
+                  licensing matters.
                 </p>
               </div>
             </div>
@@ -82,8 +81,8 @@ export default function AboutPage() {
               <p
                 className={`pt-1 text-lg font-medium leading-[1.82] text-white md:text-xl md:leading-[1.78] text-balance`}
               >
-                {FIRM_NAME} professionals have one goal: winning for the client.
-                It is as simple as that and the results speak for themselves.
+                At {FIRM_NAME}, the goal is simple: to win for the client. The
+                firm’s results speak for themselves.
               </p>
             </div>
 

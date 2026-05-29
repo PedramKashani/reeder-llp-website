@@ -10,7 +10,7 @@ export const professionals: Professional[] = [
     title: "Partner",
     officePhone: "(310) 861-2470",
     directDial: "(310) 861-2471",
-    email: "chris@reedermccreary.com",
+    email: "chris@reederllp.com",
     photoSmall: "/images/attorneys/chris-headshot.webp",
     photoLarge: "/images/attorneys/chris-headshot.webp",
     links: [
@@ -153,7 +153,7 @@ export const professionals: Professional[] = [
     title: "Counsel",
     officePhone: "(310) 861-2470",
     directDial: "(310) 861-2474",
-    email: "ben@reedermccreary.com",
+    email: "ben@reederllp.com",
     photoSmall: "/images/attorneys/ben-headshot.webp",
     photoLarge: "/images/attorneys/ben-headshot.webp",
     links: [
@@ -192,7 +192,7 @@ export const professionals: Professional[] = [
       ],
       awards: [
         "2017 Outstanding Nickel Alumnus, Southwestern Law School",
-        "Named a “Southern California Rising Star,” Super Lawyers (2018-2025)*",
+        "Named a “Southern California Rising Star,” Super Lawyers (2018-2026)*",
       ],
       education: [
         "Southwestern Law School, J.D. (2013); Southwestern Journal of International Law, Associate Editor (2012-2013); Trial Advocacy Honors Program (2011-2013)",
@@ -215,7 +215,7 @@ export const professionals: Professional[] = [
     title: "Of Counsel",
     officePhone: "(310) 861-2470",
     directDial: "(310) 861-2475",
-    email: "mark@reedermccreary.com",
+    email: "mark@reederllp.com",
     photoSmall: "/images/attorneys/mark-headshot.webp",
     photoLarge: "/images/attorneys/mark-headshot.webp",
     links: [
@@ -254,7 +254,7 @@ export const professionals: Professional[] = [
     title: "Attorney",
     officePhone: "(310) 861-2470",
     directDial: "(424) 322-0218",
-    email: "marcus@reedermccreary.com",
+    email: "marcus@reederllp.com",
     photoSmall: "/images/attorneys/marcus-headshot.webp",
     photoLarge: "/images/attorneys/marcus-headshot.webp",
     links: [
@@ -284,7 +284,7 @@ export const professionals: Professional[] = [
       ],
       admissions: ["California"],
       awards: [
-        "Named a “Southern California Rising Star,” Super Lawyers (2025)",
+        "Named a “Southern California Rising Star,” Super Lawyers (2025-2026)",
       ],
     },
   },
@@ -298,7 +298,7 @@ export const professionals: Professional[] = [
     title: "Attorney",
     officePhone: "(310) 861-2470",
     directDial: "(310) 861-2474",
-    email: "zach@reedermccreary.com",
+    email: "zach@reederllp.com",
     photoSmall: "/images/attorneys/zach-headshot.webp",
     photoLarge: "/images/attorneys/zach-headshot.webp",
     links: [

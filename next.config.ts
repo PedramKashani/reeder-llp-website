@@ -21,6 +21,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/chris-reeder",
+        destination: "/professionals/chris-reeder",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

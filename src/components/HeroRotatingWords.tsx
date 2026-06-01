@@ -41,8 +41,11 @@ export function HeroRotatingWords({
       ref={heroSectionRef}
       className="snap-section relative -mt-[4.25rem] w-full min-h-screen overflow-hidden bg-black"
     >
-      {/* Full-bleed portrait crop — object-position only (no scale/contain) */}
-      <div className="pointer-events-none absolute inset-0" aria-hidden>
+      {/* Single full-bleed image — mobile unchanged; desktop: upper frame, slight right bias */}
+      <div
+        className="pointer-events-none absolute inset-0 overflow-hidden"
+        aria-hidden
+      >
         <Image
           src={backgroundImageUrl}
           alt=""
@@ -51,12 +54,12 @@ export function HeroRotatingWords({
           sizes="100vw"
           className={[
             "h-full w-full object-cover",
-            "object-[center_15%]",
+            "object-[center_12%]",
             "brightness-[0.9] contrast-[1.06] saturate-[0.9]",
-            "sm:object-[center_18%]",
-            "md:object-[center_22%]",
-            "lg:object-[center_28%]",
-            "xl:object-[center_32%]",
+            "sm:object-[center_15%]",
+            "md:object-[58%_8%]",
+            "lg:object-[60%_10%]",
+            "xl:object-[62%_12%]",
           ].join(" ")}
         />
         <div className="absolute inset-0 bg-black/35" />

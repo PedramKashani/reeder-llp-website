@@ -1,13 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import { PHONE } from "@/data/firm";
+import { CONTACT_EMAIL, PHONE } from "@/data/firm";
 import { LIMITS, isValidEmail } from "@/lib/validation";
 import { Field } from "@/components/ui/Field";
 import { TextArea } from "@/components/ui/TextArea";
 import type { ContactFieldErrors, ContactApiResponse } from "@/types/contact";
 
 export function ContactForm() {
+  // TODO: Re-enable online submissions once FORMSPREE_ENDPOINT is configured.
+  const submissionsTemporarilyDisabled = true;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
   const [formError, setFormError] = useState<string | null>(null);
@@ -15,6 +17,7 @@ export function ContactForm() {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (submissionsTemporarilyDisabled) return;
     const form = e.currentTarget;
     setFormError(null);
     setFieldErrors({});
@@ -102,6 +105,28 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
+      {submissionsTemporarilyDisabled ? (
+        <div
+          className="rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-800"
+          role="status"
+        >
+          <p>
+            Online form submissions are being finalized. Please contact us
+            directly by phone or email and we&apos;ll be happy to assist you.
+          </p>
+          <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1">
+            <a href={`tel:${PHONE}`} className="font-medium text-neutral-900 hover:underline">
+              {PHONE}
+            </a>
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="font-medium text-neutral-900 hover:underline"
+            >
+              {CONTACT_EMAIL}
+            </a>
+          </div>
+        </div>
+      ) : null}
       {success ? (
         <div
           className="rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-800"
@@ -160,10 +185,14 @@ export function ContactForm() {
       <div className="pt-2">
         <button
           type="submit"
-          disabled={isSubmitting}
+          disabled={isSubmitting || submissionsTemporarilyDisabled}
           className="inline-flex w-full items-center justify-center rounded-full bg-neutral-950 px-6 py-3 text-sm font-medium text-white transition hover:bg-neutral-800 disabled:cursor-not-allowed disabled:opacity-60 md:w-auto"
         >
-          {isSubmitting ? "Sending…" : "Submit"}
+          {submissionsTemporarilyDisabled
+            ? "Online Submissions Unavailable"
+            : isSubmitting
+              ? "Sending…"
+              : "Submit"}
         </button>
       </div>
     </form>

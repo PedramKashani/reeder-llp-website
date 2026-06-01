@@ -16,6 +16,7 @@ export async function POST(request: Request) {
 
   const data = body as Partial<ContactFormFields>;
   const honeypot = typeof data.website === "string" ? data.website.trim() : "";
+  const website = honeypot;
   if (honeypot !== "") {
     return NextResponse.json({ ok: true }, { status: 200 });
   }
@@ -37,11 +38,18 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "validation", fields: errors }, { status: 400 });
   }
 
-  const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO_EMAIL;
-  const from = process.env.CONTACT_FROM_EMAIL;
+  const formspreeEndpoint =
+    process.env.FORMSPREE_ENDPOINT?.trim() ||
+    process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT?.trim() ||
+    "";
 
-  if (!apiKey || !to || !from) {
+  if (!formspreeEndpoint) {
+    console.error("[contact-api] Missing Formspree endpoint configuration", {
+      hasFormspreeEndpoint: Boolean(process.env.FORMSPREE_ENDPOINT?.trim()),
+      hasPublicFormspreeEndpoint: Boolean(
+        process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT?.trim(),
+      ),
+    });
     return NextResponse.json({ error: "unavailable" }, { status: 503 });
   }
 
@@ -50,36 +58,43 @@ export async function POST(request: Request) {
 
   let res: Response;
   try {
-    res = await fetch("https://api.resend.com/emails", {
+    res = await fetch(formspreeEndpoint, {
       method: "POST",
       signal: controller.signal,
       headers: {
-        Authorization: `Bearer ${apiKey}`,
+        Accept: "application/json",
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from,
-        to: [to],
-        reply_to: email,
-        subject: `Website inquiry from ${name}`,
-        text: [
-          `Name: ${name}`,
-          `Email: ${email}`,
-          phone ? `Phone: ${phone}` : null,
-          "",
-          message,
-        ]
-          .filter(Boolean)
-          .join("\n"),
+        name,
+        email,
+        phone,
+        message,
+        website,
+        _subject: `Website inquiry from ${name}`,
       }),
     });
-  } catch {
+  } catch (err) {
+    console.error("[contact-api] Formspree request failed before response", {
+      error: err instanceof Error ? err.message : String(err),
+    });
     return NextResponse.json({ error: "send_failed" }, { status: 502 });
   } finally {
     clearTimeout(timeoutId);
   }
 
   if (!res.ok) {
+    let formspreeBody = "";
+    try {
+      formspreeBody = await res.text();
+    } catch {
+      formspreeBody = "<unable to read response body>";
+    }
+    console.error("[contact-api] Formspree API responded with error", {
+      status: res.status,
+      statusText: res.statusText,
+      body: formspreeBody.slice(0, 2000),
+    });
     return NextResponse.json({ error: "send_failed" }, { status: 502 });
   }
 

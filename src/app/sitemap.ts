@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { practiceAreas } from "@/data/practiceAreas";
-import { professionals } from "@/data/professionals";
 import { SITE_URL } from "@/data/firm";
+import { getProfessionals } from "@/lib/sanity/professionals";
 
 const STATIC_ROUTES: string[] = [
   "/",
@@ -20,7 +20,8 @@ function toAbsoluteUrl(path: string): string {
   return new URL(path, SITE_URL).toString();
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const professionals = await getProfessionals();
   const practicePaths = practiceAreas.map((a) => `/practice-areas/${a.slug}`);
   const professionalPaths = professionals.map((p) => `/professionals/${p.slug}`);
 

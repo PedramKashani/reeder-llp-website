@@ -5,7 +5,7 @@ import { practiceAreas } from "@/data/practiceAreas";
 import { GRID_GAP_CARDS, SECTION_PAD_MAJOR } from "@/lib/luxuryLayout";
 
 export const metadata: Metadata = {
-  title: "Practice Areas | Reeder LLP",
+  title: "Practice Areas",
   description:
     "Explore Reeder LLP’s practice areas—from commercial litigation and trials to corporate, real estate, franchise, entertainment, employment, and white collar matters.",
   alternates: {

@@ -6,7 +6,7 @@ import { CTABand } from "@/components/CTABand";
 import { getProfessionals } from "@/lib/sanity/professionals";
 
 export const metadata: Metadata = {
-  title: "Attorneys & Professionals | Reeder LLP",
+  title: "Attorneys & Professionals",
   description:
     "Meet the attorneys and professionals of Reeder LLP—experienced trial lawyers and counsel serving clients in litigation, transactions, and ongoing business matters.",
   alternates: {

@@ -18,7 +18,7 @@ export function ProfileHero({ profile }: { profile: Professional }) {
           {photoUrl ? (
             <Image
               src={photoUrl}
-              alt=""
+              alt={`${profile.name}, ${profile.title}`}
               fill
               priority
               sizes="(min-width: 1024px) 50vw, 100vw"

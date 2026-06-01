@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Reeder LLP",
+  title: "Contact Us",
   description:
     "Contact Reeder LLP in Los Angeles—phone, business hours, and a secure way to reach our team about new matters, consultations, and general inquiries.",
   alternates: {

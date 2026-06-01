@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { LegalPageLayout } from "@/components/LegalPageLayout";
 
 export const metadata: Metadata = {
-  title: "Terms of Use | Reeder LLP",
+  title: "Terms of Use",
   description:
     "Terms of use for the Reeder LLP website, including conditions for accessing content, disclaimers, and limitations applicable to your use of this site.",
   alternates: {

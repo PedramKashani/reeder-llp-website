@@ -10,7 +10,7 @@ const aboutBlockGap = "space-y-4 md:space-y-5";
 const aboutRhythm = "space-y-14 md:space-y-16";
 
 export const metadata: Metadata = {
-  title: `About the Firm | ${FIRM_NAME}`,
+  title: "About the Firm",
   description: `Learn about ${FIRM_NAME}—a Los Angeles business litigation firm led by trial lawyer Chris Reeder, focused on strategic, results-driven representation for companies, entrepreneurs, and individuals.`,
   alternates: {
     canonical: "/about",

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { practiceAreas } from "@/data/practiceAreas";
+import { buildPageSocialMetadata } from "@/lib/metadata";
 
 import { ProfileHero } from "@/components/profiles/ProfileHero";
 import { BioShowMore } from "@/components/profiles/BioShowMore";
@@ -25,12 +26,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? firstSentenceMatch[0].trim()
     : firstBioParagraph;
 
+  const title = `${profile.name} | ${profile.title}`;
+  const description =
+    [profile.title, firstSentence].filter(Boolean).join(" — ") ||
+    `${profile.name} is ${profile.title} at Reeder LLP.`;
+  const ogImage =
+    profile.photoLarge || profile.photo || profile.photoSmall || undefined;
+  const social = buildPageSocialMetadata({
+    title,
+    description,
+    path: `/professionals/${slug}`,
+    image: ogImage,
+  });
+
   return {
-    title: `${profile.name} | Reeder LLP`,
-    description: [profile.title, firstSentence].filter(Boolean).join(" — "),
+    title,
+    description,
     alternates: {
       canonical: `/professionals/${slug}`,
     },
+    ...social,
   };
 }
 

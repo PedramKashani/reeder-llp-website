@@ -18,7 +18,10 @@ export const siteUrl = new URL(SITE_URL_STRING);
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,
-  title: FIRM_NAME,
+  title: {
+    default: FIRM_NAME,
+    template: "%s | Reeder LLP",
+  },
   description: SITE_DESCRIPTION,
   openGraph: {
     title: FIRM_NAME,

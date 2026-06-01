@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { practiceAreas } from "@/data/practiceAreas";
+import { buildPageSocialMetadata } from "@/lib/metadata";
 import { CTABand } from "@/components/CTABand";
 import { PracticeHeroImage } from "@/components/practice/PracticeHeroImage";
 import { SECTION_PAD_MAJOR, STACK_SECTION } from "@/lib/luxuryLayout";
@@ -13,12 +14,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!area) {
     return {};
   }
+  const title = area.metaTitle ?? `${area.title} | Reeder LLP`;
+  const description =
+    area.metaDescription ?? area.excerpt ?? `${area.title} at Reeder LLP.`;
+  const social = buildPageSocialMetadata({
+    title,
+    description,
+    path: `/practice-areas/${slug}`,
+    image: area.heroImage,
+  });
+
   return {
-    title: area.metaTitle ?? area.title,
-    description: area.metaDescription ?? area.excerpt,
+    title: { absolute: title },
+    description,
     alternates: {
       canonical: `/practice-areas/${slug}`,
     },
+    ...social,
   };
 }
 

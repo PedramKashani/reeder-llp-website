@@ -5,7 +5,10 @@ import { ImageContentSection } from "@/components/ImageContentSection";
 import { CTABand } from "@/components/CTABand";
 
 export const metadata: Metadata = {
-  title: "Business Litigation, Trials & Corporate Counsel | Reeder LLP",
+  title: {
+    absolute:
+      "Business Litigation, Trials & Corporate Counsel | Reeder LLP",
+  },
   description:
     "Los Angeles trial lawyers and strategic business counsel for complex litigation, high-stakes trials, and transactions. Reeder LLP serves companies, investors, and individuals with a focused, results-driven approach.",
   alternates: {

@@ -16,7 +16,7 @@ function AttorneyCard({ p }: { p: Professional }) {
       <div className="relative aspect-[4/5] w-full overflow-hidden bg-black/30">
         <Image
           src={p.photoSmall || p.photoLarge || ""}
-          alt=""
+          alt={p.name}
           fill
           sizes="(max-width: 639px) 85vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover object-[center_30%] transition-transform duration-300 ease-out group-hover:scale-[1.02] sm:object-[center_28%] lg:object-[center_26%]"

@@ -3,7 +3,7 @@ import type { FavoriteThing } from "@/types/favorite";
 export const CATEGORY_ORDER = [
   "Dining & Nightlife",
   "Retail & Style",
-  "Venues & Creative",
+  "Creative & Entertainment",
   "Health & Wellness",
   "Real Estate & Business",
   "More Favorites",
@@ -14,8 +14,8 @@ export const CATEGORY_INTRO: Record<string, string> = {
     "Restaurants and lounges we rely on for client dinners, celebrations, and nights worth remembering.",
   "Retail & Style":
     "Designers, craftspeople, and brands we trust when the details have to be right.",
-  "Venues & Creative":
-    "Spaces and creative partners we're proud to recommend when the setting matters as much as the work.",
+  "Creative & Entertainment":
+    "Production partners, entertainment companies, and distinctive settings we recommend when the work—or the occasion—has to feel intentional.",
   "Health & Wellness":
     "Practitioners and teams we suggest when discretion, expertise, and outcomes are non‑negotiable.",
   "Real Estate & Business":
@@ -24,14 +24,6 @@ export const CATEGORY_INTRO: Record<string, string> = {
 };
 
 export const favorites: FavoriteThing[] = [
-  {
-    href: "https://briowt.com/",
-    img: "/images/favorites/favorite-brio.webp",
-    alt: "Brio",
-    category: "Dining & Nightlife",
-    description:
-      "Upscale Italian with a polished room—ideal for hosting clients or marking an occasion.",
-  },
   {
     href: "https://instagram.com/tonyynotstyle?igshid=c35cnto6g6s",
     img: "/images/favorites/favorite-tony.webp",
@@ -69,25 +61,25 @@ export const favorites: FavoriteThing[] = [
     href: "https://www.thehoudiniestate.com",
     img: "/images/favorites/favorite-houdini.webp",
     alt: "The Houdini Estate",
-    category: "Venues & Creative",
+    category: "Creative & Entertainment",
     description:
-      "A landmark Hollywood Hills estate for events that need history, drama, and privacy.",
+      "A landmark Hollywood Hills estate for private events that need history, drama, and discretion.",
   },
   {
     href: "https://www.britneyegner.com",
     img: "/images/favorites/favorite-britney.webp",
-    alt: "Britney Egner",
-    category: "Venues & Creative",
+    alt: "Brittany Egner",
+    category: "Creative & Entertainment",
     description:
-      "Creative direction and production with a cinematic eye and calm execution.",
+      "Photography and creative production with a cinematic eye and calm, professional execution on set.",
   },
   {
     href: "https://www.cabinedit.com",
     img: "/images/favorites/favorite-cabin.webp",
     alt: "Cabin Edit",
-    category: "Venues & Creative",
+    category: "Creative & Entertainment",
     description:
-      "Editorial, design-forward takes on cabin and lifestyle—refined without losing warmth.",
+      "Entertainment-focused creative and editorial work with a refined, story-driven point of view.",
   },
   {
     href: "https://www.robertkotlermd.com",
@@ -112,6 +104,14 @@ export const favorites: FavoriteThing[] = [
     category: "Health & Wellness",
     description:
       "Aesthetic and wellness care in a setting that feels calm, private, and precise.",
+  },
+  {
+    href: "https://briowt.com/",
+    img: "/images/favorites/favorite-brio.webp",
+    alt: "Brio Water Technology",
+    category: "Real Estate & Business",
+    description:
+      "Water dispensers, filtration systems, and hydration solutions for home and office—with strong inventory and dealer support.",
   },
   {
     href: "https://www.dealpointmerrill.com",

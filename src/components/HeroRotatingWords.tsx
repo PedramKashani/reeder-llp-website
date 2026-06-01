@@ -41,25 +41,35 @@ export function HeroRotatingWords({
       ref={heroSectionRef}
       className="snap-section relative -mt-[4.25rem] w-full min-h-screen overflow-hidden bg-black"
     >
-      {/* Portrait hero — tuned for chris-reeder-hero.webp (subject upper-right, desk on left) */}
+      {/* Mobile: cover crop. Desktop: full portrait (contain) over blurred cover fill — no distortion. */}
       <div
-        className="pointer-events-none absolute inset-0 overflow-hidden"
+        className="pointer-events-none absolute inset-0 overflow-hidden bg-black"
         aria-hidden
       >
         <Image
           src={backgroundImageUrl}
           alt=""
           fill
-          priority
           sizes="100vw"
           className={[
-            "h-full w-full object-cover",
-            "object-[center_14%]",
+            "hidden h-full w-full scale-110 object-cover object-center",
+            "blur-3xl brightness-[0.55] saturate-[0.85] md:block",
+          ].join(" ")}
+        />
+        <Image
+          src={backgroundImageUrl}
+          alt=""
+          fill
+          priority
+          unoptimized
+          quality={100}
+          sizes="100vw"
+          className={[
+            "h-full w-full",
+            "object-cover object-[65%_8%]",
+            "sm:object-[66%_10%]",
+            "md:object-contain md:object-center",
             "brightness-[0.9] contrast-[1.06] saturate-[0.9]",
-            "sm:object-[center_16%]",
-            "md:object-[48%_12%]",
-            "lg:object-[50%_14%]",
-            "xl:object-[52%_16%]",
           ].join(" ")}
         />
         <div className="absolute inset-0 bg-black/35" />

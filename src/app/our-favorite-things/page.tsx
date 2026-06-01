@@ -4,7 +4,7 @@ import { OurFavoriteThingsGrid } from "@/components/OurFavoriteThingsGrid";
 export const metadata: Metadata = {
   title: "Our Favorite Things | Reeder LLP",
   description:
-    "A curated list of restaurants, makers, venues, and professionals the team at Reeder LLP recommends—places and people we trust enough to share with clients and friends.",
+    "A curated list of makers, creative partners, and professionals the team at Reeder LLP recommends—people and companies we trust enough to share with clients and friends.",
   alternates: {
     canonical: "/our-favorite-things",
   },
@@ -33,9 +33,9 @@ export default function OurFavoriteThingsPage() {
               Our Favorite Things
             </h1>
             <p className="mt-6 text-base font-normal leading-relaxed text-white/70 md:mt-8 md:text-lg md:leading-relaxed">
-              A shortlist of restaurants, makers, venues, and professionals we
-              rely on and recommend—places and people we&apos;d send a client or
-              a friend without hesitation.
+              A shortlist of makers, creative partners, and professionals we
+              rely on and recommend—people and companies we&apos;d send a
+              client or a friend without hesitation.
             </p>
           </div>
         </div>

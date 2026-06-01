@@ -39,37 +39,35 @@ export function HeroRotatingWords({
   return (
     <section
       ref={heroSectionRef}
-      className="snap-section relative min-h-[min(68svh,52rem)] overflow-hidden md:min-h-[min(100svh,56rem)]"
+      className="snap-section relative -mt-[4.25rem] w-full min-h-screen overflow-hidden bg-black"
     >
-      {/* Fixed hero image layer */}
-      <div className="fixed inset-0 z-0 bg-neutral-900">
-        <div className="absolute inset-0">
-          <Image
-            src={backgroundImageUrl}
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            className="h-full w-full scale-[1.625] object-contain object-center md:scale-100 md:object-cover md:object-center"
-          />
-        </div>
-        {/* Top-weighted scrim: nav legibility */}
-        <div
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(10, 10, 10, 0.52) 0%, rgba(10, 10, 10, 0.2) 30%, rgba(10, 10, 10, 0.07) 48%, transparent 64%)",
-          }}
-          aria-hidden
+      {/* Full-bleed portrait crop — object-position only (no scale/contain) */}
+      <div className="pointer-events-none absolute inset-0" aria-hidden>
+        <Image
+          src={backgroundImageUrl}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className={[
+            "h-full w-full object-cover",
+            "object-[center_15%]",
+            "brightness-[0.9] contrast-[1.06] saturate-[0.9]",
+            "sm:object-[center_18%]",
+            "md:object-[center_22%]",
+            "lg:object-[center_28%]",
+            "xl:object-[center_32%]",
+          ].join(" ")}
         />
-        {/* Soft pool behind hero type (bottom-left) — keeps cream/white copy readable on bright photo */}
+        <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/15 to-black/35" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-transparent to-black/10" />
         <div
-          className="pointer-events-none absolute inset-0"
+          className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 110% 65% at 12% 88%, rgba(8, 8, 10, 0.48) 0%, rgba(8, 8, 10, 0.18) 42%, transparent 68%)",
+              "radial-gradient(ellipse 100% 72% at 10% 90%, rgba(8, 8, 10, 0.48) 0%, rgba(8, 8, 10, 0.18) 44%, transparent 70%)",
           }}
-          aria-hidden
         />
       </div>
 
@@ -78,7 +76,7 @@ export function HeroRotatingWords({
       <CursorBadgeTrail rootRef={heroSectionRef} />
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl px-6 sm:px-10 lg:px-14 xl:max-w-7xl">
-        <div className="flex min-h-[min(68svh,52rem)] w-full flex-col items-center justify-start pb-14 pt-[4.25rem] text-center md:min-h-[min(100svh,56rem)] md:items-start md:justify-end md:pb-28 md:pt-32 md:text-left">
+        <div className="flex min-h-screen w-full flex-col items-center justify-center pb-14 text-center md:items-start md:justify-end md:pb-28 md:pt-32 md:text-left">
           <div className="mx-auto w-full max-w-[22rem] md:mx-0 md:max-w-5xl">
             <div className="flex flex-col items-center gap-0 md:items-start">
               <p className="text-center text-xs font-medium uppercase tracking-[0.22em] text-[#e8e2d6]/85 sm:text-[13px] md:text-left md:text-sm md:tracking-[0.24em]">

@@ -17,8 +17,7 @@ export default function HomePage() {
   return (
     <main className="homepage-scroll-reveal">
       <HeroRotatingWords
-        // Use a Reeder image if you want; keeping placeholder for now
-        backgroundImageUrl="/images/team/outdoor_professional_portrait_3_people.webp"
+        backgroundImageUrl="/images/chris/chris-reeder-hero.webp"
         kicker="We were born to be"
         words={["Litigators", "Deal Makers", "Trial Lawyers"]}
         scrollToId="welcome"

@@ -20,16 +20,17 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 Create `.env.local` at the project root with:
 
-- Server-only (never expose to client):
-  - `RESEND_API_KEY`
-  - `CONTACT_TO_EMAIL`
-  - `CONTACT_FROM_EMAIL`
+- Server-only (preferred for contact):
+  - `FORMSPREE_ENDPOINT` — Formspree form POST URL (used by `/api/contact`)
   - `SANITY_API_VERSION` (optional)
+- Public (contact fallback if server-only var is unset):
+  - `NEXT_PUBLIC_FORMSPREE_ENDPOINT` — same Formspree URL (exposed to client bundle; prefer `FORMSPREE_ENDPOINT` in production)
 - Public (safe for client exposure; project metadata only):
   - `NEXT_PUBLIC_SANITY_PROJECT_ID` (`88xnx54a`)
   - `NEXT_PUBLIC_SANITY_DATASET` (`production`)
 
 Notes:
+- Contact form: if neither Formspree env var is set, `POST /api/contact` returns **503** `unavailable` and the UI shows a call-to-fallback message.
 - The professionals pages fall back to `src/data/professionals.ts` when Sanity env is missing or Sanity fetch fails.
 - No Sanity token is required for published content reads in the current implementation.
 

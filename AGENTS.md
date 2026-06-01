@@ -85,7 +85,7 @@ These are **editorial/legal-risk guardrails** for any copy, metadata, or data yo
 - **Imports:** Use alias **`@/...`** → `src/...` (see `tsconfig.json`).
 - **Data changes:** Structured site content belongs in **`src/data/`** with types under **`src/types/`** when shared. Keep slugs stable for **`generateStaticParams`** and **`sitemap.ts`**.
 - **API routes:** Only **`src/app/api/contact/route.ts`** today. Validate input, use existing patterns (`LIMITS`, `isValidEmail` from `src/lib/validation.ts`), preserve honeypot behavior.
-- **Env vars (contact):** `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL` — missing config yields **503** `unavailable` from the handler (see route implementation).
+- **Env vars (contact):** `FORMSPREE_ENDPOINT` (preferred) or `NEXT_PUBLIC_FORMSPREE_ENDPOINT` — missing config yields **503** `unavailable` from the handler (see route implementation).
 - **Before claiming “done”:** Run **`npm run build`** locally.
 
 ### Things to avoid

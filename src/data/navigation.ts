@@ -28,7 +28,10 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
   {
     title: "Connect",
     links: [
-      { label: "X", href: "https://x.com/Reederllp" },
+      {
+        label: "Instagram",
+        href: "https://www.instagram.com/reederllp",
+      },
       {
         label: "LinkedIn",
         href: "https://www.linkedin.com/company/reeder-llp/",

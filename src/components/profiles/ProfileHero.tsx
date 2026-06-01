@@ -74,7 +74,7 @@ export function ProfileHero({ profile }: { profile: Professional }) {
                     key={l.href}
                     href={l.href}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="rounded-md border border-white/35 bg-white/[0.06] px-3.5 py-2 text-xs font-medium tracking-wide text-white/95 transition hover:border-white/50 hover:bg-white/10 md:text-sm"
                   >
                     {l.label}

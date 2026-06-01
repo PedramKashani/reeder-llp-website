@@ -33,8 +33,10 @@ export function HomeReveal({
       typeof window !== "undefined" &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches
     ) {
-      setVisible(true);
-      return;
+      const timeoutId = window.setTimeout(() => {
+        setVisible(true);
+      }, 0);
+      return () => window.clearTimeout(timeoutId);
     }
 
     let timeoutId: number | undefined;

@@ -41,7 +41,7 @@ export const favorites: FavoriteThing[] = [
       "Personal styling with a clear point of view—sharp, tailored, and never overdone.",
   },
   {
-    href: "https://Closetworld.com",
+    href: "https://closetworld.com",
     img: "/images/favorites/favorite-closetWorld.webp",
     alt: "Closet World",
     category: "Retail & Style",
@@ -49,7 +49,7 @@ export const favorites: FavoriteThing[] = [
       "Custom closets and storage that balance function with a clean, finished look.",
   },
   {
-    href: "https://Closetsbydesign.com",
+    href: "https://closetsbydesign.com",
     img: "/images/favorites/favorite-closetByDesign.webp",
     alt: "Closets By Design",
     category: "Retail & Style",
@@ -57,7 +57,7 @@ export const favorites: FavoriteThing[] = [
       "Thoughtful closet systems for homes where flow and order matter day to day.",
   },
   {
-    href: "http://glassieofficial.com",
+    href: "https://glassieofficial.com",
     img: "/images/favorites/favorite-glassie.webp",
     alt: "Glassie",
     category: "Retail & Style",
@@ -74,7 +74,7 @@ export const favorites: FavoriteThing[] = [
       "A landmark Hollywood Hills estate for events that need history, drama, and privacy.",
   },
   {
-    href: "http://www.britneyegner.com",
+    href: "https://www.britneyegner.com",
     img: "/images/favorites/favorite-britney.webp",
     alt: "Britney Egner",
     category: "Venues & Creative",
@@ -122,7 +122,7 @@ export const favorites: FavoriteThing[] = [
       "M&A and transaction support for deals where diligence and judgment move in lockstep.",
   },
   {
-    href: "#",
+    href: "",
     img: "/images/favorites/favorite-icon-collective.webp",
     alt: "Icon Collective",
     category: "More Favorites",

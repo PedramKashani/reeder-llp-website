@@ -51,10 +51,15 @@ export function CursorBadgeTrail({ rootRef }: CursorBadgeTrailProps) {
     }
   }, []);
 
-  const finishIfIdle = useCallback(() => {
+  const finishIfIdle = useCallback(function finishIfIdleInner() {
     const elapsed = performance.now() - lastMoveRef.current;
     if (elapsed < IDLE_MS) {
-      idleTimerRef.current = setTimeout(finishIfIdle, IDLE_MS - elapsed);
+      // Use the inner function reference so ESLint doesn't flag self-referencing
+      // the outer `finishIfIdle` const during its initializer.
+      idleTimerRef.current = setTimeout(
+        finishIfIdleInner,
+        IDLE_MS - elapsed
+      );
       return;
     }
     movingRef.current = false;

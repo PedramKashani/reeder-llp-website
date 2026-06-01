@@ -66,7 +66,7 @@ function EditorialFavoriteItem({ item }: { item: FavoriteThing }) {
     <a
       href={item.href}
       target="_blank"
-      rel="noreferrer"
+      rel="noopener noreferrer"
       className="group flex h-full flex-col outline-none transition-transform duration-500 ease-out hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-white/35 focus-visible:ring-offset-4 focus-visible:ring-offset-black"
       aria-label={`Visit ${label}`}
     >

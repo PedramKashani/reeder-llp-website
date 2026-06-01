@@ -332,6 +332,13 @@ export const professionals: Professional[] = [
         "Zachary was born and raised in Los Angeles and attended the University of Southern California and subsequently received his J.D. from Loyola Law School, Los Angeles. While in law school, Zachary participated in a pro-bono program where he got the invaluable opportunity to teach philosophy to at-risk middle school students.",
         "Being a Los Angeles native, and an avid sports fan, Zachary takes every opportunity he can to go to a Lakers, Dodgers or USC Trojans game.",
       ],
+      winningResults: [
+        "Prepared and negotiated a wide range of corporate and transactional agreements, including stock purchase agreements, redemption agreements, trademark assignments, operating agreements, loan agreements, security agreements, and pledge agreements.",
+        "Managed intellectual property portfolios for clients, including filing and registering trademarks with the USPTO, responding to office actions, maintaining and protecting trademark rights, addressing infringing marks, advising on fair use, and drafting licensing agreements.",
+        "Served as lead associate on numerous multi-million-dollar loans and revolving lines of credit, and assisted with the $333 million sale of a senior care facility.",
+        "Drafted and revised corporate agreements, commercial contracts, venue agreements, partnership agreements, marketing materials, and promotional sweepstakes materials for clients across various industries.",
+        "Prepared influencer agreements, social media agreements, sweepstakes rules, and promotional terms and conditions for brand, marketing, and advertising initiatives.",
+      ],
       education: [
         "Loyola Law School, J.D. (2019)",
         "University of Southern California, B.A. (2016)",

@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: new URL("/images/team/reeder-banner.webp", siteUrl).toString(),
+        // Keep this pointed at an existing asset to avoid social preview 404s.
+        url: new URL(
+          "/images/team/team-in-office-2-photoshopped.webp",
+          siteUrl,
+        ).toString(),
         width: 1200,
         height: 630,
         alt: FIRM_NAME,
@@ -38,7 +42,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: FIRM_NAME,
     description: SITE_DESCRIPTION,
-    images: [new URL("/images/team/reeder-banner.webp", siteUrl).toString()],
+    images: [
+      new URL(
+        "/images/team/team-in-office-2-photoshopped.webp",
+        siteUrl,
+      ).toString(),
+    ],
   },
 };
 

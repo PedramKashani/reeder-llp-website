@@ -2,7 +2,7 @@ export const FIRM_NAME = "Reeder LLP";
 
 export const PHONE = "310-861-2470";
 export const PHONE_E164 = "+1-310-861-2470";
-export const PHONE_HREF = "tel:310-861-2470";
+export const PHONE_HREF = "tel:+13108612470";
 
 export const SITE_URL = "https://www.reederllp.com";
 

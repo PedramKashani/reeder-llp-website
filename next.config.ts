@@ -28,6 +28,31 @@ const nextConfig: NextConfig = {
         destination: "/professionals/chris-reeder",
         permanent: true,
       },
+      {
+        source: "/cs-reeder-pc",
+        destination: "/professionals/chris-reeder",
+        permanent: true,
+      },
+      {
+        source: "/ben-tragish",
+        destination: "/professionals/ben-tragish",
+        permanent: true,
+      },
+      {
+        source: "/mark-passin",
+        destination: "/professionals/mark-passin",
+        permanent: true,
+      },
+      {
+        source: "/marcus-l-tippens",
+        destination: "/professionals/marcus-l-tippens",
+        permanent: true,
+      },
+      {
+        source: "/zachary-ward",
+        destination: "/professionals/zachary-ward",
+        permanent: true,
+      },
     ];
   },
 };

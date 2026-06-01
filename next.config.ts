@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { practiceAreas } from "./src/data/practiceAreas";
 
 /** Absolute path to this repo — avoids Turbopack mis-detecting root from a parent `package-lock.json`. */
 const turbopackRoot = path.dirname(fileURLToPath(import.meta.url));
@@ -54,6 +55,11 @@ const nextConfig: NextConfig = {
         destination: "/professionals/zachary-ward",
         permanent: true,
       },
+      ...practiceAreas.map((area) => ({
+        source: `/${area.slug}`,
+        destination: `/practice-areas/${area.slug}`,
+        permanent: true,
+      })),
     ];
   },
 };

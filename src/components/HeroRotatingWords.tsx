@@ -41,46 +41,73 @@ export function HeroRotatingWords({
       ref={heroSectionRef}
       className="snap-section relative -mt-[4.25rem] w-full min-h-screen overflow-hidden bg-black"
     >
-      {/* Mobile: cover crop. Desktop: full portrait (contain) over blurred cover fill — no distortion. */}
+      {/* Full-bleed cover (no contain letterboxing). Desktop: soft blur wash under sharp layer. */}
       <div
         className="pointer-events-none absolute inset-0 overflow-hidden bg-black"
         aria-hidden
       >
-        <Image
-          src={backgroundImageUrl}
-          alt=""
-          fill
-          sizes="100vw"
-          className={[
-            "hidden h-full w-full scale-110 object-cover object-center",
-            "blur-3xl brightness-[0.55] saturate-[0.85] md:block",
-          ].join(" ")}
-        />
+        <div className="absolute inset-0 hidden opacity-55 md:block">
+          <Image
+            src={backgroundImageUrl}
+            alt=""
+            fill
+            sizes="100vw"
+            className="scale-[1.15] object-cover object-[66%_12%] blur-2xl brightness-[0.52] saturate-[0.88]"
+          />
+        </div>
+
         <Image
           src={backgroundImageUrl}
           alt=""
           fill
           priority
-          unoptimized
-          quality={100}
+          quality={92}
           sizes="100vw"
           className={[
-            "h-full w-full",
-            "object-cover object-[65%_8%]",
+            "object-cover object-[65%_8%] brightness-[0.92] contrast-[1.04] saturate-[0.92]",
             "sm:object-[66%_10%]",
-            "md:object-contain md:object-center",
-            "brightness-[0.9] contrast-[1.06] saturate-[0.9]",
+            "md:brightness-[0.96] md:contrast-[1.03] md:saturate-[0.94]",
           ].join(" ")}
         />
-        <div className="absolute inset-0 bg-black/35" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/15 to-black/35" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-transparent to-black/10" />
+
+        <div className="absolute inset-0 bg-black/35 md:hidden" />
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/12 to-black/38 md:hidden"
+          aria-hidden
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/25 to-black/45 md:hidden"
+          aria-hidden
+        />
+        <div
+          className="absolute inset-0 md:hidden"
           style={{
             background:
-              "radial-gradient(ellipse 100% 72% at 10% 90%, rgba(8, 8, 10, 0.48) 0%, rgba(8, 8, 10, 0.18) 44%, transparent 70%)",
+              "radial-gradient(ellipse 100% 70% at 12% 88%, rgba(8, 8, 10, 0.42) 0%, transparent 68%)",
           }}
+          aria-hidden
+        />
+
+        <div className="absolute inset-0 hidden bg-black/10 md:block" aria-hidden />
+        <div
+          className="absolute inset-0 hidden md:block"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.48) 20%, rgba(0,0,0,0.22) 38%, rgba(0,0,0,0.08) 54%, rgba(0,0,0,0.04) 66%, rgba(0,0,0,0.18) 100%)",
+          }}
+          aria-hidden
+        />
+        <div
+          className="absolute inset-0 hidden bg-gradient-to-b from-black/48 via-black/10 to-black/36 md:block"
+          aria-hidden
+        />
+        <div
+          className="absolute inset-0 hidden md:block"
+          style={{
+            background:
+              "radial-gradient(ellipse 85% 60% at 12% 92%, rgba(8, 8, 10, 0.48) 0%, rgba(8, 8, 10, 0.1) 40%, transparent 68%)",
+          }}
+          aria-hidden
         />
       </div>
 

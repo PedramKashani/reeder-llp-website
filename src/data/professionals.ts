@@ -154,7 +154,7 @@ export const professionals: Professional[] = [
   {
     slug: "ben-tragish",
     name: "Ben Tragish",
-    title: "Counsel",
+    title: "Of Counsel",
     officePhone: "(310) 861-2470",
     directDial: "(310) 861-2474",
     email: "ben@reederllp.com",
@@ -299,7 +299,7 @@ export const professionals: Professional[] = [
   {
     slug: "zachary-ward",
     name: "Zachary Ward",
-    title: "Of Counsel",
+    title: "Attorney",
     officePhone: "(310) 861-2470",
     directDial: "(310) 861-2474",
     email: "zach@reederllp.com",

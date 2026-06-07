@@ -18,6 +18,8 @@ function AttorneyCard({ p }: { p: Professional }) {
           src={p.photoSmall || p.photoLarge || ""}
           alt={p.name}
           fill
+          loading="lazy"
+          fetchPriority="low"
           sizes="(max-width: 639px) 85vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover object-[center_30%] transition-transform duration-300 ease-out group-hover:scale-[1.02] sm:object-[center_28%] lg:object-[center_26%]"
         />

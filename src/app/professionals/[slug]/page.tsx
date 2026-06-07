@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { practiceAreas } from "@/data/practiceAreas";
 import { buildPageSocialMetadata } from "@/lib/metadata";
+import { getProfessionalPhotoUrl } from "@/lib/professionalPhoto";
 
 import { ProfileHero } from "@/components/profiles/ProfileHero";
+import { ProfessionalPersonJsonLd } from "@/components/profiles/ProfessionalPersonJsonLd";
 import { BioShowMore } from "@/components/profiles/BioShowMore";
 import { CredentialsAccordion } from "@/components/profiles/CredentialsAccordion";
 import { MeetOthers } from "@/components/profiles/MeetOthers";
@@ -30,8 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const description =
     [profile.title, firstSentence].filter(Boolean).join(" — ") ||
     `${profile.name} is ${profile.title} at Reeder LLP.`;
-  const ogImage =
-    profile.photoLarge || profile.photo || profile.photoSmall || undefined;
+  const ogImage = getProfessionalPhotoUrl(profile) || undefined;
   const social = buildPageSocialMetadata({
     title,
     description,
@@ -65,6 +66,7 @@ export default async function ProfilePage({ params }: Props) {
 
   return (
     <main className="min-h-screen bg-neutral-950 text-white">
+      <ProfessionalPersonJsonLd profile={profile} />
       <ProfileHero profile={profile} />
 
       {/* The “scroll target” (the arrow scrolls here) */}

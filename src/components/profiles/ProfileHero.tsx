@@ -1,10 +1,10 @@
 import Image from "next/image";
 import type { Professional } from "@/types/professional";
+import { getProfessionalPhotoUrl } from "@/lib/professionalPhoto";
 import { ScrollDownButton } from "@/components/ScrollDownButton";
 
 export function ProfileHero({ profile }: { profile: Professional }) {
-  const photoUrl =
-    profile.photo || profile.photoLarge || profile.photoSmall || "";
+  const photoUrl = getProfessionalPhotoUrl(profile);
 
   return (
     <section
@@ -18,9 +18,10 @@ export function ProfileHero({ profile }: { profile: Professional }) {
           {photoUrl ? (
             <Image
               src={photoUrl}
-              alt={`${profile.name}, ${profile.title}`}
+              alt={profile.name}
               fill
               priority
+              fetchPriority="high"
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover object-[center_12%] sm:object-[center_10%] lg:object-[center_18%]"
             />

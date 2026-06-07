@@ -6,6 +6,8 @@ export type ProfessionalLink = {
 export type Professional = {
   slug: string;
   name: string;
+  /** Full legal/formal name for SEO and structured data only; UI keeps `name`. */
+  legalName?: string;
   title: string;
 
   officePhone?: string;

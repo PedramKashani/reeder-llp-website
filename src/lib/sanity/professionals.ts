@@ -7,6 +7,7 @@ export const PROFESSIONALS_QUERY = /* groq */ `
   *[_type == "professional" && defined(slug.current)] | order(name asc) {
     "slug": slug.current,
     name,
+    legalName,
     title,
     officePhone,
     directDial,
@@ -33,6 +34,7 @@ function mapSanityProfessional(input: SanityProfessional): Professional | null {
   return {
     slug: input.slug,
     name: input.name,
+    legalName: input.legalName,
     title: input.title,
     officePhone: input.officePhone,
     directDial: input.directDial,

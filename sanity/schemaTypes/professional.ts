@@ -12,6 +12,13 @@ export const professionalType = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: "legalName",
+      title: "Legal Name",
+      description:
+        "Optional full legal/formal name for SEO and structured data. Display name stays in Name.",
+      type: "string",
+    }),
+    defineField({
       name: "slug",
       title: "Slug",
       type: "slug",

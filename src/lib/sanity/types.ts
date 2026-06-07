@@ -3,6 +3,7 @@ import type { Professional, ProfessionalLink } from "@/types/professional";
 export type SanityProfessional = {
   slug?: string;
   name?: string;
+  legalName?: string;
   title?: string;
   officePhone?: string;
   directDial?: string;

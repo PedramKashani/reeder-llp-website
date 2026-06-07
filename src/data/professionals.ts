@@ -7,6 +7,7 @@ export const professionals: Professional[] = [
   {
     slug: "chris-reeder",
     name: "Chris Reeder",
+    legalName: "Christopher Scott Reeder",
     title: "Partner",
     officePhone: "(310) 861-2470",
     directDial: "(310) 861-2471",

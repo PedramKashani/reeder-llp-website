@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { practiceAreas } from "@/data/practiceAreas";
 import { buildPageSocialMetadata } from "@/lib/metadata";
+import { buildProfessionalDescription } from "@/lib/professionalMetadata";
 import { getProfessionalPhotoUrl } from "@/lib/professionalPhoto";
 
 import { ProfileHero } from "@/components/profiles/ProfileHero";
@@ -29,9 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     : firstBioParagraph;
 
   const title = `${profile.name} | ${profile.title}`;
-  const description =
-    [profile.title, firstSentence].filter(Boolean).join(" — ") ||
-    `${profile.name} is ${profile.title} at Reeder LLP.`;
+  const description = buildProfessionalDescription(profile, firstSentence);
   const ogImage = getProfessionalPhotoUrl(profile) || undefined;
   const social = buildPageSocialMetadata({
     title,

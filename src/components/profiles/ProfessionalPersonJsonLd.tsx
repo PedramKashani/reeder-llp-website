@@ -14,6 +14,7 @@ export function ProfessionalPersonJsonLd({
     "@context": "https://schema.org",
     "@type": "Person",
     name: profile.name,
+    ...(profile.legalName ? { alternateName: profile.legalName } : {}),
     jobTitle: profile.title,
     url: new URL(`/professionals/${profile.slug}`, SITE_URL).toString(),
     ...(imageUrl ? { image: imageUrl } : {}),

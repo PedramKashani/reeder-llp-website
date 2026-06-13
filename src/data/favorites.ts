@@ -57,6 +57,22 @@ export const favorites: FavoriteThing[] = [
       "Glass art and objects that add depth and light—residential or commercial.",
   },
   {
+    href: "https://www.cabinedit.com",
+    img: "/images/favorites/favorite-cabin.webp",
+    alt: "Cabin Edit",
+    category: "Creative & Entertainment",
+    description:
+      "Entertainment-focused creative and editorial work with a refined, story-driven point of view.",
+  },
+  {
+    href: "https://www.pistudios.com/",
+    img: "/images/favorites/favorite-pure-imagination.webp",
+    alt: "Pure Imagination Studios",
+    category: "Creative & Entertainment",
+    description:
+      "Immersive storytelling and world-building across film, location-based experiences, and original IP.",
+  },
+  {
     name: "The Houdini Estate",
     href: "https://www.thehoudiniestate.com",
     img: "/images/favorites/favorite-houdini.webp",
@@ -72,14 +88,6 @@ export const favorites: FavoriteThing[] = [
     category: "Creative & Entertainment",
     description:
       "Photography and creative production with a cinematic eye and calm, professional execution on set.",
-  },
-  {
-    href: "https://www.cabinedit.com",
-    img: "/images/favorites/favorite-cabin.webp",
-    alt: "Cabin Edit",
-    category: "Creative & Entertainment",
-    description:
-      "Entertainment-focused creative and editorial work with a refined, story-driven point of view.",
   },
   {
     href: "https://www.robertkotlermd.com",

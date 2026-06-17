@@ -118,6 +118,40 @@ function assignFallbackOrder(profiles: Professional[]): Professional[] {
   );
 }
 
+const SECTION_KEYS = [
+  "background",
+  "winningTrialLitigation",
+  "winningTransaction",
+  "winningResults",
+  "education",
+  "associations",
+  "admissions",
+  "publications",
+  "awards",
+  "speakingEngagements",
+] as const satisfies readonly (keyof Professional["sections"])[];
+
+function hasSectionContent(
+  value: string[] | undefined,
+): value is string[] {
+  return Array.isArray(value) && value.length > 0;
+}
+
+function mergeSections(
+  fallback: Professional["sections"],
+  cms: Professional["sections"],
+): Professional["sections"] {
+  const merged: Professional["sections"] = { ...fallback };
+
+  for (const key of SECTION_KEYS) {
+    if (hasSectionContent(cms[key])) {
+      merged[key] = cms[key];
+    }
+  }
+
+  return merged;
+}
+
 function mergeProfessionalsBySlug(
   fallback: Professional[],
   fromSanity: Professional[],
@@ -130,7 +164,12 @@ function mergeProfessionalsBySlug(
     if (cms) sanityBySlug.delete(fb.slug);
     merged.push(
       cms
-        ? { ...fb, ...cms, order: cms.order ?? fb.order ?? index }
+        ? {
+            ...fb,
+            ...cms,
+            order: cms.order ?? fb.order ?? index,
+            sections: mergeSections(fb.sections, cms.sections),
+          }
         : { ...fb, order: fb.order ?? index },
     );
   });

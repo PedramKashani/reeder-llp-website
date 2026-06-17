@@ -75,7 +75,14 @@ export const professionalType = defineType({
       title: "Sections",
       type: "object",
       fields: [
-        { name: "background", title: "Background", type: "array", of: [{ type: "string" }] },
+        defineField({
+          name: "background",
+          title: "Bio",
+          description:
+            "Add one paragraph per item. These paragraphs appear on the attorney profile page.",
+          type: "array",
+          of: [{ type: "string" }],
+        }),
         {
           name: "winningResults",
           title: "Winning Results",

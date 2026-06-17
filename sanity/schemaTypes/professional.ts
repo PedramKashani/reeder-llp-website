@@ -25,30 +25,30 @@ export const professionalType = defineType({
       options: { source: "name", maxLength: 96 },
       validation: (rule) => rule.required(),
     }),
+    defineField({
+      name: "order",
+      title: "Display Order",
+      type: "number",
+      description:
+        "Lower numbers appear first on the Professionals page. Leave blank to sort after ordered entries.",
+      validation: (rule) => rule.integer().min(0),
+    }),
     defineField({ name: "title", title: "Title", type: "string" }),
     defineField({ name: "officePhone", title: "Office Phone", type: "string" }),
     defineField({ name: "directDial", title: "Direct Dial", type: "string" }),
     defineField({ name: "email", title: "Email", type: "string" }),
     defineField({
       name: "photo",
-      title: "Photo (URL or /public path)",
-      type: "string",
-    }),
-    defineField({
-      name: "photoSmall",
-      title: "Photo Small (URL or /public path)",
-      type: "string",
-    }),
-    defineField({
-      name: "photoLarge",
-      title: "Photo Large (URL or /public path)",
-      type: "string",
+      title: "Headshot",
+      type: "image",
+      options: { hotspot: true },
+      description: "Primary attorney photo used on profile pages and listings.",
     }),
     defineField({
       name: "badgeImages",
       title: "Badge Images",
       type: "array",
-      of: [{ type: "string" }],
+      of: [{ type: "image", options: { hotspot: true } }],
     }),
     defineField({
       name: "links",

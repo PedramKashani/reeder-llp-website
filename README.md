@@ -31,7 +31,7 @@ Create `.env.local` at the project root with:
 
 Notes:
 - Contact form: if neither Formspree env var is set, `POST /api/contact` returns **503** `unavailable` and the UI shows a call-to-fallback message.
-- The professionals pages fall back to `src/data/professionals.ts` when Sanity env is missing or Sanity fetch fails.
+- The professionals pages merge Sanity content with `src/data/professionals.ts` by slug (CMS wins per slug; file data fills gaps when Sanity env is missing or fetch fails).
 - No Sanity token is required for published content reads in the current implementation.
 
 ## Sanity Studio

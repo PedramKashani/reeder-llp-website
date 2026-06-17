@@ -1,14 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import {
   FIRM_NAME,
   SITE_URL as SITE_URL_STRING,
-  PHONE_E164,
-  ADDRESS,
-  LOGO_SRC,
 } from "@/data/firm";
 
 const SITE_DESCRIPTION = `${FIRM_NAME} provides litigation, trial, and business counsel for companies, investors, and individuals.`;
@@ -69,23 +64,6 @@ const firmSerif = Cormorant_Garamond({
   display: "swap",
 });
 
-const organizationJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "LegalService",
-  name: FIRM_NAME,
-  url: siteUrl.toString(),
-  logo: new URL(LOGO_SRC, siteUrl).toString(),
-  telephone: PHONE_E164,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: `${ADDRESS.street}, ${ADDRESS.suite}`,
-    addressLocality: ADDRESS.city,
-    addressRegion: ADDRESS.region,
-    postalCode: ADDRESS.zip,
-    addressCountry: ADDRESS.country,
-  },
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -93,17 +71,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${manrope.variable} ${firmSerif.variable}`}>
-      <body className={manrope.className}>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationJsonLd),
-          }}
-        />
-        <Header />
-        {children}
-        <Footer />
-      </body>
+      <body className={manrope.className}>{children}</body>
     </html>
   );
 }

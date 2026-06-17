@@ -9,6 +9,8 @@ export type Professional = {
   /** Full legal/formal name for SEO and structured data only; UI keeps `name`. */
   legalName?: string;
   title: string;
+  /** Lower numbers appear first on listings; optional in file fallback. */
+  order?: number;
 
   officePhone?: string;
   directDial?: string;

@@ -4,18 +4,19 @@ import { getSanityClient } from "@/lib/sanity/client";
 import type { SanityProfessional } from "@/lib/sanity/types";
 
 export const PROFESSIONALS_QUERY = /* groq */ `
-  *[_type == "professional" && defined(slug.current)] | order(name asc) {
+  *[_type == "professional" && defined(slug.current)] | order(coalesce(order, 9999) asc, name asc) {
     "slug": slug.current,
     name,
     legalName,
     title,
+    order,
     officePhone,
     directDial,
     email,
-    photo,
-    photoSmall,
-    photoLarge,
-    badgeImages,
+    "photo": photo.asset->url,
+    "photoSmall": photo.asset->url,
+    "photoLarge": photo.asset->url,
+    "badgeImages": badgeImages[].asset->url,
     links,
     relatedPracticeSlugs,
     sections
@@ -31,18 +32,22 @@ function sanitizeStringArray(value: unknown): string[] | undefined {
 function mapSanityProfessional(input: SanityProfessional): Professional | null {
   if (!input.slug || !input.name || !input.title) return null;
 
+  const photoUrl = input.photo ?? input.photoLarge ?? input.photoSmall;
+  const badgeImages = sanitizeStringArray(input.badgeImages);
+
   return {
     slug: input.slug,
     name: input.name,
     legalName: input.legalName,
     title: input.title,
+    order: input.order,
     officePhone: input.officePhone,
     directDial: input.directDial,
     email: input.email,
-    photo: input.photo,
-    photoSmall: input.photoSmall,
-    photoLarge: input.photoLarge,
-    badgeImages: sanitizeStringArray(input.badgeImages),
+    ...(photoUrl
+      ? { photo: photoUrl, photoSmall: photoUrl, photoLarge: photoUrl }
+      : {}),
+    ...(badgeImages ? { badgeImages } : {}),
     links: Array.isArray(input.links)
       ? input.links.filter(
           (link): link is ProfessionalLink =>
@@ -80,11 +85,9 @@ async function fetchSanityProfessionals(): Promise<Professional[] | null> {
       },
     );
 
-    const mapped = rows
+    return rows
       .map(mapSanityProfessional)
       .filter((item): item is Professional => item !== null);
-
-    return mapped.length ? mapped : null;
   } catch {
     return null;
   }
@@ -99,9 +102,54 @@ function withoutExcluded(profiles: Professional[]): Professional[] {
   return profiles.filter((p) => !EXCLUDED_PROFESSIONAL_SLUGS.has(p.slug));
 }
 
+function sortProfessionals(profiles: Professional[]): Professional[] {
+  return [...profiles].sort(
+    (a, b) =>
+      (a.order ?? 9999) - (b.order ?? 9999) || a.name.localeCompare(b.name),
+  );
+}
+
+function assignFallbackOrder(profiles: Professional[]): Professional[] {
+  return sortProfessionals(
+    profiles.map((profile, index) => ({
+      ...profile,
+      order: profile.order ?? index,
+    })),
+  );
+}
+
+function mergeProfessionalsBySlug(
+  fallback: Professional[],
+  fromSanity: Professional[],
+): Professional[] {
+  const sanityBySlug = new Map(fromSanity.map((p) => [p.slug, p]));
+  const merged: Professional[] = [];
+
+  fallback.forEach((fb, index) => {
+    const cms = sanityBySlug.get(fb.slug);
+    if (cms) sanityBySlug.delete(fb.slug);
+    merged.push(
+      cms
+        ? { ...fb, ...cms, order: cms.order ?? fb.order ?? index }
+        : { ...fb, order: fb.order ?? index },
+    );
+  });
+
+  for (const extra of sanityBySlug.values()) {
+    merged.push(extra);
+  }
+
+  return sortProfessionals(merged);
+}
+
 export async function getProfessionals(): Promise<Professional[]> {
   const fromSanity = await fetchSanityProfessionals();
-  return withoutExcluded(fromSanity ?? professionalsFallback);
+  if (fromSanity === null) {
+    return withoutExcluded(assignFallbackOrder(professionalsFallback));
+  }
+  return withoutExcluded(
+    mergeProfessionalsBySlug(professionalsFallback, fromSanity),
+  );
 }
 
 export async function getProfessionalBySlug(

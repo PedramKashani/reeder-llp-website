@@ -3,26 +3,34 @@
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import type { Professional } from "@/types/professional";
 
 export const MEET_OTHERS_HEADING_ID = "meet-the-others-heading";
 
-function AttorneyCard({ p }: { p: Professional }) {
+export type MeetOthersCard = {
+  slug: string;
+  name: string;
+  title: string;
+  photoUrl: string;
+};
+
+function AttorneyCard({ p }: { p: MeetOthersCard }) {
   return (
     <Link
       href={`/professionals/${p.slug}`}
       className="group block h-full overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.04] text-left transition-[border-color,box-shadow] duration-200 hover:border-white/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/40"
     >
       <div className="relative aspect-[4/5] w-full overflow-hidden bg-black/30">
-        <Image
-          src={p.photoSmall || p.photoLarge || ""}
-          alt={p.name}
-          fill
-          loading="lazy"
-          fetchPriority="low"
-          sizes="(max-width: 639px) 85vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-cover object-[center_30%] transition-transform duration-300 ease-out group-hover:scale-[1.02] sm:object-[center_28%] lg:object-[center_26%]"
-        />
+        {p.photoUrl ? (
+          <Image
+            src={p.photoUrl}
+            alt={p.name}
+            fill
+            loading="lazy"
+            fetchPriority="low"
+            sizes="(max-width: 639px) 85vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover object-[center_30%] transition-transform duration-300 ease-out group-hover:scale-[1.02] sm:object-[center_28%] lg:object-[center_26%]"
+          />
+        ) : null}
       </div>
 
       <div className="p-6">
@@ -41,7 +49,7 @@ function AttorneyCard({ p }: { p: Professional }) {
   );
 }
 
-export function MeetOthersClient({ others }: { others: Professional[] }) {
+export function MeetOthersClient({ others }: { others: MeetOthersCard[] }) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scrollByDir = (dir: -1 | 1) => {
@@ -106,29 +114,21 @@ export function MeetOthersClient({ others }: { others: Professional[] }) {
         ) : null}
       </div>
 
-      <div className="sm:hidden">
-        <div
-          ref={scrollRef}
-          id="meet-others-track"
-          role="list"
-          aria-label="Other attorneys"
-          className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-2 motion-reduce:scroll-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-        >
-          {others.map((p) => (
-            <div
-              key={p.slug}
-              role="listitem"
-              className="w-[min(85vw,22rem)] shrink-0 snap-start"
-            >
-              <AttorneyCard p={p} />
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="hidden gap-6 sm:grid sm:grid-cols-2 lg:grid-cols-3">
+      <div
+        ref={scrollRef}
+        id="meet-others-track"
+        role="list"
+        aria-label="Other attorneys"
+        className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-2 motion-reduce:scroll-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:grid sm:grid-cols-2 sm:gap-6 sm:overflow-visible sm:pb-0 sm:snap-none lg:grid-cols-3"
+      >
         {others.map((p) => (
-          <AttorneyCard key={p.slug} p={p} />
+          <div
+            key={p.slug}
+            role="listitem"
+            className="w-[min(85vw,22rem)] shrink-0 snap-start sm:w-full sm:min-w-0 sm:shrink"
+          >
+            <AttorneyCard p={p} />
+          </div>
         ))}
       </div>
     </>

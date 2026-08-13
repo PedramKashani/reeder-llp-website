@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { FIRM_NAME, SITE_URL } from "@/data/firm";
+import { parseSanityImageDimensions } from "@/lib/sanity/imageUrl";
 
 export const DEFAULT_OG_IMAGE_PATH =
   "/images/team/team-in-office-2-photoshopped.webp";
@@ -30,6 +31,7 @@ export function buildPageSocialMetadata({
   image,
 }: PageSocialMetadata): Pick<Metadata, "openGraph" | "twitter"> {
   const imageUrl = resolveOgImageUrl(image);
+  const dimensions = parseSanityImageDimensions(imageUrl);
 
   return {
     openGraph: {
@@ -41,9 +43,8 @@ export function buildPageSocialMetadata({
       images: [
         {
           url: imageUrl,
-          width: 1200,
-          height: 630,
           alt: title,
+          ...(dimensions ?? {}),
         },
       ],
     },

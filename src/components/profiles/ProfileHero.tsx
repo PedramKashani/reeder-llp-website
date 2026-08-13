@@ -1,6 +1,9 @@
 import Image from "next/image";
 import type { Professional } from "@/types/professional";
-import { getProfessionalPhotoUrl } from "@/lib/professionalPhoto";
+import {
+  getProfessionalPhotoAlt,
+  getProfessionalPhotoUrl,
+} from "@/lib/professionalPhoto";
 import { ScrollDownButton } from "@/components/ScrollDownButton";
 
 export function ProfileHero({ profile }: { profile: Professional }) {
@@ -18,7 +21,7 @@ export function ProfileHero({ profile }: { profile: Professional }) {
           {photoUrl ? (
             <Image
               src={photoUrl}
-              alt={profile.name}
+              alt={getProfessionalPhotoAlt(profile)}
               fill
               priority
               fetchPriority="high"

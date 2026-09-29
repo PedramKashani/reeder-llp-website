@@ -132,6 +132,7 @@ export const professionals: Professional[] = [
         "U.S. District Court, Southern District of California",
       ],
       publications: [
+        "“Ex-Parler CEO’s ouster lawsuit heads to trial in Las Vegas,” Las Vegas Review-Journal (August 24, 2026)",
         "“Nev. High Court Split The Baby In Key Foreclosure Law Case,” Law360 (November 21, 2013)",
         "“Riverisland Ruling Gives Calif. Fraud Victims Fairer Shake,” Law360 (January 23, 2013)",
       ],

@@ -116,7 +116,7 @@ export const professionalType = defineType({
         },
         {
           name: "publications",
-          title: "Publications",
+          title: "Publications and News",
           type: "array",
           of: [{ type: "string" }],
         },

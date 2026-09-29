@@ -30,7 +30,7 @@ export function CredentialsAccordion({ profile }: { profile: Professional }) {
     if (s.associations?.length)
       out.push({ title: "Associations", lines: s.associations });
     if (s.publications?.length)
-      out.push({ title: "Publications", lines: s.publications });
+      out.push({ title: "Publications and News", lines: s.publications });
     if (s.speakingEngagements?.length)
       out.push({ title: "Speaking Engagements", lines: s.speakingEngagements });
     if (s.winningResults?.length)

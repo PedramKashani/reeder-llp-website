@@ -25,9 +25,9 @@ export const professionals: Professional[] = [
       },
     ],
     badgeImages: [
-      "/images/badges/super-lawyers-top-100-southern-california-2025.webp",
+      "/images/badges/super-lawyers-top-100-southern-california-2027.webp",
       "/images/badges/super-lawyers-10yr-chris-reeder-2025.webp",
-      "/images/badges/super-lawyers-selected-chris-reeder-2026.webp",
+      "/images/badges/super-lawyers-selected-chris-reeder-2027.webp",
       "/images/badges/best-lawyers-chris-reeder-2026.webp",
     ],
     relatedPracticeSlugs: [
@@ -137,8 +137,8 @@ export const professionals: Professional[] = [
         "“Riverisland Ruling Gives Calif. Fraud Victims Fairer Shake,” Law360 (January 23, 2013)",
       ],
       awards: [
-        "Named Southern California “Super Lawyer,” Super Lawyers (2015-2026)*",
-        "Named Top 100: Southern California Super Lawyers (2019 – 2026)*",
+        "Named Southern California “Super Lawyer,” Super Lawyers (2015-2027)*",
+        "Named Top 100: Southern California Super Lawyers (2019 – 2027)*",
         "Best Lawyers (2021-2026)*",
       ],
       speakingEngagements: [
@@ -169,7 +169,7 @@ export const professionals: Professional[] = [
       },
     ],
     badgeImages: [
-      "/images/badges/super-lawyers-rising-stars-benjamin-tragish-2025.webp",
+      "/images/badges/super-lawyers-rising-stars-benjamin-tragish-2027.webp",
     ],
     relatedPracticeSlugs: [
       "trials-commercial-litigation",
@@ -198,7 +198,7 @@ export const professionals: Professional[] = [
       ],
       awards: [
         "2017 Outstanding Nickel Alumnus, Southwestern Law School",
-        "Named a “Southern California Rising Star,” Super Lawyers (2018-2026)*",
+        "Named a “Southern California Rising Star,” Super Lawyers (2018-2027)*",
       ],
       education: [
         "Southwestern Law School, J.D. (2013); Southwestern Journal of International Law, Associate Editor (2012-2013); Trial Advocacy Honors Program (2011-2013)",
@@ -233,7 +233,7 @@ export const professionals: Professional[] = [
     ],
     badgeImages: [
       "/images/badges/super-lawyers-15yr-mark.webp",
-      "/images/badges/super-lawyers-selected-mark-passin-2026.webp",
+      "/images/badges/super-lawyers-selected-mark-passin-2027.webp",
       "/images/badges/the-hollywood-reporter-mark.webp",
       "/images/badges/ranked-in-chambers-red-mark.webp",
     ],
@@ -270,7 +270,7 @@ export const professionals: Professional[] = [
       },
     ],
     badgeImages: [
-      "/images/badges/super-lawyers-rising-stars-marcus-tippens-2025.webp",
+      "/images/badges/super-lawyers-rising-stars-marcus-tippens-2027.webp",
     ],
     relatedPracticeSlugs: [
       "trials-commercial-litigation",
@@ -290,7 +290,7 @@ export const professionals: Professional[] = [
       ],
       admissions: ["California"],
       awards: [
-        "Named a “Southern California Rising Star,” Super Lawyers (2025-2026)",
+        "Named a “Southern California Rising Star,” Super Lawyers (2025-2027)",
       ],
     },
   },
@@ -314,7 +314,7 @@ export const professionals: Professional[] = [
       },
     ],
     badgeImages: [
-      "/images/badges/super-lawyers-rising-stars-zachary-ward-2025.webp",
+      "/images/badges/super-lawyers-rising-stars-zachary-ward-2027.webp",
     ],
     relatedPracticeSlugs: [
       "corporate",
@@ -347,7 +347,7 @@ export const professionals: Professional[] = [
       ],
       admissions: ["California"],
       awards: [
-        "Named a “Southern California Rising Star,” Super Lawyers (2024-2025)*",
+        "Named a “Southern California Rising Star,” Super Lawyers (2024-2025, 2027)*",
       ],
     },
   },
